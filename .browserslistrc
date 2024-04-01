@@ -1,0 +1,12 @@
+> 0.2% and not dead
+not op_mini all
+not android > 0
+not ie <= 11
+not chrome < 50
+not safari < 10
+not firefox < 54
+not edge < 15
+not op_mini all
+not ucandroid > 0
+not samsung > 0
+not and_qq > 0
