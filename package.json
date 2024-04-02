@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+    "autoprefixer": "^10.4.19",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^0.33.1",
     "eslint-plugin-compat": "^4.2.0",
@@ -33,6 +34,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-sonarjs": "^0.25.0",
     "lightningcss": "^1.24.1",
+    "postcss-html": "^1.6.0",
     "prettier-plugin-astro": "^0.13.0",
     "stylelint": "^16.2.1",
     "stylelint-color-format": "^1.1.0",
