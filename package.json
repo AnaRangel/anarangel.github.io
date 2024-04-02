@@ -14,7 +14,8 @@
     "format:fix": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,mdx,json,astro}\"",
     "stylelint": "stylelint \"**/*.{scss,css,astro}\"",
     "stylelint-find-rules": "stylelint-find-new-rules",
-    "stylelint:fix": "stylelint \"**/*.{scss,css,astro}\" --fix"
+    "stylelint:fix": "stylelint \"**/*.{scss,css,astro}\" --fix",
+    "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
@@ -25,6 +26,9 @@
     "typescript": "^5.4.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@commitlint/types": "^19.0.3",
     "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
     "autoprefixer": "^10.4.19",
     "eslint-config-prettier": "^9.1.0",
@@ -33,7 +37,9 @@
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-sonarjs": "^0.25.0",
+    "husky": "^9.0.11",
     "lightningcss": "^1.24.1",
+    "lint-staged": "^15.2.2",
     "postcss-html": "^1.6.0",
     "prettier-plugin-astro": "^0.13.0",
     "stylelint": "^16.2.1",
