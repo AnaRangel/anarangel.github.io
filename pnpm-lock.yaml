@@ -19,7 +19,10 @@ dependencies:
     version: 7.5.0(eslint@8.57.0)(typescript@5.4.3)
   astro:
     specifier: ^4.5.12
-    version: 4.5.12(@types/node@20.12.2)(lightningcss@1.24.1)(typescript@5.4.3)
+    version: 4.5.12(@types/node@20.12.2)(lightningcss@1.24.1)(sass@1.74.1)(typescript@5.4.3)
+  sass:
+    specifier: ^1.74.1
+    version: 1.74.1
   typescript:
     specifier: ^5.4.3
     version: 5.4.3
@@ -1875,7 +1878,7 @@ packages:
       - supports-color
     dev: true
 
-  /astro@4.5.12(@types/node@20.12.2)(lightningcss@1.24.1)(typescript@5.4.3):
+  /astro@4.5.12(@types/node@20.12.2)(lightningcss@1.24.1)(sass@1.74.1)(typescript@5.4.3):
     resolution: {integrity: sha512-xIJcFI2hbyV8+h5pWjL7SKD1jIP0K01fYVAH+gdAt0mJaXy+u8Mj+goD0cPlK6sEaykR+7zxQLYGKJ44U4qarg==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
@@ -1936,7 +1939,7 @@ packages:
       tsconfck: 3.0.3(typescript@5.4.3)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.2.7(@types/node@20.12.2)(lightningcss@1.24.1)
+      vite: 5.2.7(@types/node@20.12.2)(lightningcss@1.24.1)(sass@1.74.1)
       vitefu: 0.2.5(vite@5.2.7)
       which-pm: 2.1.1
       yargs-parser: 21.1.1
@@ -3680,6 +3683,10 @@ packages:
   /ignore@5.3.1:
     resolution: {integrity: sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==}
     engines: {node: '>= 4'}
+
+  /immutable@4.3.5:
+    resolution: {integrity: sha512-8eabxkth9gZatlwl5TBuJnCsoTADlL6ftEr7A4qgdaTsPyreilDSnUk57SO+jfKcNtxPa22U5KK6DSeAYhpBJw==}
+    dev: false
 
   /import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
@@ -5768,6 +5775,16 @@ packages:
     dependencies:
       suf-log: 2.5.3
 
+  /sass@1.74.1:
+    resolution: {integrity: sha512-w0Z9p/rWZWelb88ISOLyvqTWGmtmu2QJICqDBGyNnfG4OUnPX9BBjjYIXUpXCMOOg5MQWNpqzt876la1fsTvUA==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.6.0
+      immutable: 4.3.5
+      source-map-js: 1.2.0
+    dev: false
+
   /section-matter@1.0.0:
     resolution: {integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==}
     engines: {node: '>=4'}
@@ -6874,7 +6891,7 @@ packages:
       vfile-message: 4.0.2
     dev: false
 
-  /vite@5.2.7(@types/node@20.12.2)(lightningcss@1.24.1):
+  /vite@5.2.7(@types/node@20.12.2)(lightningcss@1.24.1)(sass@1.74.1):
     resolution: {integrity: sha512-k14PWOKLI6pMaSzAuGtT+Cf0YmIx12z9YGon39onaJNy8DLBfBJrzg9FQEmkAM5lpHBZs9wksWAsyF/HkpEwJA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -6907,6 +6924,7 @@ packages:
       lightningcss: 1.24.1
       postcss: 8.4.38
       rollup: 4.13.2
+      sass: 1.74.1
     optionalDependencies:
       fsevents: 2.3.3
     dev: false
@@ -6919,7 +6937,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 5.2.7(@types/node@20.12.2)(lightningcss@1.24.1)
+      vite: 5.2.7(@types/node@20.12.2)(lightningcss@1.24.1)(sass@1.74.1)
     dev: false
 
   /volar-service-css@0.0.34(@volar/language-service@2.1.6):
