@@ -18,6 +18,7 @@
 	},
 	"editor.linkedEditing": true,
 	"editor.codeActionsOnSave": {
+		"source.fixAll.stylelint": "explicit",     "source.fixAll": "explicit",
 		"source.organizeImports": "explicit"
 	},
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
