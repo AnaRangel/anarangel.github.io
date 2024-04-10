@@ -1,0 +1,115 @@
+<section class="content">
+  <div class="title-subtittle-content">
+    <h1>¡Hola! Soy Ana</h1>
+
+    <p class="subtittle">
+      Una <span class="subtittle-gradient"> UX Senior</span> con alma de Junior
+    </p>
+  </div>
+  <div class="text-btn">
+    <p class="rol-text">Product Designer | UX Engineer | UX Designer</p>
+    <div class="btn-contanier">
+      <button class="btn btn-primary">Contactame</button>
+      <button class="btn btn-secondary">Descargar CV</button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Inter, serif;
+
+    text-align: center;
+    margin-block: 5.375rem;
+    margin-inline: 0;
+  }
+
+  .title-subtittle-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .subtittle {
+    color: hsl(0deg 0% 100%);
+    font-weight: 500;
+    font-size: 2.25rem;
+  }
+
+  .subtittle-gradient {
+    color: transparent;
+
+    background-image: linear-gradient(to right, hsl(317deg 90% 74%), hsl(258deg 92% 70%));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rol-text {
+    margin: 0;
+
+    color: hsl(250deg 10% 63%);
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+
+  .btn-contanier {
+    display: flex;
+    gap: 1.5rem;
+    margin-block-start: 1.5rem;
+  }
+
+  .btn {
+    inline-size: 10.75rem;
+
+    border-radius: 2.25rem;
+
+    font-size: 1rem;
+    padding-block: 0.75rem;
+    padding-inline: 1rem;
+  }
+
+  .btn-primary {
+    border: none;
+
+    background-image: linear-gradient(to right, hsl(317deg 90% 74%), hsl(258deg 92% 70%));
+  }
+
+  .btn-secondary {
+    position: relative;
+
+    border: none;
+
+    color: hsl(0deg 0% 100%);
+
+    background: none;
+  }
+
+  .btn-secondary::before {
+    position: absolute;
+
+    padding: 0.125rem;
+    border-radius: 3.125rem;
+
+    background: linear-gradient(to right, hsl(271deg 91% 65%), hsl(330deg 81% 60%));
+
+    content: '';
+    inset: 0;
+    mask:
+      linear-gradient(hsl(0deg 0% 100%) 0 0) content-box,
+      linear-gradient(hsl(0deg 0% 100%) 0 0);
+    mask-composite: exclude;
+  }
+</style>
