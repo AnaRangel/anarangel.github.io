@@ -1,0 +1,15 @@
+.grid-auto-fit {
+  --min-item-width: 20rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--min-item-width), 100%), 1fr));
+  row-gap: var(--grid-gap-row, 1rem);
+
+  column-gap: var(--grid-gap-column, 1rem);
+}
+
+
+
+.grid-auto-fit.mx-auto {
+  justify-items: center;
+}
