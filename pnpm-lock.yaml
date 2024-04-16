@@ -70,9 +70,18 @@ devDependencies:
   lint-staged:
     specifier: ^15.2.2
     version: 15.2.2
+  open-props:
+    specifier: ^1.7.2
+    version: 1.7.2
   postcss-html:
     specifier: ^1.6.0
     version: 1.6.0
+  postcss-jit-props:
+    specifier: ^1.0.14
+    version: 1.0.14(postcss@8.4.38)
+  postcss-scss:
+    specifier: ^4.0.9
+    version: 4.0.9(postcss@8.4.38)
   prettier-plugin-astro:
     specifier: ^0.13.0
     version: 0.13.0
@@ -3430,6 +3439,10 @@ packages:
       define-properties: 1.2.1
     dev: true
 
+  /globalyzer@0.1.0:
+    resolution: {integrity: sha512-40oNTM9UfG6aBmuKxk/giHn5nQ8RVz/SS4Ir6zgzOv9/qC3kKZ9v4etGTcJbEl/NyVQH7FGU7d+X1egr57Md2Q==}
+    dev: true
+
   /globby@11.1.0:
     resolution: {integrity: sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==}
     engines: {node: '>=10'}
@@ -3443,6 +3456,10 @@ packages:
 
   /globjoin@0.1.4:
     resolution: {integrity: sha512-xYfnw62CKG8nLkZBfWbhWwDw02CHty86jfPcc2cr3ZfeuK9ysoVPPEUxf21bAD/rWAgk52SuBrLJlefNy8mvFg==}
+    dev: true
+
+  /globrex@0.1.2:
+    resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
     dev: true
 
   /gopd@1.0.1:
@@ -5075,6 +5092,10 @@ packages:
     dependencies:
       mimic-fn: 4.0.0
 
+  /open-props@1.7.2:
+    resolution: {integrity: sha512-RheKypVzZBCSZ6c5iJaFWG0OBqdtql3eRFXRYrSNLh6vGzU8NSAHuq9iJPj++DrpPGs1pqlRa2BelwwBHjX3Xg==}
+    dev: true
+
   /optionator@0.9.3:
     resolution: {integrity: sha512-JjCoypp+jKn1ttEFExxhetCKeJt9zhAgAve5FXHixTvFDW/5aEktX9bufBKLRRMdU7bNtpLfcGu94B3cdEJgjg==}
     engines: {node: '>= 0.8.0'}
@@ -5276,6 +5297,16 @@ packages:
       js-tokens: 8.0.3
       postcss: 8.4.38
       postcss-safe-parser: 6.0.0(postcss@8.4.38)
+    dev: true
+
+  /postcss-jit-props@1.0.14(postcss@8.4.38):
+    resolution: {integrity: sha512-GimU4wen29Qr0DbDaAuWrj4NcErYR5x1rxcEFuPVAwF2HEZALydA8tpTMWEyThK7T2bwFTMFMA4G70pL55xUbw==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      postcss: ^8.2.8
+    dependencies:
+      postcss: 8.4.38
+      tiny-glob: 0.2.9
     dev: true
 
   /postcss-media-query-parser@0.2.3:
@@ -6533,6 +6564,13 @@ packages:
 
   /through@2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
+    dev: true
+
+  /tiny-glob@0.2.9:
+    resolution: {integrity: sha512-g/55ssRPUjShh+xkfx9UPDXqhckHEsHr4Vd9zX55oSdGZc/MD0m3sferOkwWtp98bv+kcVfEHtRJgBVJzelrzg==}
+    dependencies:
+      globalyzer: 0.1.0
+      globrex: 0.1.2
     dev: true
 
   /to-fast-properties@2.0.0:
