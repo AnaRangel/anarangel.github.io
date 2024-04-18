@@ -1,10 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../pages/_Sections/Hero/Hero.astro';
+import Profession from './_Sections/Profession/Profession.astro';
+import Ripley from './_Sections/Ripley/Ripley.astro';
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
     <Hero />
+    <div>
+      <Profession />
+      <Ripley />
+    </div>
   </main>
 </Layout>
+
+<style>
+  div {
+    display: grid;
+    gap: 2rem;
+  }
+</style>
