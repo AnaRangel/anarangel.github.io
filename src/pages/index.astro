@@ -1,6 +1,4 @@
 ---
-import { CardVariant, SimpleCard } from '@components';
-import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
 import Hero from '../pages/_Sections/Hero/Hero.astro';
 import Profession from './_Sections/Profession/Profession.astro';
@@ -8,10 +6,8 @@ import Profession from './_Sections/Profession/Profession.astro';
 
 <Layout title="Welcome to Astro.">
   <main>
-    <section>
-      <Hero />
-    </section>
-    <section class="container">
+    <Hero />
+    <div>
       <Profession />
 
       <div class="grid-auto-fit">
