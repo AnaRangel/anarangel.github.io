@@ -1,0 +1,32 @@
+.container {
+  box-sizing: border-box;
+  inline-size: 100%;
+  margin-inline: auto;
+  padding-inline: var(--container-padding, 1rem);
+
+}
+
+/* Responsive breakpoints */
+@media (--sm-n-above) {
+  .container {
+    max-inline-size:40em;
+  }
+}
+
+@media (--md-n-above) {
+  .container {
+    max-inline-size: 48em;
+  }
+}
+
+@media (--lg-n-above) {
+  .container {
+    max-inline-size: 64em;
+  }
+}
+
+@media (--xl-n-above) {
+  .container {
+    max-inline-size: 80em;
+  }
+}
