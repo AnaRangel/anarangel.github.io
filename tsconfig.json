@@ -13,7 +13,7 @@
     "strictNullChecks": true,
     "paths": {
       "@content/*": ["content/*"],
-      "@components/*": ["components/*"],
+      "@components": ["components"],
       "@common": ["common/index"],
       "@data/*": ["data/*"],
       "@layouts/*": ["layouts/*"],

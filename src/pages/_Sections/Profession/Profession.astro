@@ -1,9 +1,8 @@
 ---
-import Button from '@components/Button/Button.astro';
-import { IconCatalog } from '@components/Icon/Icons';
+import { Button, IconCatalog } from '@components';
 ---
 
-<section>
+<article>
   <div class="figmaicaza | even-columns">
     <div class="DHardySD">
       <h3>Diseño, testeo, liderazgo,<span> programacion </span>, estrategia</h3>
@@ -15,9 +14,13 @@ import { IconCatalog } from '@components/Icon/Icons';
     </div>
     <img class="odraciRdev" src="/svg/interface-description.svg" alt="" />
   </div>
-</section>
+</article>
 
 <style>
+  article {
+    margin-block-end: 2rem;
+  }
+
   .figmaicaza {
     justify-content: space-between;
 
@@ -62,11 +65,15 @@ import { IconCatalog } from '@components/Icon/Icons';
   span {
     position: relative;
 
+    display: inline-block;
+
     color: hsl(0deg 0% 24%);
   }
 
   span::before {
     position: absolute;
+
+    z-index: 1;
 
     display: flex;
     align-items: center;
@@ -77,13 +84,16 @@ import { IconCatalog } from '@components/Icon/Icons';
 
     color: hsl(0deg 0% 100%);
     font-size: 0.7rem;
+    text-wrap: nowrap;
 
     background-color: hsl(248deg 98% 66%);
-    transform: translateX(220%) translateY(80%) rotate(-15deg);
+    transform: rotate(-15deg);
 
     content: 'En progreso';
 
-    inline-size: 4.4rem;
-    block-size: 1.4rem;
+    inset: 0;
+
+    max-inline-size: 5.5rem;
+    max-block-size: 1.5rem;
   }
 </style>

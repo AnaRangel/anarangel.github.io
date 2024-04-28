@@ -1,0 +1,66 @@
+---
+import { CardVariant } from '@components';
+
+interface Props {
+  /**
+   * The class name for the card wrapper.
+   */
+  className?: string;
+
+  /**
+   * The variant of the card.
+   */
+  variant?: CardVariant;
+
+  /**
+   * Determines whether the card has a border or not.
+   */
+  hasBorder?: boolean;
+
+  /**
+   * Determines whether the card should take up the full width or not.
+   */
+  isFullWidth?: boolean;
+}
+
+const { className, variant = CardVariant.primary, hasBorder } = Astro.props;
+
+function getBorderAttributes() {
+  return hasBorder ? { 'data-has-border': true } : {};
+}
+---
+
+<article {...getBorderAttributes()} class:list={[className]} data-variant={variant}>
+  <slot />
+</article>
+
+<style>
+  article {
+    border: 1px solid hsl(0deg 0% 16%);
+    border-radius: 1.5rem;
+  }
+
+  article:not([data-has-border]) {
+    border: none;
+  }
+
+  /***********************************************
+										VARIANTS
+  ***********************************************/
+
+  article[data-variant='primary'] {
+    background: hsl(240deg 2% 9%);
+  }
+
+  article[data-variant='secondary'] {
+    background: linear-gradient(
+      127.36deg,
+      rgb(46 88 255 / 30%) 5.98%,
+      rgb(148 82 255 / 30%) 90.92%
+    );
+  }
+
+  article[data-variant='tertiary'] {
+    background: linear-gradient(90deg, rgb(48 183 202 / 30%) 0%, rgb(33 212 155 / 30%) 100.01%);
+  }
+</style>
