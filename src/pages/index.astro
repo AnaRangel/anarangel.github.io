@@ -1,23 +1,54 @@
 ---
+import { CardVariant, SimpleCard } from '@components';
 import Layout from '../layouts/Layout.astro';
 import Hero from '../pages/_Sections/Hero/Hero.astro';
 import Profession from './_Sections/Profession/Profession.astro';
-import Ripley from './_Sections/Ripley/Ripley.astro';
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
-    <Hero />
-    <div>
+    <section>
+      <Hero />
+    </section>
+    <section class="container">
       <Profession />
-      <Ripley />
-    </div>
+
+      <div class="grid-auto-fit">
+        <SimpleCard
+          cardText="UX Designer para productos financieros de Chile y Perú"
+          cardImage="/public/svg/logo-ripley.svg"
+        />
+
+        <SimpleCard
+          cardText="Mira más sobre el proyecto"
+          cardImage="/public/svg/img-ripley.svg"
+          isInverted={true}
+          variant={CardVariant.secondary}
+          url="/"
+        />
+
+        <SimpleCard
+          cardText="Mira más sobre el proyecto"
+          cardImage="/public/svg/frame_4.svg"
+          variant={CardVariant.tertiary}
+          isInverted={true}
+          url="/"
+        />
+
+        <SimpleCard
+          cardText="Product designer para el equipo de Súper mercados, Jumbo, Santa Isabel y Spid"
+          cardImage="/public/svg/cencosud_logo.svg"
+        />
+      </div>
+    </section>
   </main>
 </Layout>
 
 <style>
-  div {
-    display: grid;
-    gap: 2rem;
+  .grid-auto-fit {
+    --min-item-width: 30rem;
+    --grid-gap: 2rem;
+
+    margin-inline: auto;
   }
 </style>
