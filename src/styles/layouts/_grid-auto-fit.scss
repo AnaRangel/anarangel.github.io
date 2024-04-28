@@ -3,9 +3,7 @@
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(var(--min-item-width), 100%), 1fr));
-  row-gap: var(--grid-gap-row, 1rem);
-
-  column-gap: var(--grid-gap-column, 1rem);
+	gap: var(--grid-gap, 1rem);
 }
 
 
