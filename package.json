@@ -43,6 +43,7 @@
 		"lightningcss": "^1.24.1",
 		"lint-staged": "^15.2.2",
 		"open-props": "^1.7.2",
+		"postcss-custom-media": "^10.0.4",
 		"postcss-html": "^1.6.0",
 		"postcss-jit-props": "^1.0.14",
 		"postcss-scss": "^4.0.9",
