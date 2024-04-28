@@ -1,0 +1,122 @@
+---
+import { CardVariant, CardWrapper, Icon, IconCatalog, IconSize, IconStyle } from '@components';
+
+interface Props {
+  /**
+   * The variant of the card.
+   */
+  variant?: CardVariant;
+
+  /**
+   * Determines whether the card has a border or not.
+   */
+  hasBorder?: boolean;
+
+  /**
+   * Determines whether the card is inverted or not.
+   */
+  isInverted?: boolean;
+
+  /**
+   * The text content of the card.
+   */
+  cardText?: string;
+
+  /**
+   * The image URL for the card.
+   */
+  cardImage?: string;
+
+  /**
+   * The URL to navigate to when the card is clicked.
+   */
+  url?: string;
+}
+const {
+  variant = CardVariant.primary,
+  hasBorder = true,
+  isInverted = false,
+  cardText,
+  cardImage,
+  url,
+} = Astro.props;
+---
+
+<CardWrapper hasBorder={hasBorder} variant={variant}>
+  {
+    // TODO: Look for a better way to render this
+    !isInverted ? (
+      <div class="card-container">
+        <img class="logo-img" src={cardImage} alt="hey" slot="header" />
+        <p class="card-text" slot="content">
+          {cardText}
+        </p>
+      </div>
+    ) : (
+      <a href={url}>
+        <div class="card-container">
+          <div slot="header" class="card-header--with-icon">
+            <h3 class="card-text">{cardText}</h3>
+
+            <Icon
+              classes="card-icon"
+              icon={IconCatalog.arrowRight}
+              size={IconSize['7xl']}
+              iconStyle={IconStyle.bold}
+            />
+          </div>
+          <img src={cardImage} alt="hey" slot="content" />
+        </div>
+      </a>
+    )
+  }
+</CardWrapper>
+
+<style>
+  .card-container {
+    block-size: 26rem;
+    max-inline-size: 38rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-block: 3rem 0;
+    padding-inline: 3rem;
+  }
+
+  .card-container:has(p) {
+    padding-block: 3rem;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 2.25rem;
+    font-family: Inter, sans-serif;
+    line-height: 3.375rem;
+  }
+
+  .logo-img {
+    inline-size: 100%;
+    max-inline-size: 14rem;
+    max-block-size: 5rem;
+  }
+
+  .card-header--with-icon {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-container:hover {
+    --icon-hover-color: var(--color-primary-400);
+    --icon-hover-transform: 0.4rem;
+  }
+</style>
