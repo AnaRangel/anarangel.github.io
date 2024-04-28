@@ -48,11 +48,6 @@ interface Props extends HTMLAttributes<'svg'> {
   iconStyle?: IconStyle;
 
   /**
-   * Whether to apply hover effects to the icon.
-   */
-  hover?: boolean;
-
-  /**
    * The size of the icon. Required.
    */
   size: IconSize;
@@ -60,11 +55,11 @@ interface Props extends HTMLAttributes<'svg'> {
 
 const {
   classes,
-  color,
-  hover,
+
   icon = IconCatalog.arrowDownTray,
   iconStyle = IconStyle.thin,
   size = IconSize.sm,
+  style,
 } = Astro.props;
 
 const strokeWidth = IconStyles[iconStyle];
@@ -73,19 +68,17 @@ const iconPath = iconStyle === IconStyle.solid ? iconPaths.solid : iconPaths.out
 const sizes = IconSizes[size];
 const fill = iconStyle === IconStyle.solid ? `currentColor` : 'none';
 const stroke = iconStyle === IconStyle.solid ? 'none' : `currentColor`;
-
-const fillHover = hover === true && iconStyle === IconStyle.solid ? `currentColor` : `none`;
-const strokeHover = hover === true && iconStyle === IconStyle.solid ? `none` : `currentColor`;
 ---
 
 <svg
-  class:list={[classes, { hover: hover }]}
+  class:list={[classes]}
   data-testid="Icon"
   viewBox="0 0 24 24"
   xmlns="http://www.w3.org/2000/svg"
   stroke-width={strokeWidth}
   focusable="false"
   aria-hidden="true"
+  style={style}
 >
   <path
     fill-rule="evenodd"
@@ -100,17 +93,16 @@ const strokeHover = hover === true && iconStyle === IconStyle.solid ? `none` : `
     fill,
     stroke,
     sizes,
-    'fill-hover': fillHover,
-    'stroke-hover': strokeHover,
-    color,
   }}
 >
   svg {
-    color: var(--color, hsl(0deg 0% 100%));
+    color: var(--icon-color, currentColor);
 
-    transition-timing-function: var(--ease-in-3);
-    transition-duration: 200ms;
-    transition-property: fill stroke;
+    transform: translateX(var(--icon-transform, 0));
+
+    transition-timing-function: var(--ease-elastic-in-out-3);
+    transition-duration: 300ms;
+    transition-property: fill stroke transform;
     inline-size: var(--sizes);
     block-size: var(--sizes);
   }
@@ -118,10 +110,5 @@ const strokeHover = hover === true && iconStyle === IconStyle.solid ? `none` : `
   path {
     fill: var(--fill);
     stroke: var(--stroke);
-  }
-
-  .hover:hover {
-    fill: var(--fill-hover);
-    stroke: var(--stroke-hover);
   }
 </style>
