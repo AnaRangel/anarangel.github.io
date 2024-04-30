@@ -45,7 +45,7 @@
     </ul>
   </nav>
 
-  <svg
+  <!-- <svg
     class="burger svg"
     id="burger"
     height="12"
@@ -107,8 +107,35 @@
     line-height: 2.5rem;
   }
 
-  .svg {
-    z-index: 2;
+  .navbar {
+    position: absolute;
+
+    z-index: 1;
+
+    display: flex;
+
+    background-color: hsla(0deg 0 3% / 80%);
+
+    transform: translateY(-300%);
+
+    opacity: 1;
+
+    transition:
+      transform 300ms ease-in-out,
+      opacity 300ms ease-in-out;
+    inset: 0;
+    inline-size: 100%;
+    block-size: 100svh;
+    padding-block-start: 6.01rem;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    font-size: 1.7rem;
+    line-height: 2.5rem;
   }
 
   .menu {
@@ -127,7 +154,6 @@
   .open {
     transform: translateY(0);
     opacity: 100;
-    padding-inline-start: 1.5rem;
   }
 
   @media (width >= 50rem) {
