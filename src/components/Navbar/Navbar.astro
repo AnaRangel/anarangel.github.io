@@ -1,9 +1,5 @@
----
-
----
-
 <header class="container">
-  <!-- Here it goes the logo -->
+  <!--TO DO: Move the svg to component -->
   <svg
     class="logo svg"
     height="25"
@@ -33,7 +29,7 @@
   </svg>
 
   <!-- Navigation Section -->
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <ul class="list">
       <li class="listItem">
         <a href="http://www.google.com">Portfolio</a>
@@ -44,22 +40,30 @@
       </li>
       <li class="dots">&#183;</li>
       <li>
-        <!-- Here it goes the toggle button for the lang -->
+        <!-- TO DO: Here it goes the toggle button for the lang -->
       </li>
     </ul>
   </nav>
 
-  <svg
+  <!-- <svg
     class="burger svg"
+    id="burger"
     height="12"
     viewBox="0 0 18 12"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M0 12V10H18V12H0ZM0 7V5H18V7H0ZM0 2V0H18V2H0Z" fill="white"></path>
-  </svg>
+    <path d="M0 12V10H18V12H0ZM0 7V5H18V7H0ZM0 2V0H18V2H0Z" fill="white">
+			
+		</path>
+  </svg> -->
+
+  <span class="burger menu"></span>
+  <span class="burger menu"></span>
+  <span class="burger menu"></span>
 </header>
 
+<!----------- Style to the navbar comp ----------->
 <style>
   :root {
     --color-bg: hsla(0deg 0% 0% 0.5);
@@ -67,20 +71,64 @@
   }
 
   .container {
+    position: relative;
+    z-index: 10;
+
     display: flex;
-    inline-size: auto;
 
     justify-content: space-between;
+    inline-size: auto;
     padding-inline: 1.5rem;
     padding-block: 2rem;
   }
 
-  .svg {
-    inline-size: 3rem;
+  .navbar {
+    position: absolute;
+
+    z-index: 1;
+
+    display: flex;
+
+    background-color: hsla(0deg 0 3% / 80%);
+
+    transform: translateY(-300%);
+
+    opacity: 1;
+
+    transition:
+      transform 300ms ease-in-out,
+      opacity 300ms ease-in-out;
+    inset: 0;
+    inline-size: 100%;
+    block-size: 100svh;
+    padding-block-start: 6.01rem;
   }
 
-  .navbar {
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+  }
+
+  .menu {
+    inline-size: 0.3rem;
+    block-size: 0.1rem;
+
+    border-radius: 1rem;
+
+    background-color: hsl(0deg 0% 100%);
+  }
+
+  .dots {
     display: none;
+  }
+
+  .open {
+    transform: translateY(0);
+    opacity: 100;
   }
 
   @media (width >= 50rem) {
@@ -106,13 +154,23 @@
     }
   }
 
+  /* TO DO: update the width into a variable */
   @media (width >= 50rem) {
     .navbar {
-      display: flex;
+      display: contents;
+      border-radius: 0.5rem;
+
+      background-color: var(--color-bg);
+
+      transform: translateY(0);
+      inset-inline-start: 28rem;
+      inset: 0;
+      padding-block-start: 1.6rem;
     }
 
     .list {
       display: flex;
+      flex-direction: row;
       align-items: center;
 
       block-size: 2rem;
@@ -132,11 +190,21 @@
     }
 
     .dots {
+      display: flex;
+
       font-size: 2.5rem;
     }
 
-    .burger {
+    .burger,
+    .menu {
       display: none;
     }
   }
 </style>
+
+{/*----------- function to the navbar comp -----------*/}
+<script is:inline>
+  document.querySelector('.burger').addEventListener('click', () => {
+    document.querySelector('.navbar').classList.toggle('open');
+  });
+</script>
