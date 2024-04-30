@@ -1,0 +1,89 @@
+---
+import IconAna from '../../public/svg/ana-logo.svg';
+import Behance from '../../public/svg/behance.svg';
+import Github from '../../public/svg/github.svg';
+import Instagram from '../../public/svg/ig.svg';
+import Linkedin from '../../public/svg/linkedIn.svg';
+import Placeholder from '../../public/svg/placeholder.svg';
+import Twitch from '../../public/svg/twitch.svg';
+---
+
+<!-- TODO: Crear componente svg para iconos -->
+<footer class="footer">
+  <div class="container">
+    <div class="column1">
+      <img class="logo-ana" src={IconAna.src} alt="logo ana" />
+      <div class="social">
+        <p>Redes Sociales</p>
+        <ul class="social-icons">
+          <li><img class="icon" src={Behance.src} alt="logo ana" /></li>
+          <li><img class="icon" src={Github.src} alt="logo ana" /></li>
+          <li><img class="icon" src={Twitch.src} alt="logo ana" /></li>
+          <li><img class="icon" src={Instagram.src} alt="logo ana" /></li>
+          <li><img class="icon" src={Linkedin.src} alt="logo ana" /></li>
+        </ul>
+      </div>
+    </div>
+    <div class="column2">
+      <ul class="contribution">
+        <li><img class="logo" src={Placeholder.src} alt="logo ana" /></li>
+        <li><img class="logo" src={Placeholder.src} alt="logo ana" /></li>
+        <li><img class="logo" src={Placeholder.src} alt="logo ana" /></li>
+        <li><img class="logo" src={Placeholder.src} alt="logo ana" /></li>
+        <li><img class="logo" src={Placeholder.src} alt="logo ana" /></li>
+      </ul>
+      <p>Quienes han contribuido en el desarrollo</p>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>&copy; 2024 Proudly Powered by Ana Rangel</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    block-size: 9.9375rem;
+
+    border: 1px;
+
+    background: linear-gradient(to right, hsl(240deg 92% 5%), hsl(240deg 4% 5%));
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1.5rem;
+    padding-inline: 4.5rem;
+  }
+
+  .column1 {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .social {
+    inline-size: 100%;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-block-start: 1rem;
+  }
+
+  .icon {
+    block-size: 1.5rem;
+  }
+
+  .contribution,
+  .copyright {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo {
+    inline-size: 2.9375rem;
+    block-size: 2.9375rem;
+    margin-block-end: 1rem;
+  }
+</style>
