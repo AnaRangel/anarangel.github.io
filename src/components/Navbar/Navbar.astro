@@ -1,8 +1,9 @@
 <header class="nav-container">
-  <!--TO DO: Move the svg to component -->
+  <!-- TODO: Move the svg to component -->
   <svg
     class="logo svg"
     height="25"
+    width="35"
     viewBox="0 0 35 25"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +30,7 @@
   </svg>
 
   <!-- Navigation Section -->
-  <nav class="navbar" id="navbar">
+  <nav class="navbar" id="main-navbar" data-status="close" aria-hidden="true">
     <ul class="list">
       <li class="list-item">
         <a href="http://www.google.com">Portfolio</a>
@@ -45,15 +46,15 @@
     </ul>
   </nav>
 
-  <div class="burger">
-    <span class="bar1"></span>
-    <span class="bar2"></span>
-    <span class="bar3"></span>
+  <div class="burger" data-status="close">
+    <span class="bars bar-top"></span>
+    <span class="bars bar-middle"></span>
+    <span class="bars bar-bottom"></span>
   </div>
 </header>
 
 <!----------- Style to the navbar comp ----------->
-<style>
+<style lang="scss">
   :root {
     --color-bg: hsla(0deg 0% 0% 0.5);
     --color-menu: hsla(0deg 0 100%);
@@ -80,15 +81,11 @@
     z-index: 1;
 
     display: flex;
-
     justify-content: flex-end;
-
     padding-inline-end: 2rem;
 
     background-color: hsla(0deg 0 3% / 80%);
-
     transform: translateY(-300%);
-
     opacity: 1;
 
     transition:
@@ -98,6 +95,13 @@
     inline-size: 100%;
     block-size: 100svh;
     padding-block-start: 7rem;
+
+    &[data-status='open'] {
+      background-color: var(--color-menu-open);
+      transform: translateY(0);
+      opacity: 100;
+      backdrop-filter: blur(0.1rem);
+    }
   }
 
   .list {
@@ -107,10 +111,6 @@
 
     font-size: 1.7rem;
     line-height: 2.5rem;
-  }
-
-  .svg {
-    z-index: 2;
   }
 
   .dots {
@@ -123,7 +123,7 @@
 
     z-index: 2;
 
-    inline-size: 3.75rem;
+    inline-size: 2rem;
     block-size: 2.8125rem;
 
     transform: rotate(0deg);
@@ -135,13 +135,13 @@
       inset 0.25s ease-in-out;
   }
 
-  span {
+  .bars {
     position: absolute;
     inset-inline-start: 0;
 
     display: block;
     inline-size: 100%;
-    block-size: 0.5625rem;
+    block-size: 0.3rem;
 
     border-radius: 0.5625rem;
 
@@ -155,37 +155,32 @@
       inset 0.25s ease-in-out;
   }
 
-  .open {
-    background-color: var(--color-menu-open);
-    transform: translateY(0);
-    opacity: 100;
-    backdrop-filter: blur(0.1rem);
+  .bar-middle {
+    inset-block-start: 0.65rem;
   }
 
-  .bar2 {
-    inset-block-start: 1.125rem;
+  .bar-bottom {
+    inset-block-start: 1.25rem;
   }
 
-  .bar3 {
-    inset-block-start: 2.25rem;
-  }
+  .burger[data-status='open'] {
+    .bar-top {
+      inset-block-start: 1.125rem;
 
-  .open-bar1 {
-    inset-block-start: 1.125rem;
+      transform: rotate(135deg);
+    }
 
-    transform: rotate(135deg);
-  }
+    .bar-middle {
+      inset-inline-start: -3.75rem;
 
-  .open-bar2 {
-    inset-inline-start: -3.75rem;
+      opacity: 0;
+    }
 
-    opacity: 0;
-  }
+    .bar-bottom {
+      inset-block-start: 1.125rem;
 
-  .open-bar3 {
-    inset-block-start: 1.125rem;
-
-    transform: rotate(-135deg);
+      transform: rotate(-135deg);
+    }
   }
 
   @media (width >= 50rem) {
@@ -219,7 +214,6 @@
     }
   }
 
-  /* TO DO: update the width into a variable */
   @media (width >= 50rem) {
     .navbar {
       display: contents;
@@ -243,10 +237,6 @@
       list-style: none;
     }
 
-    .svg {
-      inline-size: 3.5rem;
-    }
-
     .list-item {
       padding-inline: 0.5rem;
 
@@ -264,8 +254,7 @@
       font-size: 2.5rem;
     }
 
-    .burger,
-    .menu {
+    .burger {
       display: none;
     }
   }
@@ -273,13 +262,23 @@
 
 {/*----------- function to the navbar comp -----------*/}
 <script is:inline>
+  const navBar = document.querySelector('.navbar');
+  const burgerMenu = document.querySelector('.burger');
+  const dataStatus = 'data-status';
+
   // Animation to the three spans, if get touch, will be a X
   document.querySelector('.burger').addEventListener('click', () => {
-    document.querySelector('.navbar').classList.toggle('open');
-    document.querySelector('.bar1').classList.toggle('open-bar1');
-    document.querySelector('.bar2').classList.toggle('open-bar2');
-    document.querySelector('.bar3').classList.toggle('open-bar3');
+    const isOpen = navBar.getAttribute(dataStatus) === 'open';
+
+    if (isOpen) {
+      navBar.setAttribute(dataStatus, 'close');
+      burgerMenu.setAttribute(dataStatus, 'close');
+    } else {
+      navBar.setAttribute(dataStatus, 'open');
+      burgerMenu.setAttribute(dataStatus, 'open');
+    }
   });
+
   let lastScrollPosition = 0;
 
   window.addEventListener('scroll', () => {

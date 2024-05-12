@@ -1,6 +1,6 @@
 ---
 import { CardVariant, Footer, Navbar, SimpleCard } from '@components';
-import Layout from '../layouts/Layout.astro';
+import Layout from '@layouts/Layout.astro';
 import Hero from '../pages/_Sections/Hero/Hero.astro';
 import Profession from './_Sections/Profession/Profession.astro';
 ---
@@ -45,6 +45,10 @@ import Profession from './_Sections/Profession/Profession.astro';
 </Layout>
 
 <style>
+  main {
+    padding-block-start: 4rem;
+  }
+
   .grid-auto-fit {
     --min-item-width: 30rem;
     --grid-gap: 2rem;
