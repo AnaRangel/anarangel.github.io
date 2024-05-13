@@ -1,7 +1,7 @@
 <header class="nav-container">
   <!-- TODO: Move the svg to component -->
   <svg
-    class="logo svg"
+    class="logo"
     height="25"
     width="35"
     viewBox="0 0 35 25"
@@ -30,7 +30,7 @@
   </svg>
 
   <!-- Navigation Section -->
-  <nav class="navbar" id="main-navbar" data-status="close" aria-hidden="true">
+  <nav class="navbar" data-status="close" aria-hidden="true">
     <ul class="list">
       <li class="list-item">
         <a href="http://www.google.com">Portfolio</a>
@@ -41,7 +41,7 @@
       </li>
       <li class="dots">&#183;</li>
       <li>
-        <!-- TO DO: Here it goes the toggle button for the lang -->
+        <!-- TODO: Here it goes the toggle button for the lang -->
       </li>
     </ul>
   </nav>
@@ -115,6 +115,10 @@
 
   .dots {
     display: none;
+  }
+
+  .logo {
+    z-index: 10;
   }
 
   .burger {
@@ -267,7 +271,7 @@
   const dataStatus = 'data-status';
 
   // Animation to the three spans, if get touch, will be a X
-  document.querySelector('.burger').addEventListener('click', () => {
+  burgerMenu.addEventListener('click', () => {
     const isOpen = navBar.getAttribute(dataStatus) === 'open';
 
     if (isOpen) {
