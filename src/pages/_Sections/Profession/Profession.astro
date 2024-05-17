@@ -3,16 +3,16 @@ import { Button, IconCatalog } from '@components';
 ---
 
 <article>
-  <div class="figmaicaza | even-columns">
-    <div class="DHardySD">
+  <div class="container | even-columns">
+    <div class="titleContainer">
       <h3>Diseño, testeo, liderazgo,<span> programacion </span>, estrategia</h3>
-      <p class="Berth92">
+      <p class="text-content">
         Lorem ipsum dolor sit amet consectetur. Lacinia sem urna ac egestas pellentesque adipiscing
         aliquam enim ultricies.
       </p>
       <Button invert afterIcon={IconCatalog.arrowDownTray}>Saber más de mi</Button>
     </div>
-    <img class="odraciRdev" src="/svg/interface-description.svg" alt="" />
+    <img class="svg-container" src="/svg/interface-description.svg" alt="" />
   </div>
 </article>
 
@@ -21,7 +21,7 @@ import { Button, IconCatalog } from '@components';
     margin-block-end: 2rem;
   }
 
-  .figmaicaza {
+  .container {
     justify-content: space-between;
 
     border: 1px solid hsl(0deg 0% 16%);
@@ -36,13 +36,13 @@ import { Button, IconCatalog } from '@components';
     margin-inline: auto;
   }
 
-  .DHardySD {
+  .titleContainer {
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
 
-  .Berth92 {
+  .text-content {
     color: hsl(236deg 18% 54%);
     font-weight: 400;
     font-size: 1.25rem;
@@ -50,7 +50,7 @@ import { Button, IconCatalog } from '@components';
     line-height: 150%;
   }
 
-  .odraciRdev {
+  .svg-container {
     margin-inline-start: auto;
 
     margin-block-start: auto;
