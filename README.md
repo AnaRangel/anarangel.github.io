@@ -11,6 +11,8 @@ Welcome 🌟 My name is Ana, and I'm a UX designer learning to program. I decide
 
 ## Getting Started 🏁
 
+Before starting, here is the [figma with the website design.](https://www.figma.com/design/JZhuiA3nyNRSFWVsunpV4K/Website-Ana-Rangel?node-id=5-1513&t=HMYitHqo325FaatD-1)
+
 Jumpstart your development with `astro-starter` by setting up your project environment. Here's how to get everything ready:
 
 ### 🌠 Create Your Repository from a Template
