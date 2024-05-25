@@ -3,23 +3,23 @@ import { Icon, IconCatalog, IconSize } from '@components';
 ---
 
 <section>
-  <div class="IamTahoma">
-    <div class="Zyruks">
+  <div class="container">
+    <div class="card-container">
       <img src="/svg/logo-ripley.svg" alt="" />
       <p>Lorem ipsum dolor sit amet consectetur.</p>
     </div>
-    <div class="Tyto_Mix">
-      <div class="content-tittle">
+    <div class="card-container-project">
+      <div class="content-title">
         <p class="company-card-tittle">Lorem ipsum dolor sit amet consectetur.</p>
         <Icon icon={IconCatalog.arrowRight} size={IconSize['4xl']} />
       </div>
-      <img class="midudev" src="/svg/img-ripley.svg" alt="" />
+      <img class="img-margin-logo" src="/svg/img-ripley.svg" alt="" />
     </div>
   </div>
 </section>
 
 <style>
-  .IamTahoma {
+  .container {
     display: flex;
     justify-content: space-evenly;
 
@@ -28,7 +28,7 @@ import { Icon, IconCatalog, IconSize } from '@components';
     margin-inline: auto;
   }
 
-  .Zyruks {
+  .card-container {
     align-self: stretch;
     justify-content: space-between;
     padding: 3rem;
@@ -38,7 +38,7 @@ import { Icon, IconCatalog, IconSize } from '@components';
     background: hsl(240deg 4% 5%);
   }
 
-  .Tyto_Mix {
+  .card-container-project {
     padding-block: 3rem 0;
     padding-inline: 3rem;
 
@@ -48,7 +48,7 @@ import { Icon, IconCatalog, IconSize } from '@components';
     background: linear-gradient(127deg, rgb(46 88 255 / 30%) 5.98%, rgb(148 82 255 / 30%) 90.92%);
   }
 
-  .content-tittle {
+  .content-title {
     display: flex;
   }
 
@@ -61,7 +61,7 @@ import { Icon, IconCatalog, IconSize } from '@components';
     text-shadow: 0 0 0.8125rem rgb(255 255 255 / 25%);
   }
 
-  .midudev {
+  .img-margin-logo {
     margin-inline-start: auto;
 
     margin-block-start: auto;
