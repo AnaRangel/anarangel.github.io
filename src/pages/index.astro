@@ -1,17 +1,15 @@
 ---
-import { CardVariant, SimpleCard } from '@components';
-import Footer from '../components/Footer.astro';
-import Layout from '../layouts/Layout.astro';
+import { CardVariant, Footer, Navbar, SimpleCard } from '@components';
+import Layout from '@layouts/Layout.astro';
 import Hero from '../pages/_Sections/Hero/Hero.astro';
 import Profession from './_Sections/Profession/Profession.astro';
 ---
 
 <Layout title="Welcome to Astro.">
+  <Navbar />
   <main>
-    <section>
-      <Hero />
-    </section>
-    <section class="container">
+    <Hero />
+    <div>
       <Profession />
 
       <div class="grid-auto-fit">
@@ -41,12 +39,16 @@ import Profession from './_Sections/Profession/Profession.astro';
           cardImage="/svg/cencosud_logo.svg"
         />
       </div>
-    </section>
+    </div>
   </main>
   <Footer />
 </Layout>
 
 <style>
+  main {
+    padding-block-start: 4rem;
+  }
+
   .grid-auto-fit {
     --min-item-width: 30rem;
     --grid-gap: 2rem;
