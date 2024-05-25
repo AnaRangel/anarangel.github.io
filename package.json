@@ -13,9 +13,6 @@
 		"lint:fix": "eslint . --fix",
 		"format": "prettier --check \"**/*.{js,cjs,mjs,ts,tsx,md,json,astro}\"",
 		"format:fix": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,mdx,json,astro}\"",
-		"stylelint": "stylelint \"**/*.{scss,css,astro}\"",
-		"stylelint-find-rules": "stylelint-find-new-rules",
-		"stylelint:fix": "stylelint \"**/*.{scss,css,astro}\" --fix",
 		"prepare": "husky"
 	},
 	"dependencies": {
@@ -35,10 +32,6 @@
 		"autoprefixer": "^10.4.19",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-astro": "^0.33.1",
-		"eslint-plugin-compat": "^4.2.0",
-		"eslint-plugin-jsx-a11y": "^6.8.0",
-		"eslint-plugin-promise": "^6.1.1",
-		"eslint-plugin-sonarjs": "^0.25.0",
 		"husky": "^9.0.11",
 		"lightningcss": "^1.24.1",
 		"lint-staged": "^15.2.2",
@@ -47,21 +40,6 @@
 		"postcss-html": "^1.6.0",
 		"postcss-jit-props": "^1.0.14",
 		"postcss-scss": "^4.0.9",
-		"prettier-plugin-astro": "^0.13.0",
-		"stylelint": "^16.2.1",
-		"stylelint-color-format": "^1.1.0",
-		"stylelint-config-astro": "^1.0.4",
-		"stylelint-config-html": "^1.1.0",
-		"stylelint-config-rational-order-fix": "^0.1.9",
-		"stylelint-config-standard-scss": "^13.0.0",
-		"stylelint-find-new-rules": "^5.0.0",
-		"stylelint-group-selectors": "^1.0.10",
-		"stylelint-high-performance-animation": "^1.10.0",
-		"stylelint-order": "^6.0.4",
-		"stylelint-rem-over-px": "^1.0.1",
-		"stylelint-scss": "^6.2.1",
-		"stylelint-suitcss": "^5.0.0",
-		"stylelint-use-logical": "^2.1.2",
-		"stylelint-use-logical-spec": "^5.0.1"
+		"prettier-plugin-astro": "^0.13.0"
 	}
 }
