@@ -1,0 +1,48 @@
+---
+type GradientSection = 'home' | 'about' | 'ripley' | 'latam' | 'cencosud';
+
+interface GradientBackgroundProps {
+  section: GradientSection;
+}
+
+const { section } = Astro.props as GradientBackgroundProps;
+
+const gradients: Record<GradientSection, string> = {
+  home: 'radial-gradient(48.42% 48.42% at 49.41% 51.58%, rgba(46, 88, 255, 0.34) 0%, rgba(0, 0, 0, 0.00) 100%)',
+  about:
+    'radial-gradient(48.42% 48.42% at 49.41% 51.58%, rgba(148, 82, 255, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%)',
+  ripley: 'radial-gradient(48.42% 48.42% at 49.41% 51.58%, #1E0D4F 0%, rgba(0, 0, 0, 0.00) 100%)',
+  latam: 'radial-gradient(48.42% 48.42% at 49.41% 51.58%, #061962 0%, rgba(0, 0, 0, 0.00) 100%)',
+  cencosud:
+    'radial-gradient(35.82% 35.18% at 50.01% 50%, rgba(48, 183, 202, 0.30) 0%, rgba(33, 212, 155, 0.00) 100%)',
+};
+
+const gradientStyle = gradients[section];
+---
+
+<div class="gradient-background" style={`--gradient: ${gradientStyle}`}>
+  <slot />
+</div>
+
+<style>
+  .gradient-background {
+    position: absolute;
+    top: -3%;
+    left: 50%;
+    max-height: 1064px;
+    max-width: 1064px;
+    height: 100%;
+    width: 100%;
+    background: var(--gradient);
+    transform: translate(-50%, -50%);
+  }
+
+  @media (max-width: 480px) {
+    .gradient-background {
+      max-height: 514px;
+      max-width: 514px;
+      height: 100%;
+      width: 100%;
+    }
+  }
+</style>
