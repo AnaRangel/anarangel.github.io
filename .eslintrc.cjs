@@ -1,12 +1,5 @@
 module.exports = {
-  extends: [
-    "plugin:astro/recommended",
-    "plugin:sonarjs/recommended",
-    "plugin:compat/recommended",
-    "plugin:promise/recommended",
-    "plugin:astro/jsx-a11y-strict",
-    "prettier",
-  ],
+  extends: ["plugin:astro/recommended", "prettier"],
   overrides: [
     {
       files: ["*.astro"],
