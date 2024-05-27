@@ -1,0 +1,77 @@
+---
+import { TestimonyCard } from '@components';
+import { dataTestimonies } from '@data/testimonies';
+---
+
+<section class="testimonials">
+  <article class="testimonials__item">
+    <h2 class="testimonials__item__title">Lo que mis compañeros y líderes han dicho de mi</h2>
+    <p class="testimonials__item__content">
+      Afortunadamente he trabajado con distintos roles y perfiles, de los cuales he tenido una grata
+      relación y espero algún día volver a trabajar con ellos.
+    </p>
+  </article>
+  <div class="testimonials__cards">
+    {
+      dataTestimonies.map((item) => (
+        <TestimonyCard
+          companyLogoUrl={item.companyLogoUrl}
+          companyName={item.companyName}
+          personFullName={item.personFullName}
+          personJobTitle={item.personJobTitle}
+          testimonyText={item.testimonyText}
+          fullTestimonyUrl={item.fullTestimonyUrl}
+        />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    display: flex;
+    padding: 72px 36px 72px 36px;
+    gap: 48px;
+    opacity: 0px;
+    overflow: hidden;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .testimonials__item {
+    display: grid;
+    gap: 24px;
+    max-width: 444px;
+    height: 240px;
+  }
+  .testimonials__item__title {
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48.41px;
+    text-align: left;
+  }
+  .testimonials__item__content {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #73769e;
+  }
+  .testimonials__cards {
+    flex: 1;
+    overflow-x: auto;
+    display: flex;
+    gap: 48px;
+    width: 100%;
+  }
+
+  @media (max-width: 1000px) {
+    .testimonials {
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
+    }
+  }
+</style>
