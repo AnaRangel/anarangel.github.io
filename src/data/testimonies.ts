@@ -31,7 +31,7 @@ interface DataTestimonies {
 }
 export const dataTestimonies: DataTestimonies[] = [
   {
-    companyLogoUrl: 'public/about-me/neoris_logo.jpg',
+    companyLogoUrl: 'public/assets/images/neoris_logo.jpg',
     companyName: 'Neoris',
     personFullName: 'Jesús Contreras',
     personJobTitle: 'UX Researcher',
@@ -40,7 +40,7 @@ export const dataTestimonies: DataTestimonies[] = [
     fullTestimonyUrl: '',
   },
   {
-    companyLogoUrl: 'public/about-me/bancoRipley_logo.png',
+    companyLogoUrl: 'public/assets/images/bancoRipley_logo.png',
     companyName: 'Banco Ripley',
     personFullName: 'Viviana de Toledo',
     personJobTitle: 'Lead UX I Researcher',
@@ -49,7 +49,7 @@ export const dataTestimonies: DataTestimonies[] = [
     fullTestimonyUrl: '',
   },
   {
-    companyLogoUrl: 'public/about-me/neoris_logo.jpg',
+    companyLogoUrl: 'public/assets/images/neoris_logo.jpg',
     companyName: 'Neoris',
     personFullName: 'Jesús Contreras',
     personJobTitle: 'UX Researcher',
