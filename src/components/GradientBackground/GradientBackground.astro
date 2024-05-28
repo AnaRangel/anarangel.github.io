@@ -8,11 +8,11 @@ export enum GradientColor {
 }
 
 interface GradientBackgroundProps {
-  section: GradientColor;
+  color: GradientColor;
   class?: string;
 }
 
-const { section, class: className } = Astro.props as GradientBackgroundProps;
+const { color, class: className } = Astro.props as GradientBackgroundProps;
 
 const gradients: Record<GradientColor, string> = {
   [GradientColor.blue]:
@@ -27,7 +27,7 @@ const gradients: Record<GradientColor, string> = {
     'radial-gradient(35.82% 35.18% at 50.01% 50%, rgba(48, 183, 202, 0.30) 0%, rgba(33, 212, 155, 0.00) 100%)',
 };
 
-const gradientStyle = gradients[section];
+const gradientStyle = gradients[color];
 const Class = className ? ` ${className}` : '';
 ---
 
