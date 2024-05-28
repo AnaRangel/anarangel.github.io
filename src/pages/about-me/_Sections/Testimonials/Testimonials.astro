@@ -69,6 +69,10 @@ import { dataTestimonies } from '@data/testimonies';
     mask: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   }
 
+  .testimonials__cards:hover .testimonials__cards--marquee {
+    animation-play-state: paused;
+  }
+
   @keyframes animate-carousel-movil {
     0% {
       transform: translateX(58%);
