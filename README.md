@@ -125,11 +125,11 @@ All commands are run from the root of the project, from a terminal:
 - [TypeScript](https://www.typescriptlang.org/)
 - [Open Props](https://open-props.style/)
 
-## Contributing
+## 🚀 Contributing
 
 See [contributing guide](./docs/CONTRIBUTING.md).
 
-## Code of Conduct
+## 🤝 Code of Conduct
 
 See [code of conduct](./docs/CODE_OF_CONDUCT.md).
 
