@@ -8,7 +8,6 @@ import Profession from './_Sections/Profession/Profession.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-  <Navbar />
   <main>
     <GradientBackground color={GradientColor.blue} />
     <Hero />
@@ -45,12 +44,13 @@ import Profession from './_Sections/Profession/Profession.astro';
     </div>
     <Contributors />
   </main>
-  <Footer />
 </Layout>
 
 <style>
   main {
     padding-block-start: 4rem;
+    max-width: 1280px;
+    margin: 0 auto;
   }
 
   .grid-auto-fit {
