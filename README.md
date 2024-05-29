@@ -12,18 +12,18 @@
 
 ## 👀 Table of contents
 
-- [Screenshots](#screenshots)
-- [Description](#description)
-- [Getting Started](#getting-started)
+- [Screenshots](#-screenshots)
+- [Description](#-description)
+- [Getting Started](#-getting-started)
   - [Create your repository from a template](#create-your-repository-from-a-template)
   - [Download your newly created repository](#download-your-newly-created-repository)
   - [Install dependencies](#install-dependencies)
   - [Start developing](#start-developing)
-- [Commands](#commands)
-- [Technologies](#technologies)
-- [Contributing](#contributing)
-- [Code of Conduct](#code-of-conduct)
-- [Contributors](#contributors)
+- [Commands](#%EF%B8%8F-commands)
+- [Technologies](#-technologies)
+- [Contributing](#-contributing)
+- [Code of Conduct](#-code-of-conduct)
+- [Contributors](#%EF%B8%8F-contributors)
 
 ---
 
