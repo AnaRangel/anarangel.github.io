@@ -44,6 +44,56 @@ import { Button, IconCatalog } from '@components';
 
   .hero-headline.flow {
     --flow-spacer: 0.5rem;
+
+    @media (width >= 992px) {
+      --duration: 11s;
+      --drop-shadow-color: hsla(263, 100%, 66%, 0.5);
+
+      position: relative;
+      max-width: 90%;
+      margin-inline: auto;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 154px;
+        height: 157px;
+        background-image: url('/svg/notion-maze.svg');
+        animation: float var(--duration) linear infinite;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 139px;
+        height: 163px;
+        background-image: url('/svg/figma-useberry.svg');
+        animation: float var(--duration) linear infinite;
+      }
+
+      @keyframes float {
+        0% {
+          translate: 0px;
+          filter: drop-shadow(1px 2px 1px var(--drop-shadow-color));
+        }
+        50% {
+          translate: 0px 20px;
+          filter: drop-shadow(2px 4px 8px var(--drop-shadow-color));
+        }
+        100% {
+          translate: 0px;
+          filter: drop-shadow(1px 2px 1px var(--drop-shadow-color));
+        }
+      }
+    }
+
+    @media (width >= 1536px) {
+      max-width: 80%;
+    }
   }
 
   h1 {
