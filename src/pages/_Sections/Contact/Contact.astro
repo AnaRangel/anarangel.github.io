@@ -1,5 +1,5 @@
 ---
-
+import { Button, IconCatalog } from '@components';
 ---
 
 <section class="contact">
@@ -11,26 +11,8 @@
     </p>
   </div>
   <div class="contact__actions">
-    <button class="contact__button--ct"> Contactame </button>
-    <button class="contact__button--cv">
-      <span class="contact__button--cv__text">Descargar CV</span>
-      <span class="contact__button--cv__icon">
-        <svg
-          width="24"
-          height="25"
-          viewBox="0 0 24 25"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M12.8999 3.34543C12.8999 2.84838 12.497 2.44543 11.9999 2.44543C11.5028 2.44543 11.0999 2.84838 11.0999 3.34543V13.6817L7.55422 9.92747C7.21293 9.56611 6.64331 9.54983 6.28194 9.89112C5.92058 10.2324 5.9043 10.802 6.24559 11.1634L11.3456 16.5634C11.5156 16.7434 11.7523 16.8454 11.9999 16.8454C12.2475 16.8454 12.4842 16.7434 12.6542 16.5634L17.7542 11.1634C18.0955 10.802 18.0792 10.2324 17.7179 9.89112C17.3565 9.54983 16.7869 9.56611 16.4456 9.92747L12.8999 13.6817V3.34543Z"
-            fill="white"></path>
-          <path
-            d="M4.1999 15.3454C4.1999 14.8484 3.79696 14.4454 3.2999 14.4454C2.80285 14.4454 2.3999 14.8484 2.3999 15.3454V18.3454C2.3999 20.168 3.87736 21.6454 5.6999 21.6454H18.2999C20.1224 21.6454 21.5999 20.168 21.5999 18.3454V15.3454C21.5999 14.8484 21.197 14.4454 20.6999 14.4454C20.2028 14.4454 19.7999 14.8484 19.7999 15.3454V18.3454C19.7999 19.1739 19.1283 19.8454 18.2999 19.8454H5.6999C4.87148 19.8454 4.1999 19.1739 4.1999 18.3454V15.3454Z"
-            fill="white"></path>
-        </svg>
-      </span>
-    </button>
+    <Button> Contactame </Button>
+    <Button invert afterIcon={IconCatalog.arrowDownTray}>Descargar CV</Button>
   </div>
 </section>
 
@@ -72,60 +54,6 @@
     gap: 24px;
     margin: 0 auto;
   }
-  .contact__button--ct {
-    background: linear-gradient(270deg, #f880d6 -0.7%, #966bf9 100.39%);
-    width: 172px;
-    height: 49px;
-    padding: 12px 16px 12px 16px;
-    border-radius: 2.25rem;
-    color: #000000;
-
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-  }
-
-  .contact__button--cv {
-    height: 49px;
-    padding: 12px 16px 12px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-
-    position: relative;
-    border: none;
-    color: hsl(0deg 0% 100%);
-    background: none;
-
-    &::before {
-      position: absolute;
-
-      padding: 0.125rem;
-
-      border-radius: 3.125rem;
-
-      background: linear-gradient(to right, hsl(271deg 91% 65%), hsl(330deg 81% 60%));
-
-      content: '';
-      inset: 0;
-      mask:
-        linear-gradient(hsl(0deg 0% 100%) 0 0) content-box,
-        linear-gradient(hsl(0deg 0% 100%) 0 0);
-      mask-composite: exclude;
-    }
-  }
-  .contact__button--cv__text {
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-  }
-  .contact__button--cv__icon {
-    width: 24px;
-    height: 24px;
-  }
 
   @media (max-width: 375px) {
     width: 311px;
@@ -142,11 +70,6 @@
       font-size: 20px;
       font-weight: 300;
       line-height: 30px;
-    }
-    .contact__button--ct,
-    .contact__button--cv {
-      width: 100% !important;
-      justify-content: center !important;
     }
   }
 </style>
