@@ -42,10 +42,11 @@ import { dataTestimonies } from '@data/testimonies';
     margin: 0 auto;
   }
   .testimonials__item {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     gap: 24px;
     max-width: 444px;
-    height: 240px;
   }
   .testimonials__item__title {
     font-family: Inter;
@@ -67,6 +68,7 @@ import { dataTestimonies } from '@data/testimonies';
     overflow: hidden;
     width: 100%;
     mask: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    padding: 1rem;
   }
 
   .testimonials__cards--marquee:hover {
