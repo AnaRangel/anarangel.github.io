@@ -4,7 +4,6 @@ import Behance from '../../public/svg/behance.svg';
 import Github from '../../public/svg/github.svg';
 import Instagram from '../../public/svg/ig.svg';
 import Linkedin from '../../public/svg/linkedIn.svg';
-import Placeholder from '../../public/svg/placeholder.svg';
 import Twitch from '../../public/svg/twitch.svg';
 ---
 
@@ -24,16 +23,6 @@ import Twitch from '../../public/svg/twitch.svg';
         </ul>
       </div>
     </div>
-    <div class="column2">
-      <ul class="contribution">
-        <li><img class="logo" src={Placeholder.src} alt="logo ana" /></li>
-        <li><img class="logo" src={Placeholder.src} alt="logo ana" /></li>
-        <li><img class="logo" src={Placeholder.src} alt="logo ana" /></li>
-        <li><img class="logo" src={Placeholder.src} alt="logo ana" /></li>
-        <li><img class="logo" src={Placeholder.src} alt="logo ana" /></li>
-      </ul>
-      <p>Quienes han contribuido en el desarrollo</p>
-    </div>
   </div>
   <div class="copyright">
     <p>&copy; 2024 Proudly Powered by Ana Rangel</p>
@@ -42,44 +31,72 @@ import Twitch from '../../public/svg/twitch.svg';
 
 <style>
   .footer {
-    block-size: 9.9375rem;
-
     margin-block-start: 4rem;
     border: 1px;
-
     background: linear-gradient(to right, hsl(240deg 92% 5%), hsl(240deg 4% 5%));
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .container {
     display: flex;
     justify-content: space-between;
+    padding: 0;
     padding-block: 1.5rem;
     padding-inline: 4.5rem;
+    margin: 0;
+    width: 100%;
   }
 
   .column1 {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+    width: 100%;
+    @media (width <= 570px) {
+      justify-content: center;
+    }
   }
 
   .social {
     inline-size: 100%;
+    width: fit-content;
+  }
+
+  .social p {
+    color: hsl(0deg 0% 100%);
+    width: fit-content;
+    @media (width <= 570px) {
+      text-align: center;
+      justify-content: center;
+    }
+    @media (width <= 570px) {
+      width: 100%;
+    }
   }
 
   .social-icons {
     display: flex;
     gap: 1rem;
     margin-block-start: 1rem;
+    width: fit-content;
   }
 
   .icon {
     block-size: 1.5rem;
+    height: 48px;
+    width: 48px;
   }
 
   .contribution,
   .copyright {
+    color: hsl(0deg 0% 100%);
     display: flex;
     justify-content: center;
+    padding-bottom: 25px;
   }
 
   .logo {
