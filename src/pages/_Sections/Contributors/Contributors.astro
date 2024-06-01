@@ -20,38 +20,38 @@ const dataDevs: Contributor[] = await respDevs.json();
 const dataDesigners: Designer[] = designersData;
 ---
 
-<section class="contribuciones">
-  <p class="contribuciones-title">Quienes han contribuido en el desarrollo y diseño</p>
+<section class="contributions">
+  <p class="contributions-title">Quienes han contribuido en el desarrollo y diseño</p>
 
-  <span class="contribuciones-subtitle">Diseño</span>
-  <div class="contribuidores">
+  <span class="contributions-subtitle">Diseño</span>
+  <div class="contributors">
     {
       dataDesigners.map((designer) => (
-        <a href={designer.html_url} target="_blank" class="contribuidor" title={designer.name}>
+        <a href={designer.html_url} target="_blank" class="contributor" title={designer.name}>
           <img
             src={designer.avatar_url}
             alt={`Avatar ${designer.name}`}
-            class="contribuidores-img"
+            class="contributors__img"
           />
         </a>
       ))
     }
   </div>
 
-  <span class="contribuciones-subtitle">Desarrollo</span>
-  <div class="contribuidores">
+  <span class="contributions-subtitle">Desarrollo</span>
+  <div class="contributors">
     {
-      dataDevs.map((contribuidor) => (
+      dataDevs.map((contributor) => (
         <a
-          href={contribuidor.html_url}
+          href={contributor.html_url}
           target="_blank"
-          class="contribuidor"
-          title={contribuidor.login}
+          class="contributor"
+          title={contributor.login}
         >
           <img
-            src={contribuidor.avatar_url}
-            alt={`Avatar ${contribuidor.login}`}
-            class="contribuidores-img"
+            src={contributor.avatar_url}
+            alt={`Avatar ${contributor.login}`}
+            class="contributors__img"
           />
         </a>
       ))
@@ -60,13 +60,13 @@ const dataDesigners: Designer[] = designersData;
 </section>
 
 <style lang="scss">
-  .contribuciones {
+  .contributions {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 
-    .contribuciones-title {
+    .contributions-title {
       font-size: 40px;
       font-weight: 500;
       line-height: 60px;
@@ -74,7 +74,7 @@ const dataDesigners: Designer[] = designersData;
       margin-bottom: 24px;
     }
 
-    .contribuciones-subtitle {
+    .contributions-subtitle {
       font-size: 24px;
       font-weight: 500;
       line-height: 14px;
@@ -82,7 +82,7 @@ const dataDesigners: Designer[] = designersData;
       margin-bottom: 24px;
     }
 
-    .contribuidores {
+    .contributors {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -96,7 +96,7 @@ const dataDesigners: Designer[] = designersData;
         margin-left: -10px;
       }
 
-      .contribuidores-img {
+      .contributors__img {
         cursor: pointer;
         width: 45px;
         height: 45px;
@@ -136,13 +136,13 @@ const dataDesigners: Designer[] = designersData;
   }
 
   @media only screen and (max-width: 768px) {
-    .contribuciones {
-      .contribuidores {
+    .contributions {
+      .contributors {
         width: calc(100% - 2rem);
         margin-bottom: 32px;
       }
 
-      .contribuidores-img {
+      .contributors-img {
         margin-bottom: 32px;
       }
     }
