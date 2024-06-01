@@ -1,0 +1,342 @@
+<section>
+  <div class="wrapper">
+    <div class="hobbie-card">
+      <div>
+        <img src="/svg/twitch.svg" alt="logo twitch" class="hobbie-twitch" />
+        <p class="hobbie-card-title">Streamer en twitch</p>
+        <p class="hobbie-card-paragraph">
+          He descubierto que ser streamer e interactuar con mi comunidad es divertido y me ha
+          permitido crecer aún mas como profesional
+        </p>
+      </div>
+      <div class="img-twitch-container">
+        <img src="/assets/images/ana-2.jpg" alt="" />
+      </div>
+    </div>
+
+    <div class="hobbie-card">
+      <p class="hobbie-card-title">UX engineer</p>
+      <p class="hobbie-card-paragraph">
+        Hoy en día estoy buscando adquirir mas habilidades, y manejas lenguajes de programación ha
+        sido una excelente forma de mejorar en mi área de UX
+        <div class="hobbies-imgs-group">
+          <img src="/svg/html-logo.svg" alt=" logo" />
+          <img src="/svg/css-logo.svg" alt=" logo" />
+          <img src="/svg/astro-logo.svg" alt=" logo" />
+          <img src="/svg/js-logo.svg" alt=" logo" />
+          <img src="/svg/react-logo.svg" alt=" logo" />
+          <img src="/svg/github-logo.svg" alt=" logo" />
+        </div>
+      </p>
+    </div>
+
+    <div class="hobbie-card">
+      <div>
+        <p class="hobbie-card-title">Voluntariado</p>
+        <p class="hobbie-card-paragraph">
+          Ser voluntaria me ha dado muchas oportunidades laborales y conocer excelentes
+          profesionales, adicional aporto desde mis habilidades de diseño a comunidades de
+          tecnología, dándome tambien experiencia en organización de eventos y conferencias como la <span
+            >JSconf 2024</span
+          >, hackathons, siendo charlista, contribuyendo al open source y más, es una manera de
+          regresarle a la comunidad todo lo que he aprendido y transmitirlo a nuevas generaciones.
+        </p>
+      </div>
+      <div class="voluntariado">
+        <div class="js-chile">
+          <img src="/assets/images/js-chile.png" alt="Javascript Chile" />
+          <p>Javascript Chile</p>
+        </div>
+        <div class="spark-code">
+          <img src="/assets/images/spark-logo.png" alt="Javascript Chile" />
+          <p>Spark code</p>
+        </div>
+        <div class="js-chile-conf">
+          <img src="/assets/images/js-chile-conf-logo.png" alt="Javascript Chile" />
+          <p>Js Conf Chile 2024</p>
+        </div>
+        <div class="women-techmakers">
+          <img src="/assets/images/women-techmakers-logo.png" alt="Javascript Chile" />
+          <p>Women Techmakers VChile</p>
+        </div>
+        <div class="js-venezuela">
+          <img src="/assets/images/js-venezuela-logo.png" alt="Javascript Chile" />
+          <p>Javascript Venezuela</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+  }
+
+  .head-comment {
+    max-width: 63.5rem;
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 2.71875rem;
+    text-align: center;
+    margin: 7.5rem 0 3.75rem 0;
+  }
+
+  .wrapper {
+    display: grid;
+    margin: 0 auto;
+    max-width: 81rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+
+  .hobbie-card {
+    background-color: #0d0d0e;
+    border-radius: 1.5rem;
+    border: 0.0625rem solid #282828;
+    padding: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .hobbie-card-title {
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 3rem;
+      color: #f9f7f9;
+    }
+
+    .hobbie-card-paragraph {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #b1b3d0;
+    }
+
+    &:first-child {
+      grid-column: 1;
+      grid-row: 1/3;
+      width: 24.9375rem;
+
+      .hobbie-twitch {
+        position: relative;
+        width: 40px;
+        top: 5px;
+        margin-bottom: 23px;
+      }
+
+      .hobbie-card-title {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 38px;
+        margin-bottom: 23px;
+      }
+
+      .img-twitch-container {
+        width: 327px;
+        height: 477px;
+        border-radius: 1.5rem;
+        overflow: hidden;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      grid-column: span 2;
+    }
+
+    &:nth-child(2) {
+      .hobbie-card-paragraph {
+        font-size: 24px;
+        line-height: 36px;
+      }
+    }
+
+    .hobbies-imgs-group {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 36px;
+
+      img {
+        width: 80px;
+        aspect-ratio: 1;
+      }
+    }
+
+    &:nth-child(3) {
+      display: flex;
+      flex-direction: row;
+      gap: 36px;
+
+      span {
+        font-weight: 700;
+        color: #fff;
+      }
+
+      .voluntariado {
+        max-width: 282px;
+        width: 100%;
+        position: relative;
+
+        .js-chile,
+        .spark-code,
+        .js-chile-conf,
+        .women-techmakers,
+        .js-venezuela {
+          position: absolute;
+          width: fit-content;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 6px;
+
+          p {
+            width: max-content;
+            font-weight: 600;
+            font-size: 10px;
+            line-height: 9px;
+            padding: 3px 4.5px;
+            border-radius: 20px;
+          }
+        }
+
+        .js-chile {
+          p {
+            background-color: #f7df1e;
+            color: #0d0d0e;
+          }
+          p::after {
+            content: '';
+            position: absolute;
+            width: 17px;
+            height: 20px;
+            background-color: #f7df1e;
+            bottom: 30%;
+            left: -10%;
+            transform: translateX(-50%);
+            clip-path: polygon(50% 85%, 0 100%, 50% 0, 100% 100%);
+            rotate: -35deg;
+          }
+        }
+
+        .spark-code {
+          top: 50%;
+          left: 13%;
+          p {
+            background-color: #bf54de;
+            color: white;
+          }
+
+          p::after {
+            content: '';
+            position: absolute;
+            width: 17px;
+            height: 20px;
+            background-color: #bf54de;
+            bottom: 30%;
+            left: -10%;
+            transform: translateX(-50%);
+            clip-path: polygon(50% 85%, 0 100%, 50% 0, 100% 100%);
+            rotate: -35deg;
+          }
+        }
+
+        .js-chile-conf {
+          top: 25%;
+          left: 35%;
+          p {
+            background-color: #ddcd54;
+            color: #000;
+          }
+
+          p::after {
+            content: '';
+            position: absolute;
+            width: 17px;
+            height: 20px;
+            background-color: #ddcd54;
+            bottom: 30%;
+            left: -10%;
+            transform: translateX(-50%);
+            clip-path: polygon(50% 85%, 0 100%, 50% 0, 100% 100%);
+            rotate: -35deg;
+          }
+        }
+
+        .women-techmakers {
+          top: 5%;
+          left: 70%;
+          p {
+            background-color: #fff;
+            color: #000;
+            width: 105px;
+            text-align: center;
+          }
+
+          p::after {
+            content: '';
+            position: absolute;
+            width: 17px;
+            height: 20px;
+            background-color: #fff;
+            bottom: 40%;
+            left: -5%;
+            transform: translateX(-50%);
+            clip-path: polygon(50% 85%, 0 100%, 50% 0, 100% 100%);
+            rotate: -35deg;
+          }
+        }
+
+        .js-venezuela {
+          top: 60%;
+          left: 65%;
+
+          p {
+            border: 1px solid #f7df1e;
+            color: #f7df1e;
+          }
+
+          p::after {
+            content: '';
+            position: absolute;
+            width: 17px;
+            height: 20px;
+            background-color: #f7df1e;
+            bottom: 30%;
+            left: -10%;
+            transform: translateX(-50%);
+            clip-path: polygon(50% 85%, 0 100%, 50% 0, 100% 100%);
+            rotate: -35deg;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .wrapper {
+      grid-template-columns: repeat(1, 1fr);
+
+      .hobbie-card {
+        &:first-child {
+          width: calc(100% + 32px);
+        }
+        &:nth-child(3) {
+          min-width: 311px;
+          flex-direction: column;
+
+          .voluntariado {
+            max-width: 100%;
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+</style>
