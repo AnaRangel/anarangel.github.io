@@ -11,8 +11,14 @@ import { Button, IconCatalog } from '@components';
     </p>
   </div>
   <div class="contact__actions">
-    <Button> Contactame </Button>
-    <Button invert afterIcon={IconCatalog.arrowDownTray}>Descargar CV</Button>
+    <!--TODO: hacer refactor de el enlace de los botones en el componente -->
+    <a target="_blank" href="#"><Button> Contactame </Button></a>
+    <a
+      target="_blank"
+      download
+      href="https://drive.google.com/file/d/1AarbQ2HUMlMa4ZpA40MfW7OsNMC-Z6OE/view?usp=sharing"
+      ><Button invert afterIcon={IconCatalog.arrowDownTray}>Descargar CV</Button></a
+    >
   </div>
 </section>
 
@@ -24,7 +30,7 @@ import { Button, IconCatalog } from '@components';
     justify-content: center;
     align-items: center;
     gap: 24px;
-    padding: 56px 1rem 56px 1rem;
+    padding: 100px 0rem;
   }
   .contact__content {
     text-align: center;
