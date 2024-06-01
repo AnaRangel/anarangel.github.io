@@ -1,0 +1,322 @@
+---
+import { Button } from '@components';
+import BaseLayout from '@layouts/Base.astro';
+---
+
+<BaseLayout title="Upps! • Ana Rangel">
+  <div class="blobs-bg">
+    <svg viewBox="0 0 100vw 100vw" xmlns="http://www.w3.org/2000/svg" class="noise-bg">
+      <filter id="noise-filter-bg">
+        <feTurbulence type="fractalNoise" baseFrequency="0.6" stitchTiles="stitch"></feTurbulence>
+      </filter>
+
+      <rect
+        width="100%"
+        height="100%"
+        preserveAspectRatio="xMidYMid meet"
+        filter="url(#noise-filter-bg)"></rect>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="svg-blur">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+            result="goo"></feColorMatrix>
+          <feBlend in="SourceGraphic" in2="goo"></feBlend>
+        </filter>
+      </defs>
+    </svg>
+
+    <div class="blobs">
+      <div class="blob"></div>
+      <div class="blob"></div>
+      <div class="blob"></div>
+      <div class="blob"></div>
+      <div class="blob"></div>
+      <div class="blob follower"></div>
+    </div>
+  </div>
+
+  <main class="container-404">
+    <div class="text-wrapper">
+      <h1>404</h1>
+      <h2>Parece que est&aacute;s perdido...</h2>
+      <span>la p&aacute;gina que est&aacute;s buscando no existe.</span>
+    </div>
+
+    <Button invert>Ir al inicio</Button>
+  </main>
+</BaseLayout>
+
+<style>
+  :root {
+    --level-bg: 0;
+    --level-card: 1;
+
+    --base-size: 80%;
+    --blob-blending: hard-light;
+    --blob-size: var(--base-size);
+
+    --color-1: 46, 88, 255;
+    --color-2: 255, 193, 111;
+    --color-3: 148, 82, 255;
+    --color-4: 48, 183, 202;
+    --color-5: 150, 107, 249;
+
+    --color-follower: 250, 134, 206;
+
+    --card-bg: 13, 13, 14;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    font-family: InterVariable, Inter, sans-serif;
+  }
+
+  .container-404 {
+    width: 55vmin;
+    padding: 48px;
+    display: flex;
+    user-select: none;
+    align-items: center;
+    border-radius: 24px;
+    aspect-ratio: 1 / 0.9;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #282828;
+    z-index: var(--level-card);
+    backdrop-filter: blur(20px);
+    background: rgb(var(--card-bg), 0.85);
+    box-shadow: 0 8px 32px 0 rgb(31, 38, 135, 0.37);
+
+    & .text-wrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+
+      & h1 {
+        font-size: 9rem;
+        font-weight: 900;
+        color: transparent;
+        background-clip: text;
+        background-image: linear-gradient(
+          to right,
+          var(--color-primary-400),
+          var(--color-secondary-500)
+        );
+      }
+
+      & h2 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        flex: 1;
+        color: #fff;
+        margin: 24px 0 12px;
+      }
+
+      & span {
+        font-size: 1rem;
+        font-weight: 500;
+        color: hsl(250, 10%, 63%);
+      }
+
+      @media (width < 768px) {
+        & {
+          padding-bottom: 24px;
+        }
+
+        & h1 {
+          font-size: 5rem;
+        }
+
+        & h2 {
+          font-size: 1.25rem;
+        }
+
+        & span {
+          font-size: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .blobs-bg {
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: var(--level-bg);
+    background: linear-gradient(40deg, #080a0f, #001120);
+
+    & .blobs {
+      filter: url(#goo) blur(40px);
+      width: 100%;
+      height: 100%;
+
+      & > .blob {
+        will-change: transform, opacity, background;
+      }
+
+      & .blob {
+        width: var(--blob-size);
+        height: var(--blob-size);
+
+        position: absolute;
+        top: var(--blob-top, 0);
+        left: var(--blob-left, 0);
+
+        opacity: var(--blob-opacity, 1);
+        mix-blend-mode: var(--blob-blending);
+        background: radial-gradient(
+            circle at center,
+            rgb(var(--blob-color), 0.8) 0,
+            rgb(var(--blob-color), 0) 50%
+          )
+          no-repeat;
+
+        transform-origin: var(--blob-origin, center center);
+        animation: var(--blob-animation);
+
+        &:nth-child(1) {
+          --blob-color: var(--color-1);
+          --blob-top: calc(50% - var(--blob-size) / 2);
+          --blob-left: calc(50% - var(--blob-size) / 2);
+          --blob-animation: move-vertical 30s ease infinite;
+        }
+
+        &:nth-child(2) {
+          --blob-color: var(--color-2);
+          --blob-origin: calc(50% - 400px);
+          --blob-top: calc(50% - var(--blob-size) / 2);
+          --blob-left: calc(50% - var(--blob-size) / 2);
+          --blob-animation: move-circle 20s reverse infinite;
+        }
+
+        &:nth-child(3) {
+          --blob-color: var(--color-3);
+          --blob-origin: calc(50% + 400px);
+          --blob-animation: move-circle 40s linear infinite;
+          --blob-top: calc(50% - var(--blob-size) / 2 + 200px);
+          --blob-left: calc(50% - var(--blob-size) / 2 - 500px);
+        }
+
+        &:nth-child(4) {
+          --blob-opacity: 0.7;
+          --blob-color: var(--color-4);
+          --blob-origin: calc(50% - 200px);
+          --blob-top: calc(50% - var(--blob-size) / 2);
+          --blob-left: calc(50% - var(--blob-size) / 2);
+          --blob-animation: move-horizontal 40s ease infinite;
+        }
+
+        &:nth-child(5) {
+          --blob-color: var(--color-5);
+          --blob-size: calc(var(--base-size) * 2);
+          --blob-top: calc(50% - var(--base-size));
+          --blob-left: calc(50% - var(--base-size));
+          --blob-animation: move-circle 20s ease infinite;
+          --blob-origin: calc(50% - 800px) calc(50% + 200px);
+        }
+
+        &.follower {
+          --blob-top: -50%;
+          --blob-left: -50%;
+          --blob-size: 100%;
+          --blob-opacity: 0.7;
+          --blob-animation: none;
+          --blob-origin: 50% 50% 0;
+          --blob-color: var(--color-follower);
+
+          transform: translate(var(--cursor-x), var(--cursor-y));
+        }
+      }
+    }
+
+    & .svg-blur {
+      display: none;
+    }
+
+    & .noise-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      mix-blend-mode: soft-light;
+      opacity: 0.3;
+    }
+  }
+
+  @keyframes move-circle {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes move-vertical {
+    0% {
+      transform: translateY(-50%);
+    }
+    50% {
+      transform: translateY(50%);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+
+  @keyframes move-horizontal {
+    0% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+    50% {
+      transform: translateX(50%) translateY(10%);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const followerBlob = document.querySelector<HTMLDivElement>('.blob.follower');
+    let cursorX = 0;
+    let cursorY = 0;
+    let targetX = 0;
+    let targetY = 0;
+
+    window.addEventListener('mousemove', (event) => {
+      targetX = event.clientX;
+      targetY = event.clientY;
+    });
+
+    function moveBlob() {
+      cursorX += (targetX - cursorX) / 20;
+      cursorY += (targetY - cursorY) / 20;
+
+      followerBlob?.style?.setProperty('--cursor-x', `${Math.round(cursorX)}px`);
+      followerBlob?.style?.setProperty('--cursor-y', `${Math.round(cursorY)}px`);
+      requestAnimationFrame(moveBlob);
+    }
+
+    moveBlob();
+  });
+</script>
