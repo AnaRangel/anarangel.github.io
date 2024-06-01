@@ -31,6 +31,8 @@ interface Props {
    * The URL to navigate to when the card is clicked.
    */
   url?: string;
+
+  hasHover?: boolean;
 }
 const {
   variant = CardVariant.primary,
@@ -39,10 +41,11 @@ const {
   cardText,
   cardImage,
   url,
+  hasHover = false,
 } = Astro.props;
 ---
 
-<CardWrapper hasBorder={hasBorder} variant={variant}>
+<CardWrapper hasBorder={hasBorder} variant={variant} hasHover={hasHover}>
   {
     // TODO: Look for a better way to render this
     !isInverted ? (
