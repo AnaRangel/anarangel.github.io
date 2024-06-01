@@ -15,11 +15,36 @@ import Twitch from '../../public/svg/twitch.svg';
       <div class="social">
         <p>Redes Sociales</p>
         <ul class="social-icons">
-          <li><img class="icon" src={Behance.src} alt="logo ana" /></li>
-          <li><img class="icon" src={Github.src} alt="logo ana" /></li>
-          <li><img class="icon" src={Twitch.src} alt="logo ana" /></li>
-          <li><img class="icon" src={Instagram.src} alt="logo ana" /></li>
-          <li><img class="icon" src={Linkedin.src} alt="logo ana" /></li>
+          <li>
+            <a href="https://www.behance.net/rangelana1a2a6" target="_blank" rel="noopener norefer"
+              ><img class="icon" src={Behance.src} alt="Behance" /></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/AnaRangel" target="_blank" rel="noopener norefer"
+              ><img class="icon" src={Github.src} alt="github" /></a
+            >
+          </li>
+          <li>
+            <a href="https://www.twitch.tv/uxanarangel" target="_blank" rel="noopener norefer"
+              ><img class="icon" src={Twitch.src} alt="Twitch" /></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/ux.ana.rangel/"
+              target="_blank"
+              rel="noopener norefer"><img class="icon" src={Instagram.src} alt="Instagram" /></a
+            >
+          </li>
+
+          <li>
+            <a
+              href="https://www.linkedin.com/in/ux-ana-rangel/"
+              target="_blank"
+              rel="noopener norefer"><img class="icon" src={Linkedin.src} alt="Linkedin" /></a
+            >
+          </li>
         </ul>
       </div>
     </div>
@@ -32,8 +57,8 @@ import Twitch from '../../public/svg/twitch.svg';
 <style>
   .footer {
     margin-block-start: 4rem;
-    border: 1px;
-    background: linear-gradient(to right, hsl(240deg 92% 5%), hsl(240deg 4% 5%));
+    border-top: 1px solid #2f303f;
+    background: radial-gradient(334.99% 90.54% at 0.35% 53.17%, #010119 0%, #0d0d0e 100%);
     width: 100%;
     padding-inline: 0;
     margin-inline: 0;
@@ -85,7 +110,7 @@ import Twitch from '../../public/svg/twitch.svg';
 
   .icon {
     block-size: 1.5rem;
-    height: 48px;
+    height: 32px;
     width: 100%;
     max-width: 48px;
   }
