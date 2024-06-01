@@ -21,16 +21,30 @@ interface Props {
    * Determines whether the card should take up the full width or not.
    */
   isFullWidth?: boolean;
+
+  /**
+   * Determines whether the card should has hover effect or not.
+   */
+  hasHover?: boolean;
 }
 
-const { className, variant = CardVariant.primary, hasBorder } = Astro.props;
+const { className, variant = CardVariant.primary, hasBorder, hasHover } = Astro.props;
 
 function getBorderAttributes() {
   return hasBorder ? { 'data-has-border': true } : {};
 }
+
+function getHoverAttributes() {
+  return hasHover ? { 'data-has-hover': true } : {};
+}
 ---
 
-<article {...getBorderAttributes()} class:list={[className]} data-variant={variant}>
+<article
+  {...getBorderAttributes()}
+  {...getHoverAttributes()}
+  class:list={[className]}
+  data-variant={variant}
+>
   <slot />
 </article>
 
@@ -38,10 +52,18 @@ function getBorderAttributes() {
   article {
     border: 1px solid hsl(0deg 0% 16%);
     border-radius: 1.5rem;
+    transition:
+      border-color 300ms ease-in-out,
+      box-shadow 300ms ease-in-out;
   }
 
   article:not([data-has-border]) {
     border: none;
+  }
+
+  article[data-has-hover]:hover {
+    border: 1px solid white;
+    box-shadow: 0px 0px 22.5px 0px rgba(255, 255, 255, 0.35);
   }
 
   /***********************************************

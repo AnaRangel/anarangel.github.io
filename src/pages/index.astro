@@ -1,5 +1,5 @@
 ---
-import { CardVariant, Footer, GradientBackground, Navbar, SimpleCard } from '@components';
+import { CardVariant, GradientBackground, SimpleCard } from '@components';
 import { GradientColor } from 'components/GradientBackground/GradientBackground.astro';
 import Layout from '@layouts/Layout.astro';
 import Hero from '../pages/_Sections/Hero/Hero.astro';
@@ -7,7 +7,7 @@ import Contact from './_Sections/Contact/Contact.astro';
 import Profession from './_Sections/Profession/Profession.astro';
 ---
 
-<Layout title="Ana Rangel">
+<Layout title="UX Ana Rangel">
   <main>
     <GradientBackground color={GradientColor.blue} />
     <Hero />
@@ -26,6 +26,7 @@ import Profession from './_Sections/Profession/Profession.astro';
           isInverted={true}
           variant={CardVariant.secondary}
           url="/"
+          hasHover
         />
 
         <SimpleCard
@@ -34,6 +35,7 @@ import Profession from './_Sections/Profession/Profession.astro';
           variant={CardVariant.tertiary}
           isInverted={true}
           url="/"
+          hasHover
         />
 
         <SimpleCard
