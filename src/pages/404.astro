@@ -48,7 +48,7 @@ import BaseLayout from '@layouts/Base.astro';
       <span>la p&aacute;gina que est&aacute;s buscando no existe.</span>
     </div>
 
-    <a href="/" class="button">Ir al inicio</a>
+    <Button invert>Ir al inicio</Button>
   </main>
 </BaseLayout>
 
@@ -127,58 +127,6 @@ import BaseLayout from '@layouts/Base.astro';
         font-size: 1rem;
         font-weight: 500;
         color: hsl(250, 10%, 63%);
-      }
-    }
-
-    .button {
-      position: relative;
-      z-index: 1;
-      inline-size: fit-content;
-      padding: 0.75rem 2.5rem;
-      font-size: 1rem;
-      height: 2.5rem;
-      border: none;
-      border-radius: 2.25rem;
-      overflow: hidden;
-      color: #fff;
-      font-weight: 500;
-      transition: font-weight 500ms var(--ease-spring-3);
-      block-size: 2.6rem;
-      background: transparent;
-
-      &:active {
-        font-weight: 800;
-      }
-
-      &::before {
-        inset: 0;
-        z-index: -1;
-        content: '';
-        inline-size: 100%;
-        padding: 0.125rem;
-        position: absolute;
-        will-change: transform;
-        border-radius: 3.125rem;
-        background-size: 200% 200%;
-        background-image: linear-gradient(
-          to right,
-          var(--color-secondary-500),
-          var(--color-primary-400),
-          var(--color-primary-600),
-          var(--color-secondary-600)
-        );
-        transition:
-          transform 0.2s var(--ease-in-out-3),
-          background-position 0.2s var(--ease-in-out-3);
-        mask:
-          linear-gradient(hsl(0deg 0% 100%) 0 0) content-box,
-          linear-gradient(hsl(0deg 0% 100%) 0 0);
-        mask-composite: exclude;
-      }
-
-      &:hover::before {
-        background-position: 100% center;
-        transform: translateX(0%);
       }
     }
   }
