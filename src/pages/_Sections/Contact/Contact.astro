@@ -1,0 +1,75 @@
+---
+import { Button, IconCatalog } from '@components';
+---
+
+<section class="contact">
+  <div class="contact__content">
+    <h2 class="contact__title">¿Listo para dar vida a tus ideas?</h2>
+    <p class="contact__description">
+      Haz clic abajo para conversar conmigo o echa un vistazo a mi CV, para ver cómo puedo impulsar
+      tu proyecto o formar parte de tu equipo
+    </p>
+  </div>
+  <div class="contact__actions">
+    <Button> Contactame </Button>
+    <Button invert afterIcon={IconCatalog.arrowDownTray}>Descargar CV</Button>
+  </div>
+</section>
+
+<style>
+  .contact {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 56px 1rem 56px 1rem;
+  }
+  .contact__content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact__title {
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 60px;
+  }
+  .contact__description {
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 48px;
+  }
+
+  .contact__actions {
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 375px) {
+    width: 311px;
+    .contact {
+      height: 512px;
+      padding: 56px 0px 56px 0px;
+      gap: 36px;
+    }
+    .contact__title {
+      font-size: 32px;
+      line-height: 48px;
+    }
+    .contact__description {
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 30px;
+    }
+  }
+</style>

@@ -75,7 +75,6 @@ const {
 
 <style>
   .card-testimony {
-    /* Estilos para el bloque principal */
     border-radius: 24px;
     border: 1px solid #282828;
     background: #0d0d0e;
@@ -87,24 +86,24 @@ const {
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
+    transition: all 0.2s ease-in-out;
   }
-
+  .card-testimony:hover {
+    transform: scale(1.01);
+  }
   .card-testimony__company {
-    /* Estilos para el contenedor de la compañía */
     display: flex;
     align-items: center;
     gap: 8px;
   }
 
   .card-testimony__company-logo {
-    /* Estilos para el logo de la compañía */
     width: 36px;
     height: 36px;
     border-radius: 50%;
   }
 
   .card-testimony__company-name {
-    /* Estilos para el nombre de la compañía */
     font-family: Inter;
     font-size: 16px;
     font-weight: 600;
@@ -113,14 +112,12 @@ const {
   }
 
   .card-testimony__person {
-    /* Estilos para el contenedor de la persona */
     display: flex;
     flex-direction: column;
     gap: 9px;
   }
 
   .card-testimony__person-name {
-    /* Estilos para el nombre de la persona */
     font-family: Inter;
     font-size: 16px;
     font-weight: 700;
@@ -129,7 +126,6 @@ const {
   }
 
   .card-testimony__person-job {
-    /* Estilos para la profesión de la persona */
     font-family: Inter;
     font-size: 16px;
     font-weight: 400;
@@ -138,7 +134,6 @@ const {
   }
 
   .card-testimony__bio {
-    /* Estilos para el contenedor del testimonio */
     overflow: hidden;
     width: 277px;
     height: 176px;
@@ -146,7 +141,6 @@ const {
   }
 
   .card-testimony__text {
-    /* Estilos para el texto del testimonio */
     font-family: Inter;
     font-size: 14px;
     font-weight: 400;
@@ -156,7 +150,6 @@ const {
   }
 
   .card-testimony__Link {
-    /* Estilos para el enlace al testimonio completo */
     width: 176px;
     height: 49px;
     padding: 12px 16px 12px 16px;
@@ -172,7 +165,6 @@ const {
   }
 
   .card-testimony__Link-text {
-    /* Estilos para el texto del enlace */
     font-family: Inter;
     font-size: 16px;
     font-weight: 500;
@@ -181,7 +173,6 @@ const {
     text-wrap: nowrap;
   }
   .card-testimony__Link-icon {
-    /* Estilos para el icono del enlace */
     width: 24px;
     height: 24px;
     gap: 0px;

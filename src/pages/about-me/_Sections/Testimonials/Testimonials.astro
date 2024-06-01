@@ -11,19 +11,22 @@ import { dataTestimonies } from '@data/testimonies';
       relación y espero algún día volver a trabajar con ellos.
     </p>
   </article>
+
   <div class="testimonials__cards">
-    {
-      dataTestimonies.map((item) => (
-        <TestimonyCard
-          companyLogoUrl={item.companyLogoUrl}
-          companyName={item.companyName}
-          personFullName={item.personFullName}
-          personJobTitle={item.personJobTitle}
-          testimonyText={item.testimonyText}
-          fullTestimonyUrl={item.fullTestimonyUrl}
-        />
-      ))
-    }
+    <div class="testimonials__cards--marquee">
+      {
+        dataTestimonies.map((item) => (
+          <TestimonyCard
+            companyLogoUrl={item.companyLogoUrl}
+            companyName={item.companyName}
+            personFullName={item.personFullName}
+            personJobTitle={item.personJobTitle}
+            testimonyText={item.testimonyText}
+            fullTestimonyUrl={item.fullTestimonyUrl}
+          />
+        ))
+      }
+    </div>
   </div>
 </section>
 
@@ -39,10 +42,11 @@ import { dataTestimonies } from '@data/testimonies';
     margin: 0 auto;
   }
   .testimonials__item {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     gap: 24px;
     max-width: 444px;
-    height: 240px;
   }
   .testimonials__item__title {
     font-family: Inter;
@@ -61,10 +65,39 @@ import { dataTestimonies } from '@data/testimonies';
   }
   .testimonials__cards {
     flex: 1;
-    overflow-x: auto;
+    overflow: hidden;
+    width: 100%;
+    mask: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    padding: 1rem;
+  }
+
+  .testimonials__cards--marquee:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes animate-carousel-movil {
+    0% {
+      transform: translateX(58%);
+    }
+    100% {
+      transform: translateX(calc(-100%));
+    }
+  }
+
+  @keyframes animate-carousel-pc {
+    0% {
+      transform: translateX(58%);
+    }
+    100% {
+      transform: translateX(calc(-100%));
+    }
+  }
+
+  .testimonials__cards--marquee {
+    width: max-content;
     display: flex;
     gap: 48px;
-    width: 100%;
+    animation: animate-carousel-pc 20s linear infinite;
   }
 
   @media (max-width: 1000px) {
@@ -72,6 +105,10 @@ import { dataTestimonies } from '@data/testimonies';
       flex-direction: column;
       align-items: center;
       gap: 48px;
+    }
+
+    .testimonials__cards--marquee {
+      animation: animate-carousel-movil 20s linear infinite;
     }
   }
 </style>
