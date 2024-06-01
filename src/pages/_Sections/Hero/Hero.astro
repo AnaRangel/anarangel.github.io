@@ -26,7 +26,56 @@ import { Button, IconCatalog } from '@components';
   section {
     padding-block: 4rem;
     position: relative;
+    top: -8rem;
     z-index: 1;
+  }
+  h1 {
+    font-size: 2.25rem;
+    text-align: center;
+  }
+
+  .hero-description {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 0;
+    text-align: center;
+  }
+
+  .role-list {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  section .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  @media (width >= 992px) {
+    section {
+      padding: 15rem 0 0rem 0;
+    }
+
+    section .btn-group {
+      flex-direction: row;
+    }
+    h1 {
+      color: hsl(0deg 0% 100%);
+      font-weight: 700;
+      font-size: 4rem;
+      margin-inline: auto;
+    }
+
+    .hero-description {
+      color: hsl(0deg 0% 100%);
+      font-weight: 500;
+      font-size: 2.25rem;
+      margin-inline: auto;
+
+      text-align: center;
+    }
   }
 
   svg {
@@ -96,24 +145,6 @@ import { Button, IconCatalog } from '@components';
     @media (width >= 1536px) {
       max-width: 80%;
     }
-  }
-
-  h1 {
-    color: hsl(0deg 0% 100%);
-    font-weight: 700;
-    font-size: 4rem;
-    margin-inline: auto;
-
-    text-align: center;
-  }
-
-  .hero-description {
-    color: hsl(0deg 0% 100%);
-    font-weight: 500;
-    font-size: 2.25rem;
-    margin-inline: auto;
-
-    text-align: center;
   }
 
   .highlighted-role {
