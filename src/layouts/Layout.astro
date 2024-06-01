@@ -2,6 +2,7 @@
 import '@styles/main.scss';
 
 import { Footer, Navbar } from '@components';
+import BaseLayout from './Base.astro';
 
 interface Props {
   title: string;
@@ -10,17 +11,8 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<!doctype html>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Astro description" />
-  <meta name="viewport" content="width=device-width" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="generator" content={Astro.generator} />
-  <title>{title}</title>
-</head>
-<body>
+<BaseLayout title={title}>
   <Navbar />
   <slot />
   <Footer />
-</body>
+</BaseLayout>
