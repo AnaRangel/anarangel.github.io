@@ -3,13 +3,15 @@ import { GradientBackground } from '@components';
 import { GradientColor } from 'components/GradientBackground/GradientBackground.astro';
 import Layout from '../../layouts/Layout.astro';
 import BasicInfo from './_Sections/BasicInfo/BasicInfo.astro';
+import Hobbies from './_Sections/Hobies/Hobbies.astro';
 import Testimonials from './_Sections/Testimonials/Testimonials.astro';
 ---
 
-<Layout title="Sobre mí • Ana Rangel">
+<Layout title="Welcome to Astro.">
   <main>
     <GradientBackground color={GradientColor.purple} />
     <BasicInfo />
+    <Hobbies />
   </main>
   <Testimonials />
 </Layout>
