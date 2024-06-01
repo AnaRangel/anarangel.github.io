@@ -33,7 +33,7 @@
   <nav class="navbar" data-status="close" aria-hidden="true">
     <ul class="list">
       <li class="list-item">
-        <a href="http://www.google.com">Portfolio</a>
+        <a href="#">Portfolio</a>
       </li>
       <li class="dots">&#183;</li>
       <li class="list-item">
@@ -199,7 +199,9 @@
       position: fixed;
 
       display: flex;
-      gap: 0.6rem;
+      gap: 1.5rem;
+      padding: 0.7rem 1.5rem;
+
       align-items: center;
       border: 0.2px solid hsla(234deg 15% 37% / 100%);
 
@@ -208,10 +210,6 @@
       background-color: #0a0a0a;
       inset-block-start: 1.2rem;
       inset-inline: 0;
-
-      padding-block: 0.3rem;
-
-      padding-inline: 2rem;
 
       inline-size: fit-content;
       margin-inline: auto;
@@ -224,7 +222,7 @@
       border-radius: 0.5rem;
 
       background-color: var(--color-bg);
-
+      padding: 0.75rem 1.5rem;
       transform: translateY(0);
       inset-inline-start: 28rem;
       inset: 0;
@@ -241,11 +239,24 @@
       list-style: none;
     }
 
+    .list-item:hover,
+    .list-item:active {
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(255, 255, 255, 0.24) 0%,
+        rgba(153, 153, 153, 0) 100%
+      );
+
+      color: white;
+    }
+
     .list-item {
       padding-inline: 0.5rem;
 
       font-size: 1.2rem;
       text-decoration: none;
+      font-size: 1rem;
+      color: hsla(234, 15%, 38%, 1);
     }
 
     .hide-navbar {
@@ -256,6 +267,7 @@
       display: flex;
 
       font-size: 2.5rem;
+      color: hsla(234, 15%, 37%, 1);
     }
 
     .burger {

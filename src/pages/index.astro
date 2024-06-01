@@ -4,10 +4,11 @@ import { GradientColor } from 'components/GradientBackground/GradientBackground.
 import Layout from '@layouts/Layout.astro';
 import Contributors from '../pages/_Sections/Contributors/Contributors.astro';
 import Hero from '../pages/_Sections/Hero/Hero.astro';
+import Contact from './_Sections/Contact/Contact.astro';
 import Profession from './_Sections/Profession/Profession.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Ana Rangel">
   <main>
     <GradientBackground color={GradientColor.blue} />
     <Hero />
@@ -41,6 +42,8 @@ import Profession from './_Sections/Profession/Profession.astro';
           cardImage="/svg/cencosud_logo.svg"
         />
       </div>
+
+      <Contact />
     </div>
     <Contributors />
   </main>
