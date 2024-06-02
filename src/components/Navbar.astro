@@ -292,9 +292,11 @@
     const isOpen = navBar.getAttribute(dataStatus) === 'open';
 
     if (isOpen) {
+      document.querySelector('body').style.removeProperty('overflow-y');
       navBar.setAttribute(dataStatus, 'close');
       burgerMenu.setAttribute(dataStatus, 'close');
     } else {
+      document.querySelector('body').style.overflowY = 'hidden';
       navBar.setAttribute(dataStatus, 'open');
       burgerMenu.setAttribute(dataStatus, 'open');
     }
