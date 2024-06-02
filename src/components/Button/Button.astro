@@ -4,6 +4,10 @@ import { Icon, IconCatalog, IconSize, IconStyle } from '@components';
 
 interface Props {
   /**
+   * The unique identifier of the component
+   */
+  id?: string;
+  /**
    * Changes the size of the button, giving it more or less padding
    */
   size?: ButtonSize;
@@ -66,6 +70,7 @@ const {
   beforeIcon,
   afterIcon,
   iconColor = '',
+  id,
 } = Astro.props;
 
 const iconSizeMap = {
@@ -79,6 +84,7 @@ const computedIconSize = iconSizeMap[size];
 ---
 
 <button
+  id={id}
   type={htmlType}
   disabled={isDisabled}
   data-size={size}
