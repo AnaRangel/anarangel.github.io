@@ -55,16 +55,24 @@ import Profession from './_Sections/Profession/Profession.astro';
 </Layout>
 
 <style>
-  main {
-    padding-block-start: 4rem;
-    max-width: 1280px;
+  .grid-auto-fit {
+    max-width: 90%;
     margin: 0 auto;
   }
 
-  .grid-auto-fit {
-    --min-item-width: 30rem;
-    --grid-gap: 2rem;
+  @media (width >= 992px) {
+    main {
+      padding-block-start: 4rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
 
-    margin-inline: auto;
+    .grid-auto-fit {
+      --min-item-width: 30rem;
+      --grid-gap: 2rem;
+
+      margin-inline: auto;
+      max-width: 100%;
+    }
   }
 </style>
