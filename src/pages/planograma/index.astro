@@ -1,0 +1,176 @@
+---
+import { CardWrapper, GradientBackground } from '@components';
+import { GradientColor } from 'components/GradientBackground/GradientBackground.astro';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout title="Ana Rangel | Planograma">
+  <main>
+    <GradientBackground color={GradientColor.cyan} />
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="/svg/cencosud_logo.svg" alt="" class="hero__image" />
+      <h1 class="hero__title">Planogramas</h1>
+      <p class="hero__description">
+        Las alertas y gestión de planogramas presentó un desafió bastante interesante, ya que haba
+        que lidiar con dos tipos de usuarios, los que gestionan en tiendas más los que crean y
+        envían los planogramas, eran objetivos distintos pero que iban de la mano y para digitalizar
+        de manera mas óptima había que entender todo el proceso desde el inicio
+      </p>
+      <div class="hero__card-container">
+        <CardWrapper>
+          <div class="card" data-variant="primary">
+            <h2 class="card__title">Metodología</h2>
+            <p class="card__subtitle">Design thinking</p>
+          </div>
+        </CardWrapper>
+        <CardWrapper>
+          <div class="card" data-variant="primary">
+            <h2 class="card__title">Tiempo</h2>
+            <p class="card__subtitle">3 Meses</p>
+          </div>
+        </CardWrapper>
+        <CardWrapper>
+          <div class="card" data-variant="primary">
+            <h2 class="card__title">Dispositivos</h2>
+            <p class="card__subtitle">Desktop y mobile</p>
+          </div>
+        </CardWrapper>
+      </div>
+    </section>
+
+    <!-- Context Section -->
+    <section class="context">
+      <h2 class="context__title">Contexto</h2>
+      <p class="context__description">
+        Ya que había dos realidades, se encontró que uno de los problemas principales era la
+        comunicación entre el área que diseña y envía el planograma con la tienda quienes son los
+        que implementan, para que hubiera concientización de ambas partes se decidió realizar un
+        workshop donde se pudieran testear wireframes ya previamente diseñados, y verificar cuáles
+        eran los mayores puntos de dolor de los usuarios
+      </p>
+      <img src="/img/rangel-iphone.png" alt="" class="context__image" />
+
+      <h3 class="context__subtitle">Workshop</h3>
+      <div class="context__card-container">
+        <CardWrapper>
+          <div class="card" data-variant="secondary">
+            <h2 class="card__title">Objetivo 1</h2>
+            <p class="card__subtitle">
+              Detectar cuáles son los principales dolores a la hora de publicar e implementar
+              planogramas
+            </p>
+          </div>
+        </CardWrapper>
+        <CardWrapper>
+          <div class="card" data-variant="secondary">
+            <h2 class="card__title">Objetivo 2</h2>
+            <p class="card__subtitle">
+              Validar si la solución que se generó en wireframes previamente solventa los dolores
+              principales de los usuarios
+            </p>
+          </div>
+        </CardWrapper>
+        <CardWrapper>
+          <div class="card" data-variant="secondary">
+            <h2 class="card__title">Objetivo 3</h2>
+            <p class="card__subtitle">
+              Obtener insights de los usuarios para asi ver que otras mejoras se pueden añadir para
+              un primer MVP y para futuras versiones
+            </p>
+          </div>
+        </CardWrapper>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .hero {
+      padding-block-start: 10rem;
+      display: grid;
+      gap: 24px;
+      place-items: center;
+    }
+    .hero__image {
+      inline-size: 11.875rem;
+    }
+    .hero__title {
+      font-size: 4rem;
+      line-height: 1.4;
+      font-weight: 500;
+      color: white;
+    }
+    .hero__description {
+      font-size: 1.25rem;
+      color: #b1b3d0;
+      text-align: center;
+    }
+    .hero__card-container {
+      display: flex;
+      gap: 32px;
+      align-items: start;
+      justify-content: center;
+      margin-top: 64px;
+      flex-wrap: wrap;
+    }
+    .card {
+      padding: 48px;
+      display: grid;
+      gap: 1.6875rem;
+      max-inline-size: 25.625rem;
+    }
+
+    .context {
+      padding-block-start: 10rem;
+      display: grid;
+      gap: 24px;
+      place-items: center;
+    }
+    .context__title {
+      font-size: 4rem;
+      line-height: 1.4;
+      font-weight: 500;
+      color: white;
+    }
+    .context__description {
+      font-size: 1.25rem;
+      color: #b1b3d0;
+      text-align: center;
+    }
+    .context__image {
+      inline-size: 11.875rem;
+    }
+    .context__subtitle {
+      font-size: 2.25rem;
+      font-weight: 500;
+    }
+    .context__card-container {
+      display: flex;
+      gap: 32px;
+      align-items: start;
+      justify-content: center;
+      margin-top: 64px;
+      flex-wrap: wrap;
+    }
+
+    .card[data-variant='primary'] .card__title {
+      font-size: 32px;
+      font-weight: 400;
+    }
+
+    .card[data-variant='primary'] .card__subtitle {
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    .card[data-variant='secondary'] .card__title {
+      font-size: 32px;
+      font-weight: 400;
+    }
+
+    .card[data-variant='secondary'] .card__subtitle {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  </style>
+</Layout>
