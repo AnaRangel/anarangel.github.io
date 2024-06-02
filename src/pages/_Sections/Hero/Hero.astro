@@ -14,8 +14,16 @@ import { Button, IconCatalog } from '@components';
       <p class="role-list">Product Designer | UX Engineer | UX Designer</p>
       <div class="btn-contanier">
         <div class="btn-group">
-          <Button>Contactame </Button>
-          <Button invert afterIcon={IconCatalog.arrowDownTray}>Contactame</Button>
+          <!--TODO: hacer refactor de el enlace de los botones en el componente -->
+          <a target="_blank" href="https://calendly.com/rangelana1221/30min"
+            ><Button> Contactame </Button></a
+          >
+          <a
+            target="_blank"
+            download
+            href="https://drive.google.com/file/d/1AarbQ2HUMlMa4ZpA40MfW7OsNMC-Z6OE/view?usp=sharing"
+            ><Button invert afterIcon={IconCatalog.arrowDownTray}>Descargar CV</Button></a
+          >
         </div>
       </div>
     </div>
