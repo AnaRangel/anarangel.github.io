@@ -1,0 +1,74 @@
+---
+import { SimpleCard } from '@components';
+---
+
+<div class="study-cases">
+  <section class="card-container latam-airlines">
+    <img
+      class="logo-img"
+      src="/svg/latam-airlines-logo.svg"
+      alt="Latam airlines Logo"
+      width="285"
+    />
+    <h3>Caso de estudio</h3>
+    <p>
+      Proyecto realizado con inteligencia artificial para mejorar la reserva de vuelos con LATAM,
+      esto un proyecto propio donde el diseño UX se encuentra con la innovación para un servicio más
+      rápido y personalizado
+    </p>
+    <img class="logo-img" src="/svg/latam-airlines-1.svg" alt="Latam airlines Logo" />
+  </section>
+  <SimpleCard
+    cardText="Mira más sobre el proyecto"
+    cardImage="/svg/latam-airlines.svg"
+    isInverted={true}
+    url="#"
+    hasHover
+  />
+</div>
+
+<style is:global>
+  .study-cases {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    @media (width >= 992px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .study-cases .latam-airlines {
+    background: linear-gradient(150deg, #0b153f, #0d0e12);
+    border: 1px solid hsl(0deg 0% 16%);
+    border-radius: 1.5rem;
+  }
+
+  .study-cases .card-container:not(.latam-airlines) {
+    block-size: initial;
+
+    & img {
+      margin-top: 6rem;
+      translate: -3rem 0;
+    }
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 3rem;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 2.25rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: #b1b3d0;
+    font-family: Inter, sans-serif;
+  }
+</style>
