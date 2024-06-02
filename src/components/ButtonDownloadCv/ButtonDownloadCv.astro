@@ -1,0 +1,28 @@
+---
+import { Button, IconCatalog } from '@components';
+---
+
+<Button invert id="download-cv-button" afterIcon={IconCatalog.arrowDownTray}> Descargar CV </Button>
+
+<script is:inline>
+  const button = document.getElementById('download-cv-button');
+
+  function downloadCV() {
+    button.disabled = true;
+    // TODO: Averiguar si hay alguna forma menos trucha de capturar el evento de descarga
+    setTimeout(() => {
+      button.disabled = false;
+    }, 1000);
+    const url = 'https://drive.google.com/uc?export=download&id=1AarbQ2HUMlMa4ZpA40MfW7OsNMC-Z6OE';
+    const anchorElement = document.createElement('a');
+    anchorElement.download = 'cv ana rangel eng.pdf';
+    anchorElement.href = url;
+    anchorElement.dispatchEvent(
+      new MouseEvent('click', { bubbles: true, cancelable: true, view: window })
+    );
+  }
+
+  if (button) {
+    button.addEventListener('click', () => downloadCV());
+  }
+</script>
