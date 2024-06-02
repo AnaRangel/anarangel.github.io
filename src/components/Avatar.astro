@@ -59,6 +59,7 @@
 
     document.addEventListener('keydown', (e) => {
       if (e.code === konamiCode[konamiCodePosition]) {
+        e.preventDefault();
         konamiCodePosition++;
         if (konamiCodePosition === konamiCode.length) {
           activateEasterEgg();
