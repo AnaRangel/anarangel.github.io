@@ -134,9 +134,19 @@ import BaseLayout from '@layouts/Base.astro';
         color: hsl(250, 10%, 63%);
       }
 
+      @media (width >= 1280px) {
+        & {
+          padding-top: 2.5rem;
+        }
+
+        & span {
+          font-size: 1.5rem;
+        }
+      }
+
       @media (width < 768px) {
         & {
-          padding-bottom: 24px;
+          padding-bottom: 48px;
         }
 
         & h1 {
@@ -144,11 +154,12 @@ import BaseLayout from '@layouts/Base.astro';
         }
 
         & h2 {
-          font-size: 1.25rem;
+          font-size: 1.75rem;
         }
 
         & span {
-          font-size: 0.5rem;
+          font-size: 1.3rem;
+          line-height: 1.5;
         }
       }
     }
