@@ -65,7 +65,14 @@
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-dasharray="8.71 8.71"></path>
-    <g filter="url(#filter0_d_704_1649)">
+    <g id="main-logo" filter="url(#filter0_d_704_1649)">
+      <rect
+        id="background-logo"
+        x="559.741"
+        y="294.877"
+        width="180.519"
+        height="179.274"
+        rx="29.879"></rect>
       <rect
         x="559.741"
         y="294.877"
@@ -297,37 +304,6 @@
         fill="black"></path>
     </g>
     <defs style="opacity: none">
-      <filter
-        id="filter0_d_704_1649"
-        x="523.637"
-        y="258.773"
-        width="252.726"
-        height="251.481"
-        filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
-      >
-        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-        <feColorMatrix
-          in="SourceAlpha"
-          type="matrix"
-          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-          result="hardAlpha"></feColorMatrix>
-        <feMorphology
-          radius="7.46974"
-          operator="dilate"
-          in="SourceAlpha"
-          result="effect1_dropShadow_704_1649"></feMorphology>
-        <feOffset></feOffset>
-        <feGaussianBlur stdDeviation="14.317"></feGaussianBlur>
-        <feComposite in2="hardAlpha" operator="out"></feComposite>
-        <feColorMatrix
-          type="matrix"
-          values="0 0 0 0 0.179167 0 0 0 0 0.343333 0 0 0 0 1 0 0 0 0.3 0"></feColorMatrix>
-        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_704_1649"
-        ></feBlend>
-        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_704_1649" result="shape"
-        ></feBlend>
-      </filter>
       <radialGradient
         id="paint0_radial_704_1649"
         cx="0"
@@ -455,6 +431,25 @@
         ></rect>
       </clipPath>
     </defs>
+    <defs>
+      <linearGradient id="Gradient1">
+        <stop offset="0%" stop-color="#7A5FFF">
+          <animate
+            attributeName="stop-color"
+            values="#7A5FFF; #01FF89; #7A5FFF"
+            dur="4s"
+            repeatCount="indefinite"></animate>
+        </stop>
+
+        <stop offset="100%" stop-color="#01FF89">
+          <animate
+            attributeName="stop-color"
+            values="#01FF89; #7A5FFF; #01FF89"
+            dur="4s"
+            repeatCount="indefinite"></animate>
+        </stop>
+      </linearGradient>
+    </defs>
   </svg>
 </div>
 
@@ -493,6 +488,13 @@
       opacity: 0;
       transition: opacity 300ms ease;
     }
+  }
+
+  #background-logo {
+    fill: url(#Gradient1);
+    scale: 1.1;
+    transform-origin: center;
+    filter: blur(12px);
   }
 
   @keyframes dash {
