@@ -3,19 +3,37 @@ import '@styles/main.scss';
 
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description = '¡Hola! Soy Ana, una UX Senior con alma de Junior.' } = Astro.props;
+
+const baseUrl = `https://${Astro.site?.host || 'anarangel.github.io'}`;
+const ogImage = new URL('/img/og.jpg', baseUrl);
 ---
 
 <!doctype html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Astro description" />
-  <meta name="viewport" content="width=device-width" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="generator" content={Astro.generator} />
   <title>{title}</title>
+
+  <meta charset="UTF-8" />
+  <meta name="description" content={description} />
+
+  <meta name="viewport" content="width=device-width" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <meta name="generator" content={Astro.generator} />
+
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={Astro.url} />
+  <meta property="og:site_name" content="UX Ana Rangel" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+
+  <meta name="robots" content="index, follow" />
 </head>
 <body>
   <slot />
