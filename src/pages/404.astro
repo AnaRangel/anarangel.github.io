@@ -50,6 +50,8 @@ import BaseLayout from '@layouts/Base.astro';
 
     <Button invert>Ir al inicio</Button>
   </main>
+
+  <div id="avatar"></div>
 </BaseLayout>
 
 <style>
@@ -274,6 +276,22 @@ import BaseLayout from '@layouts/Base.astro';
     }
   }
 
+  #avatar {
+    width: 100px;
+    height: 100px;
+    background-image: url('https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_44c8c18dc7014a08928711873084ecfb/default/dark/3.0');
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    top: -100px;
+    transform: translateX(-50%);
+    rotate: 180deg;
+    z-index: 99;
+    animation:
+      moveUp 1s forwards 5s,
+      moveDown 1s forwards 10s;
+  }
+
   @keyframes move-circle {
     0% {
       transform: rotate(0deg);
@@ -309,6 +327,24 @@ import BaseLayout from '@layouts/Base.astro';
       transform: translateX(-50%) translateY(-10%);
     }
   }
+
+  @keyframes moveUp {
+    0% {
+      top: -100px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+
+  @keyframes moveDown {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: -100px;
+    }
+  }
 </style>
 
 <script>
@@ -334,5 +370,12 @@ import BaseLayout from '@layouts/Base.astro';
     }
 
     moveBlob();
+
+    const sound = new Audio('/sounds/huh.wav');
+    const avatar = document.getElementById('avatar');
+
+    avatar?.addEventListener('animationstart', () => {
+      sound.play();
+    });
   });
 </script>
