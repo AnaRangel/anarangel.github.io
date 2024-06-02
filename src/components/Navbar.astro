@@ -244,20 +244,18 @@
       list-style: none;
     }
 
-    .list-item:hover,
-    .list-item:active {
+    .list-item:has(a:hover),
+    .list-item:has(a:active) {
       background: radial-gradient(
         50% 50% at 50% 50%,
         rgba(255, 255, 255, 0.24) 0%,
         rgba(153, 153, 153, 0) 100%
       );
-
       color: white;
     }
 
     .list-item {
       padding-inline: 0.5rem;
-
       font-size: 1.2rem;
       text-decoration: none;
       font-size: 1rem;
