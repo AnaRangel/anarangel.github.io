@@ -1,5 +1,6 @@
 ---
 import { GradientBackground } from '@components';
+import Contact from '/Users/anarangel/Projects/anarangel.github.io/src/pages/_Sections/Contact/Contact.astro';
 import { GradientColor } from 'components/GradientBackground/GradientBackground.astro';
 import Layout from '../../layouts/Layout.astro';
 import BasicInfo from './_Sections/BasicInfo/BasicInfo.astro';
@@ -14,4 +15,13 @@ import Testimonials from './_Sections/Testimonials/Testimonials.astro';
     <Hobbies />
   </main>
   <Testimonials />
+  <Contact />
 </Layout>
+
+<style>
+  main {
+    padding-block-start: 4rem;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+</style>
