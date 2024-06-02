@@ -5,10 +5,11 @@ import { Button, IconCatalog } from '@components';
 <article>
   <div class="container | even-columns">
     <div class="title-container">
-      <h3>Diseño, testeo, liderazgo,<span> programacion </span>, estrategia</h3>
+      <h3>Diseño, testeo, liderazgo,<span> programacion,</span> estrategia</h3>
       <p class="text-content">
-        Lorem ipsum dolor sit amet consectetur. Lacinia sem urna ac egestas pellentesque adipiscing
-        aliquam enim ultricies.
+        En cada proyecto, mi objetivo es armonizar la estética, la funcionalidad y la eficiencia
+        para entregar soluciones que no solo satisfacen necesidades del usuario, sino que haya un
+        aporte de valor que tiene para el negocio
       </p>
       <a href="/about-me"
         ><Button invert afterIcon={IconCatalog.arrowDownTray}>Saber más de mi</Button></a
@@ -20,7 +21,7 @@ import { Button, IconCatalog } from '@components';
 
 <style>
   article {
-    margin-block-end: 2rem;
+    margin-block-end: 1rem;
   }
 
   .container {
@@ -30,38 +31,38 @@ import { Button, IconCatalog } from '@components';
     border-radius: 1.5rem;
 
     background: hsl(240deg 4% 5%);
-    padding-block-start: 3rem;
-    padding-inline-start: 3.5rem;
+    padding: 1.5rem;
 
-    inline-size: 100%;
+    inline-size: 90%;
     max-inline-size: 81rem;
     margin-inline: auto;
   }
 
   .title-container {
+    width: 90%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
     gap: 2rem;
   }
 
   .text-content {
+
     color: #b1b3d0;
+    text-align: center;
     font-weight: 400;
     font-size: 1.25rem;
     font-style: normal;
     line-height: 150%;
   }
 
-  .svg-container {
-    margin-inline-start: auto;
-
-    margin-block-start: auto;
-  }
-
   h3 {
     color: hsl(0deg 0% 100%);
-    font-weight: 400;
-    font-size: 2.5rem;
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    text-align: center;
   }
 
   span {
@@ -97,5 +98,32 @@ import { Button, IconCatalog } from '@components';
 
     max-inline-size: 5.5rem;
     max-block-size: 1.5rem;
+  }
+
+  @media (width >= 992px) {
+    article {
+      margin-block-end: 2rem;
+    }
+
+    .container {
+      padding-block-start: 3rem;
+      padding-inline-start: 3.5rem;
+
+      inline-size: 100%;
+    }
+
+    .title-container {
+      width: 100%;
+      align-items: start;
+    }
+
+    .text-content {
+      text-align: left;
+    }
+
+    h3 {
+      font-size: 2.5rem;
+      text-align: left;
+    }
   }
 </style>

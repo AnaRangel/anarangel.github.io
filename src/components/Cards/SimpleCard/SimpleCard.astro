@@ -77,16 +77,17 @@ const {
 
 <style>
   .card-container {
-    block-size: 26rem;
-    max-inline-size: 38rem;
+    block-size: 20.25rem;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
 
-    padding-block: 3rem 0;
-    padding-inline: 3rem;
+
     color: white;
+    padding: 3rem 3rem 0 3rem;
+
   }
 
   .card-container:has(p) {
@@ -95,15 +96,15 @@ const {
 
   h3 {
     font-weight: 600;
-    font-size: 2.25rem;
-    line-height: 2.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   p {
     font-weight: 500;
-    font-size: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-family: Inter, sans-serif;
-    line-height: 3.375rem;
   }
 
   .logo-img {
@@ -122,5 +123,26 @@ const {
   .card-container:hover {
     --icon-color: var(--color-primary-400);
     --icon-transform: 0.4rem;
+  }
+
+  @media (width >= 992px) {
+    .card-container {
+      block-size: 26rem;
+      max-inline-size: 38rem;
+
+      align-items: start;
+      padding-block: 3rem 0;
+      padding-inline: 3rem;
+    }
+
+    h3 {
+      font-size: 2.25rem;
+      line-height: 2.25rem;
+    }
+
+    p {
+      font-size: 2.25rem;
+      line-height: 3.375rem;
+    }
   }
 </style>
