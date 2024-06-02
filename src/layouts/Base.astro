@@ -1,6 +1,8 @@
 ---
 import '@styles/main.scss';
 
+import { Avatar } from '@components';
+
 interface Props {
   title: string;
 }
@@ -19,4 +21,5 @@ const { title } = Astro.props;
 </head>
 <body>
   <slot />
+  <Avatar />
 </body>

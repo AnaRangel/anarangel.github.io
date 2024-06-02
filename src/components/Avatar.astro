@@ -1,0 +1,87 @@
+---
+
+---
+
+<div id="avatar"></div>
+
+<style>
+  #avatar {
+    width: 100px;
+    height: 100px;
+    background-image: url('https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_44c8c18dc7014a08928711873084ecfb/default/dark/3.0');
+    background-size: cover;
+    position: fixed;
+    left: 50%;
+    top: -100px;
+    transform: translateX(-50%);
+    rotate: 180deg;
+    z-index: 99;
+  }
+
+  .show {
+    animation:
+      moveDown 1s forwards,
+      moveUp 1s forwards 5s;
+  }
+
+  @keyframes moveUp {
+    100% {
+      top: -100px;
+    }
+  }
+
+  @keyframes moveDown {
+    100% {
+      top: 0;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const sound = new Audio('/sounds/huh.wav');
+    sound.volume = 0.5;
+    const avatar = document.getElementById('avatar');
+
+    const konamiCode = [
+      'ArrowUp',
+      'ArrowUp',
+      'ArrowDown',
+      'ArrowDown',
+      'ArrowLeft',
+      'ArrowRight',
+      'ArrowLeft',
+      'ArrowRight',
+      'KeyB',
+      'KeyA',
+    ];
+    let konamiCodePosition = 0;
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === konamiCode[konamiCodePosition]) {
+        konamiCodePosition++;
+        if (konamiCodePosition === konamiCode.length) {
+          activateEasterEgg();
+          konamiCodePosition = 0;
+        }
+      } else {
+        konamiCodePosition = 0;
+      }
+    });
+
+    function activateEasterEgg() {
+      sound.play();
+      avatar?.classList.add('show');
+
+      setTimeout(() => {
+        avatar?.classList.remove('show');
+      }, 6000);
+    }
+
+    if (window.location.pathname === '/404') {
+      setTimeout(() => {
+        activateEasterEgg();
+      }, 5000);
+    }
+  });
+</script>
