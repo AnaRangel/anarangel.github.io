@@ -90,7 +90,9 @@
       }, 6000);
     }
 
-    if (window.location.pathname === '/404') {
+    const paths = ['/', '/about-me'];
+
+    if (!paths.includes(window.location.pathname)) {
       setTimeout(() => {
         activateEasterEgg();
       }, 5000);
