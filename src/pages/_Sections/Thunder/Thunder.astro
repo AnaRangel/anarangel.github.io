@@ -1,0 +1,71 @@
+<article class="thunder-card">
+  <div class="container-thunder | even-columns">
+    <div class="thunder-description">
+      <div class="thunder-logo">
+        <img src="/svg/thunder-logo.svg" alt="logo" />
+      </div>
+      <div class="thunder-content">
+        <p class="thunder-text">
+          Es mi próximo sistema de diseño, actualmente en proceso de creación, con un compromiso
+          firme hacia la accesibilidad universal. Aún no está listo, pero mi meta es clara: crear
+          una experiencia accesible y funcional para distintos productos
+        </p>
+      </div>
+    </div>
+
+    <img class="svg-container" src="/svg/thunder-buttons.svg" alt="" />
+  </div>
+</article>
+
+<style>
+  .thunder-card {
+    margin-block-end: 2rem;
+    display: grid;
+    grid-column: 1 / 3;
+    padding-top: 2rem;
+  }
+
+  .container-thunder {
+    justify-content: space-between;
+
+    border: 1px solid hsl(0deg 0% 16%);
+    border-radius: 1.5rem;
+
+    background: hsl(240deg 4% 5%);
+    padding-block-start: 3rem;
+    padding-inline-start: 3.5rem;
+
+    inline-size: 90%;
+    max-inline-size: 81rem;
+    margin-inline: auto;
+    padding: 48px 32px 0 56px;
+
+    @media (width >= 992px) {
+      inline-size: 90%;
+    }
+  }
+
+  .thunder-description {
+    gap: 24px;
+  }
+
+  .thunder-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .svg-thunder {
+    filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.35));
+  }
+
+  .shine-title {
+    text-shadow: 0 0 30px #fafafa;
+  }
+
+  .thunder-text {
+    color: hsla(236, 18%, 54%, 1);
+    line-height: 30px;
+    font-weight: 400;
+    font-size: 20px;
+  }
+</style>
