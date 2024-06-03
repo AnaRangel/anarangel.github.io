@@ -1,3 +1,7 @@
+---
+import { LanguageToggle } from '@components';
+---
+
 <header class="nav-container">
   <!-- TODO: Move the svg to component -->
   <svg
@@ -44,8 +48,8 @@
         <a href="/about-me">Sobre mí</a>
       </li>
       <li class="dots">&#183;</li>
-      <li>
-        <!-- TODO: Here it goes the toggle button for the lang -->
+      <li class="toogle-container">
+        <LanguageToggle />
       </li>
     </ul>
   </nav>
@@ -119,6 +123,14 @@
 
   .dots {
     display: none;
+  }
+
+  .toogle-container {
+    width: 80vw;
+    max-width: 638px;
+    @media (width >= 800px) {
+      width: 106.4px;
+    }
   }
 
   .logo {
