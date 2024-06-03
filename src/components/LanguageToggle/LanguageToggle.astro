@@ -42,16 +42,25 @@
     background: transparent;
     border: none;
     display: flex;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 600;
     justify-content: center;
-    line-height: normal;
-    padding: 7.5px 24px;
+    padding: 0 24px;
     transition:
       400ms ease-in-out color,
       400ms ease-in-out background;
     width: 50%;
   }
+
+  @media (width >= 800px) {
+    .action-language {
+      font-size: 14px;
+      line-height: normal;
+      padding-top: 7.5px;
+      padding-bottom: 7.5px;
+    }
+  }
+
   .action-selected {
     background: linear-gradient(#2e58ff, #9452ff);
     color: hsl(0deg 0% 100%);
