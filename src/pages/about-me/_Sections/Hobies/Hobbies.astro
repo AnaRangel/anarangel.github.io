@@ -14,7 +14,17 @@ import { Tooltip } from '@components';
         </p>
       </div>
       <div class="img-twitch__container">
-        <img src="/assets/images/ana-2.jpg" alt="Ana foto audifonos" />
+        <picture>
+          <source srcset="/assets/images/ana-2.avif" type="image/avif" />
+          <source srcset="/assets/images/ana-2.webp" type="image/webp" />
+          <img
+            src="/assets/images/ana-2.webp"
+            alt="Ana foto audifonos"
+            loading="lazy"
+            decoding="async"
+            fetchpriority="low"
+          />
+        </picture>
       </div>
     </div>
 
