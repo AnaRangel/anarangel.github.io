@@ -5,3 +5,4 @@ export { default as Footer } from './Footer.astro';
 export * from './GradientBackground';
 export * from './Icon';
 export { default as Navbar } from './Navbar.astro';
+export { default as Tooltip } from './Tooltip/Tooltip.astro';
