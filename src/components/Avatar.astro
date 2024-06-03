@@ -8,7 +8,7 @@
   #avatar {
     width: 100px;
     height: 100px;
-    background-image: url('https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_44c8c18dc7014a08928711873084ecfb/default/dark/3.0');
+    background-image: none;
     background-size: cover;
     position: fixed;
     left: 50%;
@@ -70,12 +70,23 @@
       }
     });
 
+    const images = [
+      'https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_44c8c18dc7014a08928711873084ecfb/default/dark/3.0',
+      'https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_cc133e9f94a54767a5949fa19e889e12/default/dark/3.0',
+    ];
+
     function activateEasterEgg() {
+      if (!avatar || avatar.classList.contains('show')) return;
+
+      const random = Math.floor(Math.random() * images.length);
+      avatar.style.backgroundImage = `url(${images[random]})`;
+
       sound.play();
-      avatar?.classList.add('show');
+      avatar.classList.add('show');
 
       setTimeout(() => {
-        avatar?.classList.remove('show');
+        avatar.classList.remove('show');
+        avatar.style.backgroundImage = 'none';
       }, 6000);
     }
 
