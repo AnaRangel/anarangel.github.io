@@ -15,7 +15,14 @@ import { Tooltip } from '@components';
         Graduada en Publicidad y mercadeo, cursos de UX/UI, manejo de inteligencia artificial, y
         programación
       </p>
-      <img src="/img/emoji.gif" alt="" class="gif" />
+      <img
+        class="gif"
+        src="/img/emoji.webp"
+        alt="Emoji"
+        width="100"
+        decoding="async"
+        fetchpriority="high"
+      />
     </div>
 
     <div class="grid2 info-card">
@@ -53,7 +60,11 @@ import { Tooltip } from '@components';
         </p>
       </div>
       <div class="img-wrapper">
-        <img src="/img/ana-1.jpg" alt="Ana" />
+        <picture>
+          <source srcset="/img/ana-1.avif" type="image/avif" />
+          <source srcset="/img/ana-1.webp" type="image/webp" />
+          <img src="/img/ana-1.webp" alt="Ana" decoding="async" fetchpriority="high" />
+        </picture>
       </div>
     </div>
 
@@ -187,10 +198,6 @@ import { Tooltip } from '@components';
     line-height: 1.5rem;
     color: #b1b3d0;
     margin: 0;
-  }
-
-  .gif {
-    width: 6.25rem;
   }
 
   .img-group,

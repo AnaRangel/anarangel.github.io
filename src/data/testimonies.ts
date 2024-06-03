@@ -40,7 +40,7 @@ export const dataTestimonies: DataTestimonies[] = [
     fullTestimonyUrl: '',
   },
   {
-    companyLogoUrl: '/assets/images/bancoRipley_logo.png',
+    companyLogoUrl: '/assets/images/bancoRipley_logo.webp',
     companyName: 'Banco Ripley',
     personFullName: 'Viviana de Toledo',
     personJobTitle: 'Lead UX I Researcher',
@@ -58,7 +58,7 @@ export const dataTestimonies: DataTestimonies[] = [
     fullTestimonyUrl: '',
   },
   {
-    companyLogoUrl: '/assets/images/timining.png',
+    companyLogoUrl: '/assets/images/timining.webp',
     companyName: 'Timining',
     personFullName: 'Caro Retamal',
     personJobTitle: 'Sr. Product Manager',
