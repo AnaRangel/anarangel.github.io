@@ -1,6 +1,8 @@
 ---
 import MainLogo from './MainLogo.astro';
 import ToolsLogos from './ToolsLogos.astro';
+
+const OFFSET_Y = 1.2;
 ---
 
 <MainLogo />
@@ -70,14 +72,38 @@ import ToolsLogos from './ToolsLogos.astro';
         stroke-dasharray="8.71 8.71"></path>
     </g>
     <g id="logos">
-      <use x="38.7552" y="144.889" width="113" height="113" href="#useberry"></use>
-      <use x="258.931" y="333.941" width="82" height="82" href="#notion"></use>
-      <use x="115.913" y="578.105" width="108" height="108" href="#figma"></use>
-      <use x="400.849" y="270.441" width="81" height="81" href="#miro"></use>
-      <use x="855.259" y="335.179" width="81" height="81" href="#maze"></use>
-      <use x="1136.78" y="156.064" width="108" height="108" href="#whimsical"></use>
-      <use x="1181.44" y="497.031" width="82" height="82" href="#hotjar"></use>
-      <use x="1017.26" y="578.105" width="108" height="108" href="#adobe-xd"></use>
+      <g class="group">
+        <use x="38.7552" y="144.889" width="113" height="113" href="#useberry"></use>
+        <text x="59.7552" y={144.889 + 113 * OFFSET_Y} fill="white">Useberry</text>
+      </g>
+      <g class="group">
+        <use x="258.931" y="333.941" width="82" height="82" href="#notion"></use>
+        <text x="274.931" y={333.941 + 85 * OFFSET_Y} fill="white">Notion</text>
+      </g>
+      <g class="group">
+        <use x="115.913" y="578.105" width="108" height="108" href="#figma"></use>
+        <text x="145.913" y={578.105 + 108 * OFFSET_Y} fill="white">Figma</text>
+      </g>
+      <g class="group">
+        <use x="400.849" y="270.441" width="81" height="81" href="#miro"></use>
+        <text x="422.849" y={270.441 + 85 * OFFSET_Y} fill="white">Miro</text>
+      </g>
+      <g class="group">
+        <use x="855.259" y="335.179" width="81" height="81" href="#maze"></use>
+        <text x="873.259" y={335.179 + 85 * OFFSET_Y} fill="white">Maze</text>
+      </g>
+      <g class="group">
+        <use x="1136.78" y="156.064" width="108" height="108" href="#whimsical"></use>
+        <text x="1150.78" y={156.064 + 108 * OFFSET_Y} fill="white">Whimsical</text>
+      </g>
+      <g class="group">
+        <use x="1181.44" y="497.031" width="82" height="82" href="#hotjar"></use>
+        <text x="1198.44" y={497.031 + 86 * OFFSET_Y} fill="white">Hotjar</text>
+      </g>
+      <g class="group">
+        <use x="1017.26" y="578.105" width="108" height="108" href="#adobe-xd"></use>
+        <text x="1032.26" y={578.105 + 108 * OFFSET_Y} fill="white">Adobe XD</text>
+      </g>
     </g>
     <g id="main-logo">
       <use x="515.74" y="250.64" width="254" height="254" href="#logo-ana"></use>
