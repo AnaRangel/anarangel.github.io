@@ -7,3 +7,4 @@ export * from './Icon';
 export { default as LanguageToggle } from './LanguageToggle/LanguageToggle.astro';
 export { default as Navbar } from './Navbar.astro';
 export { default as Tooltip } from './Tooltip/Tooltip.astro';
+export { default as Avatar } from './Avatar.astro';

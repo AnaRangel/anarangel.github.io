@@ -1,6 +1,8 @@
 ---
 import '@styles/main.scss';
 
+import { Avatar } from '@components';
+
 interface Props {
   title: string;
   description?: string;
@@ -37,4 +39,5 @@ const ogImage = new URL('/img/og.jpg', baseUrl);
 </head>
 <body>
   <slot />
+  <Avatar />
 </body>
