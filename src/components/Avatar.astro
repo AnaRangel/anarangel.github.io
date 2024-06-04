@@ -90,9 +90,11 @@
       }, 6000);
     }
 
+    const normalize = (path: string) => path.replace(/\/$/, '');
+
     const paths = ['/', '/about-me'];
-    const normalizedPaths = paths.map((path) => path.replace(/\/$/, ''));
-    const currentPath = window.location.pathname.replace(/\/$/, '');
+    const normalizedPaths = paths.map(normalize);
+    const currentPath = normalize(window.location.pathname);
 
     if (!normalizedPaths.includes(currentPath)) {
       setTimeout(() => {
