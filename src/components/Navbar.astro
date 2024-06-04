@@ -1,3 +1,7 @@
+---
+import { LanguageToggle } from '@components';
+---
+
 <header class="nav-container">
   <!-- TODO: Move the svg to component -->
   <svg
@@ -44,8 +48,8 @@
         <a href="/about-me">Sobre mí</a>
       </li>
       <li class="dots">&#183;</li>
-      <li>
-        <!-- TODO: Here it goes the toggle button for the lang -->
+      <li class="toggle-container">
+        <LanguageToggle />
       </li>
     </ul>
   </nav>
@@ -86,7 +90,6 @@
 
     display: flex;
     justify-content: flex-end;
-    padding-inline-end: 2rem;
 
     background-color: hsla(0deg 0 3% / 80%);
     transform: translateY(-300%);
@@ -109,8 +112,10 @@
   }
 
   .list {
+    align-items: center;
     display: flex;
     flex-direction: column;
+    margin-inline: auto;
     gap: 1.5rem;
 
     font-size: 1.7rem;
@@ -119,6 +124,14 @@
 
   .dots {
     display: none;
+  }
+
+  .toggle-container {
+    width: 65vw;
+    max-width: 638px;
+    @media (width >= 800px) {
+      width: 106.4px;
+    }
   }
 
   .logo {
@@ -244,20 +257,18 @@
       list-style: none;
     }
 
-    .list-item:hover,
-    .list-item:active {
+    .list-item:has(a:hover),
+    .list-item:has(a:active) {
       background: radial-gradient(
         50% 50% at 50% 50%,
         rgba(255, 255, 255, 0.24) 0%,
         rgba(153, 153, 153, 0) 100%
       );
-
       color: white;
     }
 
     .list-item {
       padding-inline: 0.5rem;
-
       font-size: 1.2rem;
       text-decoration: none;
       font-size: 1rem;
@@ -292,9 +303,11 @@
     const isOpen = navBar.getAttribute(dataStatus) === 'open';
 
     if (isOpen) {
+      document.querySelector('body').style.removeProperty('overflow-y');
       navBar.setAttribute(dataStatus, 'close');
       burgerMenu.setAttribute(dataStatus, 'close');
     } else {
+      document.querySelector('body').style.overflowY = 'hidden';
       navBar.setAttribute(dataStatus, 'open');
       burgerMenu.setAttribute(dataStatus, 'open');
     }

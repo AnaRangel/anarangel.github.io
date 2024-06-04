@@ -83,7 +83,7 @@ import BaseLayout from '@layouts/Base.astro';
   }
 
   .container-404 {
-    width: 55vmin;
+    width: 80vmin;
     padding: 48px;
     display: flex;
     user-select: none;
@@ -97,6 +97,10 @@ import BaseLayout from '@layouts/Base.astro';
     backdrop-filter: blur(20px);
     background: rgb(var(--card-bg), 0.85);
     box-shadow: 0 8px 32px 0 rgb(31, 38, 135, 0.37);
+
+    @media (width >= 992px) {
+      width: 55vmin;
+    }
 
     & .text-wrapper {
       display: flex;
@@ -130,9 +134,19 @@ import BaseLayout from '@layouts/Base.astro';
         color: hsl(250, 10%, 63%);
       }
 
+      @media (width >= 1280px) {
+        & {
+          padding-top: 2.5rem;
+        }
+
+        & span {
+          font-size: 1.5rem;
+        }
+      }
+
       @media (width < 768px) {
         & {
-          padding-bottom: 24px;
+          padding-bottom: 48px;
         }
 
         & h1 {
@@ -140,11 +154,12 @@ import BaseLayout from '@layouts/Base.astro';
         }
 
         & h2 {
-          font-size: 1.25rem;
+          font-size: 1.75rem;
         }
 
         & span {
-          font-size: 0.5rem;
+          font-size: 1.3rem;
+          line-height: 1.5;
         }
       }
     }
@@ -157,6 +172,7 @@ import BaseLayout from '@layouts/Base.astro';
     position: absolute;
     z-index: var(--level-bg);
     background: linear-gradient(40deg, #080a0f, #001120);
+    overflow: hidden;
 
     & .blobs {
       filter: url(#goo) blur(40px);

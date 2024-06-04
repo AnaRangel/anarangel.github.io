@@ -1,5 +1,5 @@
 ---
-import { Button, IconCatalog } from '@components';
+import { Button, ButtonDownloadCv } from '@components';
 ---
 
 <section class="contact">
@@ -15,12 +15,7 @@ import { Button, IconCatalog } from '@components';
     <a target="_blank" href="https://calendly.com/rangelana1221/30min"
       ><Button> Contactame </Button></a
     >
-    <a
-      target="_blank"
-      download
-      href="https://drive.google.com/file/d/1AarbQ2HUMlMa4ZpA40MfW7OsNMC-Z6OE/view?usp=sharing"
-      ><Button invert afterIcon={IconCatalog.arrowDownTray}>Descargar CV</Button></a
-    >
+    <ButtonDownloadCv />
   </div>
 </section>
 
@@ -32,7 +27,7 @@ import { Button, IconCatalog } from '@components';
     justify-content: center;
     align-items: center;
     gap: 24px;
-    padding: 100px 0rem;
+    padding: 160px 0rem;
   }
   .contact__content {
     text-align: center;
@@ -52,6 +47,7 @@ import { Button, IconCatalog } from '@components';
     font-size: 32px;
     font-weight: 300;
     line-height: 48px;
+    color: white;
   }
 
   .contact__actions {
@@ -63,21 +59,27 @@ import { Button, IconCatalog } from '@components';
     margin: 0 auto;
   }
 
-  @media (max-width: 375px) {
-    width: 311px;
+  @media (max-width: 400px) {
     .contact {
       height: 512px;
+      width: 90%;
       padding: 56px 0px 56px 0px;
       gap: 36px;
     }
     .contact__title {
-      font-size: 32px;
-      line-height: 48px;
+      font-size: 2rem;
+      line-height: 3rem;
     }
     .contact__description {
-      font-size: 20px;
+      font-size: 1.25rem;
       font-weight: 300;
-      line-height: 30px;
+      line-height: 1.875rem;
+    }
+
+    .contact__actions {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: center;
     }
   }
 </style>

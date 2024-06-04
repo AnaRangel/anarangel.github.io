@@ -1,6 +1,7 @@
 ---
 import { GradientBackground } from '@components';
-import { GradientColor } from 'components/GradientBackground/GradientBackground.astro';
+import Contact from '../_Sections/Contact/Contact.astro';
+import { GradientColor } from '../../components/GradientBackground/GradientBackground.astro';
 import Layout from '../../layouts/Layout.astro';
 import BasicInfo from './_Sections/BasicInfo/BasicInfo.astro';
 import Hobbies from './_Sections/Hobies/Hobbies.astro';
@@ -8,7 +9,7 @@ import Testimonials from './_Sections/Testimonials/Testimonials.astro';
 import Tools from './_Sections/Tools/Tools.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Sobre mí • Ana Rangel">
   <main>
     <GradientBackground color={GradientColor.purple} />
     <BasicInfo />
@@ -16,4 +17,13 @@ import Tools from './_Sections/Tools/Tools.astro';
     <Hobbies />
   </main>
   <Testimonials />
+  <Contact />
 </Layout>
+
+<style>
+  main {
+    padding-block-start: 4rem;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+</style>

@@ -43,7 +43,14 @@ const {
 
 <article class="card-testimony">
   <div class="card-testimony__company">
-    <img src={companyLogoUrl} alt={companyName} class="card-testimony__company-logo" />
+    <img
+      src={companyLogoUrl}
+      alt={companyName}
+      class="card-testimony__company-logo"
+      loading="lazy"
+      decoding="async"
+      fetchpriority="low"
+    />
     <h2 class="card-testimony__company-name">{companyName}</h2>
   </div>
   <div class="card-testimony__person">
@@ -146,7 +153,7 @@ const {
     font-weight: 400;
     line-height: 16.94px;
     text-align: left;
-    color: #73769e;
+    color: #b1b3d0;
   }
 
   .card-testimony__Link {
