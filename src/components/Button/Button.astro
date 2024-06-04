@@ -4,6 +4,18 @@ import { Icon, IconCatalog, IconSize, IconStyle } from '@components';
 
 interface Props {
   /**
+   * The tag to use for the button. It can be either a button or an anchor tag
+   */
+  tag?: 'button' | 'anchor';
+  /**
+   * The URL to navigate to when the anchor is clicked
+   */
+  href?: string;
+  /**
+   * The target attribute specifies where to open the linked document
+   */
+  target?: HTMLAnchorElement['target'];
+  /**
    * The unique identifier of the component
    */
   id?: string;
@@ -60,6 +72,9 @@ interface Props {
 }
 
 const {
+  tag = 'button',
+  href = '',
+  target = '_blank',
   size = ButtonSize.base,
   variant = ButtonVariant.primary,
   invert,
@@ -83,33 +98,67 @@ const iconSizeMap = {
 const computedIconSize = iconSizeMap[size];
 ---
 
-<button
-  id={id}
-  type={htmlType}
-  disabled={isDisabled}
-  data-size={size}
-  data-variant={variant}
-  class:list={['button', { inverted: invert }, { fullWidth: isFullWidth }, className]}
->
-  {
-    beforeIcon && (
-      <Icon
-        icon={beforeIcon}
-        size={computedIconSize}
-        color={iconColor}
-        iconStyle={IconStyle.bold}
-      />
-    )
-  }
+{
+  tag === 'button' ? (
+    <button
+      id={id}
+      type={htmlType}
+      disabled={isDisabled}
+      data-size={size}
+      data-variant={variant}
+      class:list={['button', { inverted: invert }, { fullWidth: isFullWidth }, className]}
+    >
+      {beforeIcon && (
+        <Icon
+          icon={beforeIcon}
+          size={computedIconSize}
+          color={iconColor}
+          iconStyle={IconStyle.bold}
+        />
+      )}
 
-  <slot />
+      <slot />
 
-  {
-    afterIcon && (
-      <Icon icon={afterIcon} size={computedIconSize} color={iconColor} iconStyle={IconStyle.bold} />
-    )
-  }
-</button>
+      {afterIcon && (
+        <Icon
+          icon={afterIcon}
+          size={computedIconSize}
+          color={iconColor}
+          iconStyle={IconStyle.bold}
+        />
+      )}
+    </button>
+  ) : (
+    <a
+      id={id}
+      data-size={size}
+      data-variant={variant}
+      class:list={['button', { inverted: invert }, { fullWidth: isFullWidth }, className]}
+      href={href}
+      target={target}
+    >
+      {beforeIcon && (
+        <Icon
+          icon={beforeIcon}
+          size={computedIconSize}
+          color={iconColor}
+          iconStyle={IconStyle.bold}
+        />
+      )}
+
+      <slot />
+
+      {afterIcon && (
+        <Icon
+          icon={afterIcon}
+          size={computedIconSize}
+          color={iconColor}
+          iconStyle={IconStyle.bold}
+        />
+      )}
+    </a>
+  )
+}
 
 <style lang="scss">
   :root {
