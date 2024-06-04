@@ -164,14 +164,39 @@ const OFFSET_Y = 1.2;
 
 <style>
   .tools {
+    background: #0d0d0e;
+    border: 1px solid #282828;
+    border-radius: 1.5rem;
     position: relative;
-    width: max-content;
-    margin-inline: auto;
-    margin-block: 2rem;
+    padding-block: 20px;
+    margin-top: 3rem;
+    margin-inline: 1rem;
+
+    @media (width >= 1536px) {
+      margin-inline: 0;
+    }
   }
 
-  .tools > svg {
-    margin-inline: auto;
+  #tools-desktop {
+    display: none;
+
+    @media (width >= 768px) {
+      display: initial;
+    }
+  }
+
+  #tools-mobile {
+    width: 100%;
+    min-height: 1000px;
+
+    @media (411px <= width <= 767.98px) {
+      width: 90%;
+      margin-inline: auto;
+    }
+
+    @media (width >= 768px) {
+      display: none;
+    }
   }
 
   .line-dash {
@@ -179,23 +204,37 @@ const OFFSET_Y = 1.2;
   }
 
   .tools-title {
-    position: absolute;
     max-width: 460px;
     font-weight: 500;
     text-align: center;
-    top: 0;
-    left: 50%;
-    translate: -50% 56px;
+    padding-inline: 10px;
+
+    @media (width >= 768px) {
+      margin-inline: auto;
+    }
+
+    @media (width >= 1200px) {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      translate: -50% 56px;
+    }
   }
 
   .group {
-    &:hover text {
-      opacity: 1;
-    }
+    @media (any-hover: hover) {
+      &:hover text {
+        opacity: 1;
+      }
+      & text {
+        opacity: 0;
+        transition: opacity 300ms ease;
+      }
 
-    & text {
-      opacity: 0;
-      transition: opacity 300ms ease;
+      & text {
+        opacity: 0;
+        transition: opacity 300ms ease;
+      }
     }
   }
 
