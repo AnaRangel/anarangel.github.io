@@ -294,9 +294,17 @@ import { LanguageToggle } from '@components';
 
 {/*----------- function to the navbar comp -----------*/}
 <script is:inline>
+  const items = document.querySelectorAll('.list-item  a');
   const navBar = document.querySelector('.navbar');
   const burgerMenu = document.querySelector('.burger');
   const dataStatus = 'data-status';
+
+  items.forEach((anchor) => {
+    anchor.addEventListener('click', () => {
+      navBar.setAttribute(dataStatus, 'open');
+      burgerMenu.click();
+    });
+  });
 
   // Animation to the three spans, if get touch, will be a X
   burgerMenu.addEventListener('click', () => {
