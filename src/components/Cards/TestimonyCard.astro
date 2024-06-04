@@ -43,7 +43,14 @@ const {
 
 <article class="card-testimony">
   <div class="card-testimony__company">
-    <img src={companyLogoUrl} alt={companyName} class="card-testimony__company-logo" />
+    <img
+      src={companyLogoUrl}
+      alt={companyName}
+      class="card-testimony__company-logo"
+      loading="lazy"
+      decoding="async"
+      fetchpriority="low"
+    />
     <h2 class="card-testimony__company-name">{companyName}</h2>
   </div>
   <div class="card-testimony__person">

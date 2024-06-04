@@ -1,0 +1,94 @@
+---
+// TODO: Activar cuando esté integrado con i18n
+// import { getLocale, getSwitcherData, t } from 'i18n:astro'
+// const locale = getLocale()
+// const data = getSwitcherData()
+---
+
+<div class="slider-container">
+  <!--TODO: Cambiar a los anchor y eliminar los button cuando esté integrado i18n -->
+  <button type="button" class="action-language action-left action-selected">Esp</button>
+  <button type="button" class="action-language action-right">Eng</button>
+  <!-- {
+    data.map((e, idx) => {
+      return (
+        <a
+          href={e.href}
+          class:list={[
+            `action-language action-${idx === 0 ? 'left' : 'right'}`,
+            { 'action-selected': e.locale === locale },
+          ]}
+        >
+          {e.locale === 'es' ? 'Esp' : 'Eng'}
+        </a>
+      );
+    })
+  } -->
+</div>
+
+<style>
+  .slider-container {
+    align-items: center;
+    background: #27272a;
+    border-radius: 50px;
+    color: #52525b;
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    width: 100%;
+  }
+  .action-language {
+    align-items: center;
+    background: transparent;
+    border: none;
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+    justify-content: center;
+    padding: 0 24px;
+    transition:
+      400ms ease-in-out color,
+      400ms ease-in-out background;
+    width: 50%;
+  }
+
+  @media (width >= 800px) {
+    .action-language {
+      font-size: 14px;
+      line-height: normal;
+      padding-top: 7.5px;
+      padding-bottom: 7.5px;
+    }
+  }
+
+  .action-selected {
+    background: linear-gradient(#2e58ff, #9452ff);
+    color: hsl(0deg 0% 100%);
+  }
+  .action-left {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+  .action-right {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+</style>
+
+<!-- TODO: Eliminar todo estos script cuando esté integrado con i18n -->
+<script>
+  const btnLeft = document.querySelector('.action-left');
+  const btnRight = document.querySelector('.action-right');
+
+  if (btnLeft && btnRight) {
+    btnLeft.addEventListener('click', () => {
+      btnLeft.classList.add('action-selected');
+      btnRight.classList.remove('action-selected');
+    });
+
+    btnRight.addEventListener('click', () => {
+      btnRight.classList.add('action-selected');
+      btnLeft.classList.remove('action-selected');
+    });
+  }
+</script>

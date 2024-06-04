@@ -1,3 +1,7 @@
+---
+import { Tooltip } from '@components';
+---
+
 <section>
   <p class="head-comment">
     No sólo tengo experiencia en empresas, me gusta contribuir en comunidades y compartir
@@ -11,7 +15,14 @@
         Graduada en Publicidad y mercadeo, cursos de UX/UI, manejo de inteligencia artificial, y
         programación
       </p>
-      <img src="/img/emoji.gif" alt="" class="gif" />
+      <img
+        class="gif"
+        src="/img/emoji.webp"
+        alt="Emoji"
+        width="100"
+        decoding="async"
+        fetchpriority="high"
+      />
     </div>
 
     <div class="grid2 info-card">
@@ -21,11 +32,21 @@
         en equipo y UX. Me apasiona conectar con la audiencia y fomentar el aprendizaje colaborativo
       </p>
       <div class="img-group">
-        <img src="/img/nerdearla-logo.png" alt="Nerdearla" />
-        <img src="/img/cl-js.png" alt="Javascript Chile" />
-        <img src="/img/spark-code-logo.png" alt="Spark Code" />
-        <img src="/img/desafio-latam.png" alt="Desafio Latam" />
-        <img src="/img/4geeks.png" alt="4 Geeks academy" />
+        <Tooltip message="Nerdearla"
+          ><img src="/img/nerdearla-logo.png" alt="Nerdearla" class="img-size" /></Tooltip
+        >
+        <Tooltip message="JavaScript Chile"
+          ><img src="/img/cl-js.png" alt="Javascript Chile" class="img-size" /></Tooltip
+        >
+        <Tooltip message="Spark Code"
+          ><img src="/img/spark-code-logo.png" alt="Spark Code" class="img-size" /></Tooltip
+        >
+        <Tooltip message="Desafio Latam"
+          ><img src="/img/desafio-latam.png" alt="Desafio Latam" class="img-size" /></Tooltip
+        >
+        <Tooltip message="4 Geeks academy"
+          ><img src="/img/4geeks.png" alt="4 Geeks academy" class="img-size" /></Tooltip
+        >
       </div>
     </div>
 
@@ -39,7 +60,11 @@
         </p>
       </div>
       <div class="img-wrapper">
-        <img src="/img/ana-1.jpg" alt="Ana" />
+        <picture>
+          <source srcset="/img/ana-1.avif" type="image/avif" />
+          <source srcset="/img/ana-1.webp" type="image/webp" />
+          <img src="/img/ana-1.webp" alt="Ana" decoding="async" fetchpriority="high" />
+        </picture>
       </div>
     </div>
 
@@ -175,10 +200,6 @@
     margin: 0;
   }
 
-  .gif {
-    width: 6.25rem;
-  }
-
   .img-group,
   .emoji-group {
     display: flex;
@@ -186,7 +207,7 @@
     gap: 1rem;
   }
 
-  .img-group img,
+  .img-size,
   .emoji-group img {
     width: 3.5rem;
   }

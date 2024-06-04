@@ -1,3 +1,7 @@
+---
+import { Tooltip } from '@components';
+---
+
 <section>
   <div class="wrapper">
     <div class="hobbie-card">
@@ -10,7 +14,17 @@
         </p>
       </div>
       <div class="img-twitch__container">
-        <img src="/assets/images/ana-2.jpg" alt="Ana foto audifonos" />
+        <picture>
+          <source srcset="/assets/images/ana-2.avif" type="image/avif" />
+          <source srcset="/assets/images/ana-2.webp" type="image/webp" />
+          <img
+            src="/assets/images/ana-2.webp"
+            alt="Ana foto audifonos"
+            loading="lazy"
+            decoding="async"
+            fetchpriority="low"
+          />
+        </picture>
       </div>
     </div>
 
@@ -20,12 +34,14 @@
         Hoy en día estoy buscando adquirir mas habilidades, y manejas lenguajes de programación ha
         sido una excelente forma de mejorar en mi área de UX
         <div class="hobbies-imgs-group">
-          <img src="/svg/html-logo.svg" alt=" logo html" />
-          <img src="/svg/css-logo.svg" alt=" logo css" />
-          <img src="/svg/astro-logo.svg" alt=" logo astro" />
-          <img src="/svg/js-logo.svg" alt=" logo javascript" />
-          <img src="/svg/react-logo.svg" alt=" logo react" />
-          <img src="/svg/github-logo.svg" alt=" logo github" />
+          <Tooltip message="HTML 5"><img src="/svg/html-logo.svg" alt=" logo html" /></Tooltip>
+          <Tooltip message="CSS 3"><img src="/svg/css-logo.svg" alt=" logo css" /></Tooltip>
+          <Tooltip message="Astro"><img src="/svg/astro-logo.svg" alt=" logo astro" /></Tooltip>
+          <Tooltip message="JavaScript"
+            ><img src="/svg/js-logo.svg" alt=" logo javascript" /></Tooltip
+          >
+          <Tooltip message="React"><img src="/svg/react-logo.svg" alt=" logo react" /></Tooltip>
+          <Tooltip message="GitHub"><img src="/svg/github-logo.svg" alt=" logo github" /></Tooltip>
         </div>
       </p>
     </div>
@@ -44,23 +60,53 @@
       </div>
       <div class="volunteering">
         <div class="js-chile">
-          <img src="/assets/images/js-chile.png" alt="Javascript Chile" />
+          <img
+            src="/assets/images/js-chile.png"
+            alt="Javascript Chile"
+            loading="lazy"
+            decoding="async"
+            fetchpriority="low"
+          />
           <p>Javascript Chile</p>
         </div>
         <div class="spark-code">
-          <img src="/assets/images/spark-logo.png" alt="Javascript Chile" />
+          <img
+            src="/assets/images/spark-logo.png"
+            alt="Javascript Chile"
+            loading="lazy"
+            decoding="async"
+            fetchpriority="low"
+          />
           <p>Spark code</p>
         </div>
         <div class="js-chile-conf">
-          <img src="/assets/images/js-chile-conf-logo.png" alt="Javascript Chile" />
+          <img
+            src="/assets/images/js-chile-conf-logo.png"
+            alt="Javascript Chile"
+            loading="lazy"
+            decoding="async"
+            fetchpriority="low"
+          />
           <p>Js Conf Chile 2024</p>
         </div>
         <div class="women-techmakers">
-          <img src="/assets/images/women-techmakers-logo.png" alt="Javascript Chile" />
+          <img
+            src="/assets/images/women-techmakers-logo.png"
+            alt="Javascript Chile"
+            loading="lazy"
+            decoding="async"
+            fetchpriority="low"
+          />
           <p>Women Techmakers VChile</p>
         </div>
         <div class="js-venezuela">
-          <img src="/assets/images/js-venezuela-logo.png" alt="Javascript Chile" />
+          <img
+            src="/assets/images/js-venezuela-logo.png"
+            alt="Javascript Chile"
+            loading="lazy"
+            decoding="async"
+            fetchpriority="low"
+          />
           <p>Javascript Venezuela</p>
         </div>
       </div>
