@@ -1,5 +1,20 @@
 ---
 import { LanguageToggle } from '@components';
+
+const ITEMS = [
+  {
+    text: 'Inicio',
+    slug: '/',
+  },
+  {
+    text: 'Proyectos',
+    slug: '/#proyecto',
+  },
+  {
+    text: 'Sobre mí',
+    slug: '/about-me',
+  },
+];
 ---
 
 <header class="nav-container">
@@ -36,18 +51,16 @@ import { LanguageToggle } from '@components';
   <!-- Navigation Section -->
   <nav class="navbar" data-status="close" aria-hidden="true">
     <ul class="list">
-      <li class="list-item">
-        <a href="/">Inicio</a>
-      </li>
-      <li class="dots">&#183;</li>
-      <li class="list-item">
-        <a href="/#proyecto">Proyectos</a>
-      </li>
-      <li class="dots">&#183;</li>
-      <li class="list-item">
-        <a href="/about-me">Sobre mí</a>
-      </li>
-      <li class="dots">&#183;</li>
+      {
+        ITEMS.map(({ text, slug }) => (
+          <>
+            <li class:list={['list-item', { active: Astro.url.pathname === slug }]}>
+              <a href={slug}>{text}</a>
+            </li>
+            <li class="dots">&#183;</li>
+          </>
+        ))
+      }
       <li class="toggle-container">
         <LanguageToggle />
       </li>
@@ -258,7 +271,8 @@ import { LanguageToggle } from '@components';
     }
 
     .list-item:has(a:hover),
-    .list-item:has(a:active) {
+    .list-item:has(a:active),
+    .list-item.active {
       background: radial-gradient(
         50% 50% at 50% 50%,
         rgba(255, 255, 255, 0.24) 0%,
