@@ -90,12 +90,10 @@
       }, 6000);
     }
 
-    const paths = ['/', '/about-me'];
-
-    if (!paths.includes(window.location.pathname)) {
+    if (document.querySelector('.container-404')) {
       setTimeout(() => {
         activateEasterEgg();
-      }, 5000);
+      }, 3500);
     }
   });
 </script>
