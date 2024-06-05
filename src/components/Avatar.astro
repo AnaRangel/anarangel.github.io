@@ -1,7 +1,3 @@
----
-
----
-
 <div id="avatar"></div>
 
 <style>
@@ -90,11 +86,9 @@
       }, 6000);
     }
 
-    const normalize = (path: string) => path.replace(/\/$/, '');
-
     const paths = ['/', '/about-me'];
-    const normalizedPaths = paths.map(normalize);
-    const currentPath = normalize(window.location.pathname);
+    const currentPath = window.location.pathname;
+    const normalizedPaths = paths.map((path) => path.replace(/\/$/, ''));
 
     if (!normalizedPaths.includes(currentPath)) {
       setTimeout(() => {
