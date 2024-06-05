@@ -1,7 +1,3 @@
----
-
----
-
 <div id="avatar"></div>
 
 <style>
@@ -91,8 +87,10 @@
     }
 
     const paths = ['/', '/about-me'];
+    const currentPath = window.location.pathname;
+    const normalizedPaths = paths.map((path) => path.replace(/\/$/, ''));
 
-    if (!paths.includes(window.location.pathname)) {
+    if (!normalizedPaths.includes(currentPath)) {
       setTimeout(() => {
         activateEasterEgg();
       }, 5000);
