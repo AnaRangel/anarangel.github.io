@@ -11,9 +11,15 @@ import { Button, IconCatalog } from '@components';
         para entregar soluciones que no solo satisfacen necesidades del usuario, sino que haya un
         aporte de valor que tiene para el negocio
       </p>
-      <a href="/about-me"
-        ><Button invert afterIcon={IconCatalog.arrowDownTray}>Saber más de mi</Button></a
+      <Button
+        invert
+        tag="anchor"
+        href="/about-me"
+        target="_self"
+        afterIcon={IconCatalog.arrowDownTray}
       >
+        Saber más de mi
+      </Button>
     </div>
     <img class="svg-container" src="/svg/interface-description.svg" alt="" />
   </div>
