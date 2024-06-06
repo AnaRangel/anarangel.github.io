@@ -115,13 +115,18 @@ import { Tooltip } from '@components';
 </section>
 
 <style>
+  /*--- Twitch Section ---*/
   section {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: transparent;
-    position: relative;
-    z-index: 1;
+    width: 90%;
+    margin: 0 auto;
+
+    @media (width >= 992px) {
+      width: 100%;
+    }
   }
 
   .head-comment {
@@ -135,10 +140,15 @@ import { Tooltip } from '@components';
 
   .wrapper {
     display: grid;
-    margin: 64px 0;
+    margin-top: 64px;
     max-width: 81rem;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
+    row-gap: 2rem;
+    justify-items: center;
+
+    @media (width >= 992px) {
+      grid-gap: 2rem;
+    }
   }
 
   .hobbie-card {
@@ -184,7 +194,7 @@ import { Tooltip } from '@components';
       }
 
       .img-twitch__container {
-        width: 327px;
+        width: 100%;
         height: 477px;
         border-radius: 1.5rem;
         overflow: hidden;
@@ -219,6 +229,7 @@ import { Tooltip } from '@components';
       display: flex;
       flex-direction: row;
       gap: 36px;
+      width: 100%;
 
       span {
         font-weight: 700;
@@ -227,8 +238,12 @@ import { Tooltip } from '@components';
 
       .volunteering {
         max-width: 282px;
-        width: 100%;
+        width: 90%;
         position: relative;
+
+        @media (width >= 992px) {
+          width: 100%;
+        }
 
         .js-chile,
         .spark-code,
@@ -370,11 +385,8 @@ import { Tooltip } from '@components';
       grid-template-columns: repeat(1, 1fr);
 
       .hobbie-card {
-        &:first-child {
-          width: calc(100% + 32px);
-        }
+        width: 100%;
         &:nth-child(3) {
-          min-width: 311px;
           flex-direction: column;
 
           .volunteering {
