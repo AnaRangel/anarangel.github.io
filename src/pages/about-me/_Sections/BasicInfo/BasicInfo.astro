@@ -1,369 +1,299 @@
 ---
-import { Tooltip } from '@components';
+import { CardWrapper, Tooltip } from '@components';
 ---
 
 <section>
-  <p class="head-comment">
-    No sólo tengo experiencia en empresas, me gusta contribuir en comunidades y compartir
-    conocimiento
-  </p>
+  <div class="container">
+    <p class="intro-text">
+      No sólo tengo experiencia en empresas, me gusta contribuir en comunidades y compartir
+      conocimiento
+    </p>
 
-  <div class="wrapper">
-    <div class="grid1 info-card">
-      <p class="info-card-title">Estudios</p>
-      <p class="info-card-paragraph">
-        Graduada en Publicidad y mercadeo, cursos de UX/UI, manejo de inteligencia artificial, y
-        programación
-      </p>
-      <img
-        class="gif"
-        src="/img/emoji.webp"
-        alt="Emoji"
-        width="100"
-        decoding="async"
-        fetchpriority="high"
-      />
-    </div>
+    <div class="wrapper">
+      <div class="grid-item" data-type="studies">
+        <CardWrapper hasBorder class="card">
+          <p class="card__title">Estudios</p>
+          <p class="card__description">
+            Graduada en Publicidad y mercadeo, cursos de UX/UI, manejo de inteligencia artificial, y
+            programación
+          </p>
+          <img
+            class="gif"
+            src="/img/emoji.webp"
+            alt="Emoji"
+            decoding="async"
+            fetchpriority="high"
+            width="100"
+          />
+        </CardWrapper>
 
-    <div class="grid2 info-card">
-      <p class="info-card-title">Charlista</p>
-      <p class="info-card-paragraph">
-        He tenido el privilegio de compartir mis conocimientos en talleres y charlas sobre trabajo
-        en equipo y UX. Me apasiona conectar con la audiencia y fomentar el aprendizaje colaborativo
-      </p>
-      <div class="img-group">
-        <Tooltip message="Nerdearla"
-          ><img src="/img/nerdearla-logo.png" alt="Nerdearla" class="img-size" /></Tooltip
-        >
-        <Tooltip message="JavaScript Chile"
-          ><img src="/img/cl-js.png" alt="Javascript Chile" class="img-size" /></Tooltip
-        >
-        <Tooltip message="Spark Code"
-          ><img src="/img/spark-code-logo.png" alt="Spark Code" class="img-size" /></Tooltip
-        >
-        <Tooltip message="Desafio Latam"
-          ><img src="/img/desafio-latam.png" alt="Desafio Latam" class="img-size" /></Tooltip
-        >
-        <Tooltip message="4 Geeks academy"
-          ><img src="/img/4geeks.png" alt="4 Geeks academy" class="img-size" /></Tooltip
-        >
-        <Tooltip message="UX Show"
-          ><img src="/img/uxshow.png" alt="4 Geeks academy" class="img-size" /></Tooltip
-        >
+        <CardWrapper hasBorder class="card grid-item" data-type="speaker">
+          <p class="card__title">Charlista</p>
+          <p class="card__description">
+            He tenido el privilegio de compartir mis conocimientos en talleres y charlas sobre
+            trabajo en equipo y UX. Me apasiona conectar con la audiencia y fomentar el aprendizaje
+            colaborativo
+          </p>
+          <div class="flex-group">
+            <Tooltip message="Nerdearla"
+              ><img src="/img/nerdearla-logo.png" alt="Nerdearla" /></Tooltip
+            >
+            <Tooltip message="JavaScript Chile"
+              ><img src="/img/cl-js.png" alt="Javascript Chile" /></Tooltip
+            >
+            <Tooltip message="Spark Code"
+              ><img src="/img/spark-code-logo.png" alt="Spark Code" /></Tooltip
+            >
+            <Tooltip message="Desafio Latam"
+              ><img src="/img/desafio-latam.png" alt="Desafio Latam" /></Tooltip
+            >
+            <Tooltip message="4 Geeks academy"
+              ><img src="/img/4geeks.png" alt="4 Geeks academy" /></Tooltip
+            >
+            <Tooltip message="UX Show"><img src="/img/uxshow.png" alt="UX Show" /></Tooltip>
+          </div>
+        </CardWrapper>
       </div>
-    </div>
 
-    <div class="grid3 info-card tall">
-      <div>
-        <p class="info-card-title">Creación de contenido</p>
-        <p class="info-card-paragraph">
-          Desde 2022 he credo de contenido, quiero guiar a otros diseñadores y desarrolladores a
-          través de mis redes sociales. Busco dar tips que sirvan para potenciar su trabajo y su
-          creatividad
-        </p>
-      </div>
-      <div class="img-wrapper">
-        <picture>
+      <CardWrapper hasBorder class="card grid-item" data-type="content-creator">
+        <div class="flow">
+          <p class="card__title">Creación de contenido</p>
+          <p class="card__description">
+            Desde 2022 he credo de contenido, quiero guiar a otros diseñadores y desarrolladores a
+            través de mis redes sociales. Busco dar tips que sirvan para potenciar su trabajo y su
+            creatividad
+          </p>
+        </div>
+        <picture class="portrait-img">
           <source srcset="/img/ana-1.avif" type="image/avif" />
           <source srcset="/img/ana-1.webp" type="image/webp" />
           <img src="/img/ana-1.webp" alt="Ana" decoding="async" fetchpriority="high" />
         </picture>
-      </div>
-    </div>
+      </CardWrapper>
 
-    <div class="grid4 info-card">
-      <p class="info-card-title">Habilidades blandas</p>
-      <div class="skills">
-        <div class="skills-details">
-          <p>Comunicación</p>
-          <div class="line1"></div>
-          <div class="line"></div>
-        </div>
-        <div class="skills-details">
-          <p>Adaptabilidad</p>
-          <div class="line2"></div>
-          <div class="line"></div>
-        </div>
-        <div class="skills-details">
-          <p>Autonomía</p>
-          <div class="line3"></div>
-          <div class="line"></div>
-        </div>
-        <div class="skills-details">
-          <p>Trabajo en equipo</p>
-          <div class="line1"></div>
-          <div class="line"></div>
-        </div>
-        <div class="skills-details">
-          <p>Manejo del estrés</p>
-          <div class="line2"></div>
-          <div class="line"></div>
-        </div>
-        <div class="skills-details">
-          <p>Pensamiento crítico</p>
-          <div class="line3"></div>
-          <div class="line"></div>
-        </div>
-      </div>
-    </div>
+      <div class="grid-item" data-type="soft-skills">
+        <CardWrapper hasBorder class="card">
+          <p class="card__title">Habilidades blandas</p>
+          <div class="skills | grid-auto-fit">
+            <div class="flow">
+              <p>Comunicación</p>
+              <div class="line" data-variant="primary"></div>
+              <div class="line"></div>
+            </div>
+            <div class="flow">
+              <p>Adaptabilidad</p>
+              <div class="line" data-variant="secondary"></div>
+              <div class="line"></div>
+            </div>
+            <div class="flow">
+              <p>Autonomía</p>
+              <div class="line" data-variant="tertiary"></div>
+              <div class="line"></div>
+            </div>
+            <div class="flow">
+              <p>Trabajo en equipo</p>
+              <div class="line" data-variant="primary"></div>
+              <div class="line"></div>
+            </div>
+            <div class="flow">
+              <p>Manejo del estrés</p>
+              <div class="line" data-variant="secondary"></div>
+              <div class="line"></div>
+            </div>
+            <div class="flow">
+              <p>Pensamiento crítico</p>
+              <div class="line" data-variant="tertiary"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+        </CardWrapper>
 
-    <div class="grid5 info-card">
-      <p class="info-card-title">Mentora</p>
-      <p class="info-card-paragraph">
-        Como mentora, estoy aquí para guiar a otros cuando buscan apoyo o consultoría, cuentan
-        conmigo para potenciar tus habilidades y alcanzar tus metas
-      </p>
-      <div class="emoji-group">
-        <img src="/img/emoji-invider.png" alt="Juego" />
-        <img src="/img/emoji-wolf.png" alt="Lobo" />
-        <img src="/img/emoji-punio.png" alt="Puño" />
+        <CardWrapper hasBorder class="card">
+          <p class="card__title">Mentora</p>
+          <p class="card__description">
+            Como mentora, estoy aquí para guiar a otros cuando buscan apoyo o consultoría, cuentan
+            conmigo para potenciar tus habilidades y alcanzar tus metas
+          </p>
+          <div class="flex-group">
+            <img src="/img/emoji-invider.png" alt="Juego" />
+            <img src="/img/emoji-wolf.png" alt="Lobo" />
+            <img src="/img/emoji-punio.png" alt="Puño" />
+          </div>
+        </CardWrapper>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: transparent;
-    position: relative;
-    z-index: 1;
-  }
-
-  .head-comment {
-    max-width: 63.5rem;
-    font-size: 2.25rem;
-    font-weight: 500;
-    line-height: 2.71875rem;
-    text-align: center;
-    margin: 7.5rem 0 3.75rem 0;
-    color: white;
+  .grid-item {
+    display: grid;
+    gap: 2.25rem;
   }
 
   .wrapper {
     display: grid;
-    margin: 0 auto;
-    max-width: 81rem;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
+    gap: 2.25rem;
   }
 
-  .grid1 {
-    grid-column: 1/3;
-    grid-row: 1;
-    width: 22.125rem;
+  .intro-text {
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 2.7188rem;
+    text-align: center;
+    margin: 7.5rem 0 3.75rem 0;
+    text-wrap: balance;
   }
 
-  .grid2 {
-    grid-column: 3/6;
-    grid-row: 1;
-  }
-
-  .grid3 {
-    grid-column: 6/9;
-    grid-row: 1/3;
-    width: 24.9375rem;
-  }
-
-  .grid4 {
-    grid-column: 1/4;
-    grid-row: 2;
-  }
-
-  .grid5 {
-    grid-column: 4/6;
-    grid-row: 2;
-    width: 20rem;
-  }
-
-  .info-card {
-    background-color: #0d0d0e;
+  .card {
+    background-color: hsl(240, 4%, 5%);
     border-radius: 1.5rem;
-    border: 0.0625rem solid #282828;
-    padding: 2.25rem;
+    padding: 3.5rem 2.25rem 2.25rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.4375rem;
+    block-size: 100%;
   }
 
-  .info-card-title {
+  .card__title {
     font-size: 2rem;
     font-weight: 600;
-    line-height: 3rem;
+    line-height: 2.4rem;
     color: white;
-    margin: 0;
   }
 
-  .info-card-paragraph {
-    font-size: 1rem;
-    font-weight: 400;
+  .card__description {
     line-height: 1.5rem;
-    color: #b1b3d0;
-    margin: 0;
+    color: hsl(236, 25%, 75%);
   }
 
-  .img-group,
-  .emoji-group {
+  /* flex-group can be a global class */
+  .flex-group {
     display: flex;
-    flex-direction: row;
     gap: 1rem;
+
+    img {
+      width: 100%;
+      max-inline-size: 3.5rem;
+    }
   }
 
-  .img-size,
-  .emoji-group img {
-    width: 3.5rem;
-  }
+  .grid-item[data-type='content-creator'] {
+    --flow-spacer: 1.4375rem;
+    justify-content: space-between;
+    .card {
+      display: grid;
+      gap: 1rem;
+    }
 
-  .img-wrapper {
-    width: 20.4375rem;
-    height: 30rem;
-    border-radius: 1.5rem;
-    overflow: hidden;
+    img {
+      border-radius: 1.5rem;
+      inline-size: 100%;
+      max-block-size: 35rem;
+      object-fit: cover;
+      object-position: 20% 10%;
+
+      @media (width >= 1200px) {
+        max-block-size: 26.0625rem;
+      }
+    }
   }
 
   .skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.9375rem;
-    color: white;
+    --min-item-width: 10rem;
+
+    column-gap: 0.9375rem;
+    row-gap: 2.25rem;
+    div {
+      --flow-spacer: 0.5rem;
+    }
+    p {
+      font-size: 1.125rem;
+      font-weight: 600;
+      max-width: 8.125rem;
+    }
+
+    @media (width >= 900px) {
+      --min-item-width: 8rem;
+    }
   }
 
-  .skills-details {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .skills-details p {
-    font-size: 1.125rem;
-    font-weight: 600;
-    max-width: 8.125rem;
-  }
-
-  .skills-details .line {
-    width: 3.125rem;
-    height: 0.375rem;
-    border-radius: 1.25rem;
-    background: #52546e;
-  }
-
-  .skills-details .line1,
-  .skills-details .line2,
-  .skills-details .line3 {
-    width: 7.988125rem;
+  .line {
+    inline-size: 100%;
+    max-inline-size: 3.125rem;
     height: 0.385rem;
     border-radius: 1.25rem;
+    background: hsl(236, 15%, 38%);
   }
 
-  .skills-details .line1 {
+  .line[data-variant] {
+    max-inline-size: 7.988125rem;
+  }
+  .line[data-variant='primary'] {
     background: linear-gradient(90deg, #30b7ca 0%, #21d49b 100.01%);
   }
 
-  .skills-details .line2 {
+  .line[data-variant='secondary'] {
     background: linear-gradient(270deg, #f880d6 -0.7%, #966bf9 100.39%);
   }
 
-  .skills-details .line3 {
+  .line[data-variant='tertiary'] {
     background: linear-gradient(107.73deg, #ffc16f 0%, #fa86ce 100.25%);
   }
 
-  @media screen and (max-width: 76.875rem) {
-    .head-comment {
-      margin: 5.625rem 0 3.125rem 0;
-    }
-
-    .wrapper {
-      width: calc(100% - 1.875rem);
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto auto auto;
-      grid-gap: 2rem;
-    }
-
-    .grid1 {
-      grid-column: 1 / 2;
-      grid-row: 1;
-      width: 100%;
-    }
-
-    .grid2 {
-      grid-column: 2 / 3;
-      grid-row: 1;
-    }
-
-    .grid3 {
-      grid-column: 1 / 3;
-      grid-row: 2;
+  @media (width >= 900px) {
+    .grid-item[data-type='studies'] {
+      inline-size: 100%;
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-      width: 100%;
+      gap: 2.25rem;
+      justify-content: center;
+
+      article:first-child {
+        max-inline-size: 22.125rem;
+      }
+      article:nth-child(2) {
+        width: 100%;
+        max-width: 29.4375rem;
+      }
     }
 
-    .grid3 div {
+    .grid-item[data-type='content-creator'] {
+      grid-row: 2 / 3;
+      inline-size: 100%;
+      max-inline-size: 53.125rem;
+      margin-inline: auto;
+    }
+
+    .grid-item[data-type='soft-skills'] {
+      inline-size: 100%;
       display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      text-align: left;
-    }
+      gap: 2.25rem;
+      grid-row: 3 / 4;
+      justify-content: center;
+      article:first-child {
+        width: 100%;
+        max-width: 31.5625rem;
+      }
 
-    .grid3 .img-wrapper {
-      width: 50%;
-      height: auto;
-      margin-left: 1rem;
-    }
-
-    .grid4 {
-      grid-column: 1 / 2;
-      grid-row: 3;
-    }
-
-    .grid5 {
-      grid-column: 2 / 3;
-      grid-row: 3;
-      width: 100%;
+      article:nth-child(2) {
+        width: 100%;
+        max-width: 20rem;
+      }
     }
   }
-
-  @media screen and (max-width: 47.9375rem) {
-    .head-comment {
-      margin: 1.875rem 0 3.75rem 0;
-    }
-
+  @media (width >= 1200px) {
     .wrapper {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
+      grid-template-columns: 1fr 25rem;
     }
 
-    .grid1,
-    .grid2,
-    .grid3,
-    .grid4,
-    .grid5 {
-      grid-column: 1;
-      grid-row: auto;
-      width: 100%;
+    .grid-item[data-type='content-creator'] {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+      max-inline-size: 25rem;
     }
 
-    .grid3 {
-      flex-direction: column;
-    }
-
-    .grid3 .info-card-title,
-    .grid3 .info-card-paragraph {
-      width: 100%;
-    }
-
-    .grid3 .img-wrapper {
-      width: 100%;
-      margin-left: 0;
-    }
-
-    .img-group {
-      align-self: stretch;
-      flex-wrap: wrap;
+    .grid-item[data-type='soft-skills'] {
+      grid-row: 2 / 3;
     }
   }
 </style>
