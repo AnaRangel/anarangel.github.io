@@ -5,10 +5,10 @@ import ToolsLogos from './ToolsLogos.astro';
 const OFFSET_Y = 1.2;
 ---
 
-<MainLogo />
-<ToolsLogos />
-
 <div class="container">
+  <MainLogo />
+  <ToolsLogos />
+
   <div class="tools">
     <h2 class="tools-title">Algunas herramientas de diseño que manejo</h2>
     <svg id="tools-desktop" width="1300" height="741" viewBox="0 0 1300 741" fill="none">
@@ -165,6 +165,9 @@ const OFFSET_Y = 1.2;
 </div>
 
 <style>
+  .container {
+    padding-inline: 1rem;
+  }
   .tools {
     background: #0d0d0e;
     border: 1px solid #282828;
@@ -172,6 +175,7 @@ const OFFSET_Y = 1.2;
     position: relative;
     padding-block: 20px;
     margin-top: 3rem;
+
     cursor: url('/svg/cursor.svg'), auto;
 
     @media (width >= 1536px) {
