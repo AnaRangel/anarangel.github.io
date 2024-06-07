@@ -1,16 +1,12 @@
 .container {
-  box-sizing: border-box;
   inline-size: 100%;
   margin-inline: auto;
-  padding-inline: var(--container-padding, 1rem);
 
 }
 
-/* Responsive breakpoints */
 @media (--sm-n-above) {
   .container {
     max-inline-size:40em;
-		padding-inline: 1rem;
     margin-inline: auto;
   }
 }

@@ -3,29 +3,31 @@ import { TestimonyCard } from '@components';
 import { dataTestimonies } from '@data/testimonies';
 ---
 
-<section class="testimonials">
-  <article class="testimonials__item">
-    <h2 class="testimonials__item__title">Lo que mis compañeros y líderes han dicho de mi</h2>
-    <p class="testimonials__item__content">
-      Afortunadamente he trabajado con distintos roles y perfiles, de los cuales he tenido una grata
-      relación y espero algún día volver a trabajar con ellos.
-    </p>
-  </article>
+<section>
+  <div class="testimonials | container">
+    <article class="testimonials__item">
+      <h2 class="testimonials__item__title">Lo que mis compañeros y líderes han dicho de mi</h2>
+      <p class="testimonials__item__content">
+        Afortunadamente he trabajado con distintos roles y perfiles, de los cuales he tenido una
+        grata relación y espero algún día volver a trabajar con ellos.
+      </p>
+    </article>
 
-  <div class="testimonials__cards">
-    <div class="testimonials__cards--marquee">
-      {
-        dataTestimonies.map((item) => (
-          <TestimonyCard
-            companyLogoUrl={item.companyLogoUrl}
-            companyName={item.companyName}
-            personFullName={item.personFullName}
-            personJobTitle={item.personJobTitle}
-            testimonyText={item.testimonyText}
-            fullTestimonyUrl={item.fullTestimonyUrl}
-          />
-        ))
-      }
+    <div class="testimonials__cards">
+      <div class="testimonials__cards--marquee">
+        {
+          dataTestimonies.map((item) => (
+            <TestimonyCard
+              companyLogoUrl={item.companyLogoUrl}
+              companyName={item.companyName}
+              personFullName={item.personFullName}
+              personJobTitle={item.personJobTitle}
+              testimonyText={item.testimonyText}
+              fullTestimonyUrl={item.fullTestimonyUrl}
+            />
+          ))
+        }
+      </div>
     </div>
   </div>
 </section>
