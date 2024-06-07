@@ -105,7 +105,7 @@ const OFFSET_Y = 1.2;
     <svg id="tools-mobile">
       <polyline
         class="line-dash"
-        points="65,890 65,270 155,270 155,200"
+        points="62,890 62,270 138,270 138,200"
         fill="none"
         stroke="#282828"
         stroke-width="2.48991"
@@ -114,7 +114,7 @@ const OFFSET_Y = 1.2;
         stroke-dasharray="8.71 8.71"></polyline>
       <polyline
         class="line-dash"
-        points="275,890 275,270 185,270 185,200"
+        points="256,890 256,270 180,270 180,200"
         fill="none"
         stroke="#282828"
         stroke-width="2.48991"
@@ -123,41 +123,41 @@ const OFFSET_Y = 1.2;
         stroke-dasharray="8.71 8.71"></polyline>
       <g id="logos">
         <g class="group">
-          <use x="10" y="300" width="113" height="113" href="#useberry"></use>
-          <text x="30" y="435" fill="white">Useberry</text>
+          <use x="7" y="300" width="113" height="113" href="#useberry"></use>
+          <text x="27" y="435" fill="white">Useberry</text>
         </g>
         <g class="group">
-          <use x="10" y="480" width="113" height="113" href="#notion"></use>
-          <text x="40" y="612" fill="white">Notion</text>
+          <use x="7" y="480" width="113" height="113" href="#notion"></use>
+          <text x="37" y="612" fill="white">Notion</text>
         </g>
         <g class="group">
-          <use x="10" y="655" width="113" height="113" href="#figma"></use>
-          <text x="42" y="788" fill="white">Figma</text>
+          <use x="7" y="655" width="113" height="113" href="#figma"></use>
+          <text x="39" y="788" fill="white">Figma</text>
         </g>
         <g class="group">
-          <use x="10" y="830" width="113" height="113" href="#miro"></use>
-          <text x="47" y="965" fill="white">Miro</text>
+          <use x="7" y="830" width="113" height="113" href="#miro"></use>
+          <text x="44" y="965" fill="white">Miro</text>
         </g>
         <g class="group">
-          <use x="217" y="300" width="113" height="113" href="#maze"></use>
-          <text x="253" y="435" fill="white">Maze</text>
+          <use x="195" y="300" width="113" height="113" href="#maze"></use>
+          <text x="232" y="435" fill="white">Maze</text>
         </g>
         <g class="group">
-          <use x="217" y="480" width="113" height="113" href="#whimsical"></use>
-          <text x="234" y="612" fill="white">Whimsical</text>
+          <use x="195" y="480" width="113" height="113" href="#whimsical"></use>
+          <text x="212" y="612" fill="white">Whimsical</text>
         </g>
         <g class="group">
-          <use x="217" y="655" width="113" height="113" href="#hotjar"></use>
-          <text x="252" y="788" fill="white">Hotjar</text>
+          <use x="195" y="655" width="113" height="113" href="#hotjar"></use>
+          <text x="230" y="788" fill="white">Hotjar</text>
         </g>
         <g class="group">
-          <use x="217" y="830" width="113" height="113" href="#adobe-xd"></use>
-          <text x="231" y="965" fill="white">Adobe XD</text>
+          <use x="195" y="830" width="113" height="113" href="#adobe-xd"></use>
+          <text x="209" y="965" fill="white">Adobe XD</text>
         </g>
       </g>
       <g id="main-logo">
         <a href="/">
-          <use x="43" y="15" width="254" height="254" href="#logo-ana"></use>
+          <use x="33" y="15" width="254" height="254" href="#logo-ana"></use>
         </a>
       </g>
     </svg>
@@ -172,7 +172,6 @@ const OFFSET_Y = 1.2;
     position: relative;
     padding-block: 20px;
     margin-top: 3rem;
-    margin-inline: 1rem;
     cursor: url('/svg/cursor.svg'), auto;
 
     @media (width >= 1536px) {
@@ -189,13 +188,9 @@ const OFFSET_Y = 1.2;
   }
 
   #tools-mobile {
-    width: 100%;
+    width: 315px;
+    margin-inline: auto;
     min-height: 1000px;
-
-    @media (411px <= width <= 767.98px) {
-      width: 90%;
-      margin-inline: auto;
-    }
 
     @media (width >= 768px) {
       display: none;
@@ -208,14 +203,11 @@ const OFFSET_Y = 1.2;
 
   .tools-title {
     max-width: 460px;
+    margin-inline: auto;
     font-weight: 500;
     text-align: center;
     padding-inline: 10px;
     color: white;
-
-    @media (width >= 768px) {
-      margin-inline: auto;
-    }
 
     @media (width >= 1200px) {
       position: absolute;
