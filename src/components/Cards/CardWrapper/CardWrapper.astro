@@ -5,7 +5,7 @@ interface Props {
   /**
    * The class name for the card wrapper.
    */
-  className?: string;
+  class?: string;
 
   /**
    * The variant of the card.
@@ -28,7 +28,7 @@ interface Props {
   hasHover?: boolean;
 }
 
-const { className, variant = CardVariant.primary, hasBorder, hasHover } = Astro.props;
+const { class: className, variant, hasBorder, hasHover, ...rest } = Astro.props;
 
 function getBorderAttributes() {
   return hasBorder ? { 'data-has-border': true } : {};
@@ -44,6 +44,7 @@ function getHoverAttributes() {
   {...getHoverAttributes()}
   class:list={[className]}
   data-variant={variant}
+  {...rest}
 >
   <slot />
 </article>

@@ -10,6 +10,8 @@
 @media (--sm-n-above) {
   .container {
     max-inline-size:40em;
+		padding-inline: 1rem;
+    margin-inline: auto;
   }
 }
 
@@ -21,12 +23,6 @@
 
 @media (--lg-n-above) {
   .container {
-    max-inline-size: 64em;
-  }
-}
-
-@media (--xl-n-above) {
-  .container {
-    max-inline-size: 80em;
+		max-inline-size: 81rem;
   }
 }
