@@ -2,17 +2,19 @@
 import { Button, ButtonDownloadCv } from '@components';
 ---
 
-<section class="contact">
-  <div class="contact__content">
-    <h2 class="contact__title">¿Listo para dar vida a tus ideas?</h2>
-    <p class="contact__description">
-      Haz clic abajo para conversar conmigo o echa un vistazo a mi CV, para ver cómo puedo impulsar
-      tu proyecto o formar parte de tu equipo
-    </p>
-  </div>
-  <div class="contact__actions">
-    <Button tag="anchor" href="https://calendly.com/rangelana1221/30min">Contáctame</Button>
-    <ButtonDownloadCv id="btn-contact-download" />
+<section class="container">
+  <div class="contact">
+    <div class="contact__content">
+      <h2 class="contact__title">¿Listo para dar vida a tus ideas?</h2>
+      <p class="contact__description">
+        Haz clic abajo para conversar conmigo o echa un vistazo a mi CV, para ver cómo puedo
+        impulsar tu proyecto o formar parte de tu equipo
+      </p>
+    </div>
+    <div class="contact__actions">
+      <Button tag="anchor" href="https://calendly.com/rangelana1221/30min">Contáctame</Button>
+      <ButtonDownloadCv id="btn-contact-download" />
+    </div>
   </div>
 </section>
 
@@ -24,7 +26,7 @@ import { Button, ButtonDownloadCv } from '@components';
     justify-content: center;
     align-items: center;
     gap: 24px;
-    padding: 160px 0rem;
+    padding: 10rem 1rem;
   }
   .contact__content {
     text-align: center;
