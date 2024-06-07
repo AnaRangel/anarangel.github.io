@@ -1,4 +1,5 @@
 ---
+import { Picture } from 'astro:assets';
 import designersData from './designers.json';
 
 interface Designer {
@@ -28,10 +29,13 @@ const dataDesigners: Designer[] = designersData;
     {
       dataDesigners.map((designer) => (
         <a href={designer.html_url} target="_blank" class="contributor" title={designer.name}>
-          <img
-            src={designer.avatar_url}
-            alt={`Avatar ${designer.name}`}
+          <Picture
             class="contributors__img"
+            src={designer.avatar_url}
+            formats={['avif', 'webp']}
+            alt={`Avatar ${designer.name}`}
+            width={45}
+            height={45}
           />
         </a>
       ))
