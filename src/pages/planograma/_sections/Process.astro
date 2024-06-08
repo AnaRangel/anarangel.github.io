@@ -1,0 +1,143 @@
+---
+import { CardWrapper } from '@components';
+---
+
+<section>
+  <div class="container">
+    <!-- First Section -->
+    <div class="cards-container | grid-auto-fit">
+      <CardWrapper class="card | flow">
+        <h2 class="card-title">Journey maps</h2>
+        <p class="card-description">
+          Es un lienzo que nos permitió visualizar el viaje que tienen los usuarios para lograr un
+          objetivo. Con la ayuda del mapa de ese trayecto obtuvimos una idea de las motivaciones de
+          los usuarios, sus necesidades y puntos críticos.
+        </p>
+      </CardWrapper>
+      <img src="/assets/images/cards-section-1.png" alt="" />
+      <img src="/assets/images/cards-section-2.png" alt="" />
+    </div>
+
+    <!-- Second Section -->
+    <div class="cards-container">
+      <div class="even-columns">
+        <CardWrapper class="card | flow">
+          <h2 class="card-title">Testing</h2>
+          <p class="card-description">
+            Validar 3 flujos que están en una versión wireframes, para confirmar si esta posible
+            solución, efectivamente solventa sus problemas que se presentan en las diferentes tareas
+            que debían realizar los usuarios.
+          </p>
+        </CardWrapper>
+        <img src="/assets/images/cards-section-3.png" alt="" />
+      </div>
+      <img src="/assets/images/cards-section-4.png" alt="" style="max-inline-size: 52.25rem;" />
+    </div>
+
+    <!-- Third Section -->
+    <div class="cards-container">
+      <div class="even-columns">
+        <CardWrapper class="card | flow" data-type="no-background">
+          <h2 class="card-title">Análisis</h2>
+          <p class="card-description">
+            A nivel general se obtuvieron muchos insights muy valioso de parte de los diferentes
+            tipos de usuarios, se dedicaron unos 3 días para recopilar todo, analizar detalladamente
+            y encontrar los patrones que serian los indicadores principales para comenzar a
+            priorizar el primer MVP en cuanto a diseño
+          </p>
+        </CardWrapper>
+        <img src="/assets/images/cards-section-5.png" alt="" />
+      </div>
+      <div class="even-columns">
+        <img src="/assets/images/cards-section-6.png" alt="" />
+        <CardWrapper class="card | flow" data-type="no-background">
+          <h2 class="card-title">MVP 1</h2>
+          <p class="card-description">
+            Ya teniendo claro cuáles eran los principales dolores y oportunidades de mejora para los
+            usuarios había que tener una sesión con todo el equipo de desarrollo y product owner
+            para asegurar que las funcionalidades del primer MVP sean realmente factibles dentro del
+            tiempo límite, y que aporten valor al negocio.
+          </p>
+        </CardWrapper>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  section .container {
+    display: grid;
+    margin-block-start: 3rem;
+    padding-inline: 2rem;
+    gap: 2rem;
+  }
+
+  img {
+    margin-inline: auto;
+    inline-size: 100%;
+  }
+
+  .cards-container {
+    display: grid;
+    gap: 2rem;
+
+    .even-columns {
+      gap: 64px;
+    }
+  }
+
+  .cards-container.grid-auto-fit {
+    --min-item-width: 23.8987rem;
+
+    img {
+      block-size: 100%;
+    }
+  }
+
+  .card {
+    --flow-spacer: 1.4375rem;
+
+    background-color: hsla(240, 4%, 5%, 1);
+    padding: 3.5rem 2.25rem 2.25rem 2.25rem;
+    block-size: 100%;
+
+    h2 {
+      font-size: 2rem;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    p {
+      line-height: 24px;
+      letter-spacing: -1%;
+      max-inline-size: 29ch;
+      color: hsla(236, 25%, 75%, 1);
+    }
+  }
+
+  .card[data-type='no-background'] {
+    background-color: unset;
+    padding: 0;
+  }
+
+  @media (min-width: 48em) {
+    section .container {
+      padding-block-start: 7.5rem;
+    }
+    .even-columns {
+      --grid-gap: 4rem;
+      grid-auto-columns: 1fr;
+      grid-auto-flow: column;
+
+      .card[data-type='no-background'] {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-block: auto;
+      }
+
+      .card p {
+        max-inline-size: unset;
+      }
+    }
+  }
+</style>
