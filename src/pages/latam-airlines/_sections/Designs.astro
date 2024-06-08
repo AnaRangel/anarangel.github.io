@@ -1,0 +1,155 @@
+---
+import { CardWrapper } from '@components';
+---
+
+<section>
+  <div class="container">
+    <div class="even-columns">
+      <!-- Card 1: Problem statement -->
+      <CardWrapper class="card">
+        <h3>Problema</h3>
+        <p>
+          A pesar de su rendimiento efectivo, la página actual de LATAM Airlines tiene un flujo de
+          compra de boletos que algunos usuarios perciben como algo largo y poco claro. Además, la
+          falta de claridad en la información detallada de los vuelos afecta el proceso de toma de
+          decisiones de compra.
+        </p>
+      </CardWrapper>
+
+      <!-- Card 2: Hypothesis statement -->
+      <CardWrapper class="card">
+        <h3>Hipótesis</h3>
+        <p>
+          Creo que simplificar el proceso de compra de boletos en el sitio web de LATAM Airlines y
+          hacer la información más visible aumentará la satisfacción del usuario, agilizará la toma
+          de decisiones y aumentará las conversiones, beneficiando finalmente al negocio.
+        </p>
+      </CardWrapper>
+    </div>
+
+    <!-- Image showing the user flow -->
+    <img class="userflow-img" src="/assets/images/latam-airways-userflow-1.png" alt="" />
+
+    <!-- Section highlighting the benefits -->
+    <div class="benefits | flow">
+      <h3>Benefits</h3>
+      <img src="/assets/images/latam-airways-userflow-2.png" alt="" />
+    </div>
+
+    <!-- Section showcasing the design process and images -->
+    <div class="designs | flow">
+      <!-- Card: Design process description -->
+      <CardWrapper class="card">
+        <h3>Diseños</h3>
+        <p>
+          Después de un proceso de entendimiento e ideación se lanzaron bocetos de baja fidelidad
+          inicialmente para crear y descartar ideas rápidamente, sobretodo en cuanto a
+          redistribución de los elementos
+        </p>
+      </CardWrapper>
+
+      <!-- Container for the design images -->
+      <div class="images-container | flow">
+        <div class="even-columns flow">
+          <img src="/assets/images/latam-airways-userflow-3.png" alt="" />
+          <img src="/assets/images/latam-airways-userflow-4.png" alt="" />
+        </div>
+        <img src="/assets/images/latam-airways-userflow-5.png" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section .container {
+    display: grid;
+    margin-block-start: 3rem;
+    padding-inline: 2rem;
+    gap: 2rem;
+  }
+
+  img {
+    inline-size: 100%;
+  }
+
+  .container .even-columns {
+    gap: 2rem;
+  }
+
+  .card {
+    padding: 2.25rem 1.5rem;
+    background-color: hsla(240, 4%, 5%, 1);
+
+    h3 {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+    p {
+      line-height: 1.5;
+      color: hsla(236, 25%, 75%, 1);
+    }
+  }
+
+  .userflow-img {
+    margin-block: 3rem;
+    max-inline-size: 1204px;
+    margin-inline: auto;
+  }
+
+  .benefits {
+    --flow-spacer: 3.5rem;
+
+    text-align: center;
+    font-size: 2.25rem;
+    line-height: 0.4;
+
+    h3 {
+      font-weight: 500;
+    }
+  }
+
+  .designs {
+    --flow-spacer: 4rem;
+
+    .even-columns {
+      gap: 0;
+    }
+  }
+
+  @media (min-width: 48em) {
+    .benefits {
+      --flow-spacer: 3.5rem;
+      font-size: 4rem;
+      line-height: 1;
+    }
+
+    .designs {
+      --flow-spacer: 4rem;
+      text-align: center;
+      margin-block-start: 7.5rem;
+
+      .card {
+        padding: 0;
+        background-color: unset;
+      }
+
+      h3 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+      p {
+        font-size: 1.25rem;
+        max-inline-size: 80ch;
+        margin-inline: auto;
+      }
+    }
+
+    .images-container {
+      .even-columns {
+        --flow-spacer: 0;
+        gap: 2rem;
+      }
+    }
+  }
+</style>
