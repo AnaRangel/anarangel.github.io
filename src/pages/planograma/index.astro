@@ -1,0 +1,28 @@
+---
+import { GradientBackground } from '@components';
+import { GradientColor } from 'components/GradientBackground/GradientBackground.astro';
+import Layout from '@layouts/Layout.astro';
+import Contact from '@pages/_Sections/Contact/Contact.astro';
+import { Context, Designs, Hero, Process } from './_sections';
+---
+
+<Layout title="Ana Rangel | Planograma">
+  <main>
+    <GradientBackground color={GradientColor.cyan} />
+
+    <!-- Hero Section -->
+    <Hero />
+
+    <!-- Context Section -->
+    <Context />
+
+    <!-- Process Section -->
+    <Process />
+
+    <!-- Designs Section -->
+    <Designs />
+
+    <!-- Contact Section -->
+    <Contact />
+  </main>
+</Layout>
