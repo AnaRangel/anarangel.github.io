@@ -1,0 +1,104 @@
+---
+import { CardWrapper } from '@components';
+---
+
+<section class="hero">
+  <div class="container">
+    <img src="/svg/cencosud_logo.svg" alt="" class="main-logo" />
+    <h1 class="title">Planogramas</h1>
+    <p class="description">
+      Las alertas y gestión de planogramas presentó un desafió bastante interesante, ya que haba que
+      lidiar con dos tipos de usuarios, los que gestionan en tiendas más los que crean y envían los
+      planogramas, eran objetivos distintos pero que iban de la mano y para digitalizar de manera
+      mas óptima había que entender todo el proceso desde el inicio
+    </p>
+    <div class="cards-container | grid-auto-fit">
+      <CardWrapper class="card" hasBorder>
+        <h2 class="card__title">Metodología</h2>
+        <p class="card__subtitle">Design thinking</p>
+      </CardWrapper>
+      <CardWrapper class="card" hasBorder>
+        <h2 class="card__title">Tiempo</h2>
+        <p class="card__subtitle">3 Meses</p>
+      </CardWrapper>
+      <CardWrapper class="card" hasBorder>
+        <h2 class="card__title">Dispositivos</h2>
+        <p class="card__subtitle">Desktop y mobile</p>
+      </CardWrapper>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero .container {
+    padding-block-start: 2rem;
+    display: grid;
+    gap: 1.5rem;
+    place-items: center;
+    padding-inline: 2rem;
+  }
+
+  .main-logo {
+    inline-size: 11.875rem;
+  }
+  .title {
+    font-size: 4rem;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  .description {
+    color: hsl(236, 25%, 75%);
+    text-align: center;
+    line-height: 1.5;
+  }
+  .cards-container {
+    --min-item-width: 22rem;
+
+    margin-block-start: 3rem;
+    inline-size: 100%;
+    justify-items: center;
+  }
+
+  .card {
+    display: grid;
+    gap: 1rem;
+    background-color: hsla(240, 4%, 5%, 1);
+    padding: 1.5rem;
+    max-inline-size: 25.625rem;
+    inline-size: 100%;
+  }
+
+  .card__title {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  .card__subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  @media (min-width: 48em) {
+    .hero .container {
+      padding-block-start: 8rem;
+    }
+
+    .description {
+      font-size: 1.25rem;
+      max-inline-size: 78ch;
+    }
+
+    .card {
+      padding: 3rem;
+    }
+
+    .card__title {
+      font-size: 2rem;
+    }
+    .card__subtitle {
+      font-size: 2.25rem;
+      white-space: nowrap;
+    }
+  }
+</style>
