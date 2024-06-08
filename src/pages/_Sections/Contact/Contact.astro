@@ -4,14 +4,14 @@ import { Button, ButtonDownloadCv } from '@components';
 
 <section class="container">
   <div class="contact">
-    <div class="contact__content">
-      <h2 class="contact__title">¿Listo para dar vida a tus ideas?</h2>
-      <p class="contact__description">
+    <div class="content">
+      <h2 class="title">¿Listo para dar vida a tus ideas?</h2>
+      <p class="description">
         Haz clic abajo para conversar conmigo o echa un vistazo a mi CV, para ver cómo puedo
         impulsar tu proyecto o formar parte de tu equipo
       </p>
     </div>
-    <div class="contact__actions">
+    <div class="actions">
       <Button tag="anchor" href="https://calendly.com/rangelana1221/30min">Contáctame</Button>
       <ButtonDownloadCv id="btn-contact-download" />
     </div>
@@ -19,6 +19,10 @@ import { Button, ButtonDownloadCv } from '@components';
 </section>
 
 <style>
+  .container {
+    padding-inline: 1rem;
+  }
+
   .contact {
     margin: 0 auto;
     display: flex;
@@ -28,21 +32,21 @@ import { Button, ButtonDownloadCv } from '@components';
     gap: 24px;
     padding: 10rem 1rem;
   }
-  .contact__content {
+  .content {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .contact__title {
+  .title {
     font-family: Inter;
     font-size: 40px;
     font-weight: 500;
     line-height: 60px;
     color: white;
   }
-  .contact__description {
+  .description {
     font-family: Inter;
     font-size: 32px;
     font-weight: 300;
@@ -50,7 +54,7 @@ import { Button, ButtonDownloadCv } from '@components';
     color: white;
   }
 
-  .contact__actions {
+  .actions {
     width: fit-content;
     display: flex;
     flex-wrap: wrap;
@@ -59,24 +63,24 @@ import { Button, ButtonDownloadCv } from '@components';
     margin: 0 auto;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 48em) {
     .contact {
       height: 512px;
       width: 90%;
       padding: 56px 0px 56px 0px;
       gap: 36px;
     }
-    .contact__title {
+    .title {
       font-size: 2rem;
       line-height: 3rem;
     }
-    .contact__description {
+    .description {
       font-size: 1.25rem;
       font-weight: 300;
       line-height: 1.875rem;
     }
 
-    .contact__actions {
+    .actions {
       flex-wrap: nowrap;
       flex-direction: column;
       align-items: center;
