@@ -261,10 +261,6 @@ const ITEMS = [
       color: #b1b3d0;
     }
 
-    .hide-navbar {
-      transform: translateY(-200%);
-    }
-
     .dots {
       display: flex;
 
@@ -305,21 +301,5 @@ const ITEMS = [
       navBar.setAttribute(dataStatus, 'open');
       burgerMenu.setAttribute(dataStatus, 'open');
     }
-  });
-
-  let lastScrollPosition = 0;
-
-  window.addEventListener('scroll', () => {
-    let currentScroll = window.scrollY;
-
-    if (currentScroll - lastScrollPosition > 0) {
-      // The scroll direction goin to hide the navbar on desktop
-      document.querySelector('.nav-container').classList.add('hide-navbar');
-    } else {
-      // The scroll direction goin to show the navbar on desktop
-      document.querySelector('.nav-container').classList.remove('hide-navbar');
-    }
-    // Set the last scroll position to the current scroll position
-    lastScrollPosition = currentScroll;
   });
 </script>
