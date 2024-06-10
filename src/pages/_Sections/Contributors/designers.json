@@ -1,25 +1,25 @@
 [
   {
     "name": "Ana Rangel",
-    "avatar_url": "https://media.licdn.com/dms/image/D4E03AQGUyeWRq356MA/profile-displayphoto-shrink_200_200/0/1710790762061?e=1722470400&v=beta&t=yTfaR_7jQXhh3ku2jMpRsFcjcc_nV2gZrV_Og3QD470",
+    "avatar_url": "/src/img/avatars/ana-rangel.jpg",
     "html_url": "https://www.linkedin.com/in/ux-ana-rangel/"
   },
 
   {
     "name": "Tomás Álvarez",
-    "avatar_url": "https://media.licdn.com/dms/image/D4D35AQHBelP4nWzwEg/profile-framedphoto-shrink_400_400/0/1682478451650?e=1717905600&v=beta&t=99cQwDEaddmeE8MahpCYRndkydtHutIs651J5W3Tbjw",
+    "avatar_url": "/src/img/avatars/tomas-alvarez.jpg",
     "html_url": "https://www.linkedin.com/in/tomas-agustin-alvarez-blanco/"
   },
 
   {
     "name": "Andrés Fermín",
-    "avatar_url": "https://media.licdn.com/dms/image/D4E03AQE7PXvJrp7Rng/profile-displayphoto-shrink_400_400/0/1714513749547?e=1723075200&v=beta&t=_CKgdy1KNiI2ppSI5xcoujJdsortVNsolLMPLVDw_fE",
+    "avatar_url": "/src/img/avatars/andres-fermin.jpg",
     "html_url": "https://www.linkedin.com/in/andresfermin/"
   },
 
   {
     "name": "Daniela Maiese",
-    "avatar_url": "https://media.licdn.com/dms/image/D4E03AQEicptUbPYSkg/profile-displayphoto-shrink_400_400/0/1678454057985?e=1723075200&v=beta&t=-cINDnOFeObjZOADnFWaiaDmupEKUJfAcB1RHFI8YQ4",
+    "avatar_url": "/src/img/avatars/daniela-maiese.jpg",
     "html_url": "https://www.linkedin.com/in/mariamaiese/"
   }
 ]
