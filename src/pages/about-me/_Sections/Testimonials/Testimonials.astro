@@ -14,7 +14,7 @@ import { dataTestimonies } from '@data/testimonies';
     </article>
 
     <div class="testimonials__cards">
-      <div class="testimonials__cards--marquee">
+      <div id="scroller" class="testimonials__cards--marquee">
         {
           dataTestimonies.map((item) => (
             <TestimonyCard
@@ -34,9 +34,11 @@ import { dataTestimonies } from '@data/testimonies';
 
 <style>
   .testimonials {
+    --gap: 48px;
+
     display: flex;
     padding: 72px 36px 72px 36px;
-    gap: 48px;
+    gap: var(--gap);
     opacity: 0px;
     overflow: hidden;
     max-width: 1280px;
@@ -76,40 +78,36 @@ import { dataTestimonies } from '@data/testimonies';
     animation-play-state: paused;
   }
 
-  @keyframes animate-carousel-movil {
-    0% {
-      transform: translateX(58%);
-    }
-    100% {
-      transform: translateX(calc(-100%));
-    }
-  }
-
-  @keyframes animate-carousel-pc {
-    0% {
-      transform: translateX(58%);
-    }
-    100% {
-      transform: translateX(calc(-100%));
-    }
-  }
-
   .testimonials__cards--marquee {
+    --animation-duration: 50s;
+
     width: max-content;
     display: flex;
-    gap: 48px;
-    animation: animate-carousel-pc 40s linear infinite;
+    gap: var(--gap);
+    animation: scroll var(--animation-duration) linear infinite;
   }
 
   @media (max-width: 1000px) {
     .testimonials {
       flex-direction: column;
       align-items: center;
-      gap: 48px;
+      gap: var(--gap);
     }
+  }
 
-    .testimonials__cards--marquee {
-      animation: animate-carousel-movil 50s linear infinite;
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - calc(var(--gap) / 2)));
     }
   }
 </style>
+
+<script>
+  const scroller = document.querySelector('#scroller');
+  const cardTestimony = document.querySelectorAll('.card-testimony');
+
+  cardTestimony.forEach((testimony) => {
+    const duplicateContent = testimony.cloneNode(true);
+    scroller?.appendChild(duplicateContent);
+  });
+</script>
