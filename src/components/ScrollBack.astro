@@ -1,0 +1,101 @@
+<div class="container-scroll-back">
+  <button id="btn-scroll-back" data-active="false">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.8">
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+    </svg>
+  </button>
+</div>
+
+<style>
+  .container-scroll-back {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: fixed;
+    bottom: 3rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 0px;
+  }
+
+  #btn-scroll-back {
+    bottom: 1.54rem;
+    right: 1.54rem;
+    background-color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 0.8rem;
+  }
+
+  #btn-scroll-back svg {
+    width: 100%;
+    height: 100%;
+    stroke: #fff;
+    transform: rotate(-90deg);
+  }
+
+  #btn-scroll-back[data-hidden='false'] {
+    display: flex;
+    animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+
+  @keyframes slide-in-blurred-bottom {
+    0% {
+      transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+      transform-origin: 50% 100%;
+      filter: blur(40px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0) scaleY(1) scaleX(1);
+      transform-origin: 50% 50%;
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: 799px) {
+    .container-scroll-back {
+      display: none;
+    }
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const btnScrollBack = document.getElementById('btn-scroll-back');
+
+    const getPositonScroll = () => {
+      return document.body.scrollTop || document.documentElement.scrollTop;
+    };
+
+    const handleScroll = (e) => {
+      const scroll = e ? e.target.scrollingElement.scrollTop : getPositonScroll();
+      btnScrollBack.setAttribute('data-hidden', `${scroll < 100}`);
+    };
+
+    const handlerClick = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    btnScrollBack.addEventListener('click', handlerClick);
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+  });
+</script>
