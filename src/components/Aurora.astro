@@ -13,42 +13,45 @@
     z-index: -1;
     border-radius: 50%;
     filter: blur(70px);
-    opacity: 0.4;
+    opacity: 0.3;
     scale: 1.5;
 
     &:nth-child(2) {
-      background: radial-gradient(#9452ff, #0a0a0a);
+      background: #9452ff;
       translate: 0 -60px;
-      animation: move-2 18s linear infinite;
+      animation: move-2 14s linear infinite;
     }
 
     &:nth-child(3) {
       left: 50%;
-      background: radial-gradient(#ed8f9e, #0a0a0a);
+      background: #ed8f9e;
       translate: -50% 100px;
-      animation: move-3 15s linear infinite;
+      animation: move-3 14s linear infinite;
     }
 
     &:nth-child(4) {
       right: 0;
-      background: radial-gradient(#11005f, #0a0a0a);
+      background: #11005f;
       translate: -100px;
-      animation: move-4 15s linear infinite;
+      animation: move-4 14s linear infinite;
     }
   }
 
   @keyframes move-2 {
     0% {
+      background: #9452ff;
       translate: 0 -60px;
       scale: 1.3;
     }
 
     50% {
-      translate: 100px -150px;
-      scale: 1.8;
+      background: #52d7ff;
+      translate: 200px -150px;
+      scale: 1.5;
     }
 
     100% {
+      background: #9452ff;
       translate: 0 -60px;
       scale: 1.3;
     }
@@ -56,30 +59,36 @@
 
   @keyframes move-3 {
     0% {
+      background: #ed8f9e;
       translate: -50% 100px;
     }
 
     50% {
+      background: #8fe7ed;
       translate: -50% -100px;
     }
 
     100% {
+      background: #ed8f9e;
       translate: -50% 100px;
     }
   }
 
   @keyframes move-4 {
     0% {
+      background: #11005f;
       translate: -100px;
       scale: 1.3;
     }
 
     50% {
-      translate: 100px -100px;
-      scale: 1.8;
+      background: #005f4f;
+      translate: -200px -100px;
+      scale: 1.5;
     }
 
     100% {
+      background: #11005f;
       translate: -100px;
       scale: 1.3;
     }
