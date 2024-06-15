@@ -1,24 +1,31 @@
 ---
-import { Button, ButtonDownloadCv } from '@components';
+import { Aurora, Button, ButtonDownloadCv } from '@components';
 ---
 
-<section class="container">
-  <div class="contact">
-    <div class="content">
-      <h2 class="title">¿Listo para dar vida a tus ideas?</h2>
-      <p class="description">
-        Haz clic abajo para conversar conmigo o echa un vistazo a mi CV, para ver cómo puedo
-        impulsar tu proyecto o formar parte de tu equipo
-      </p>
+<div class="contact-container">
+  <section class="container">
+    <div class="contact">
+      <div class="content">
+        <h2 class="title">¿Listo para dar vida a tus ideas?</h2>
+        <p class="description">
+          Haz clic abajo para conversar conmigo o echa un vistazo a mi CV, para ver cómo puedo
+          impulsar tu proyecto o formar parte de tu equipo
+        </p>
+      </div>
+      <div class="actions">
+        <Button tag="anchor" href="https://calendly.com/rangelana1221/30min">Contáctame</Button>
+        <ButtonDownloadCv id="btn-contact-download" />
+      </div>
     </div>
-    <div class="actions">
-      <Button tag="anchor" href="https://calendly.com/rangelana1221/30min">Contáctame</Button>
-      <ButtonDownloadCv id="btn-contact-download" />
-    </div>
-  </div>
-</section>
+  </section>
+  {Astro.url.pathname !== '/' && <Aurora />}
+</div>
 
 <style>
+  .contact-container {
+    position: relative;
+  }
+
   .container {
     padding-inline: 1rem;
   }
