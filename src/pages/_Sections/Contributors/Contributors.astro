@@ -26,44 +26,46 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/img/avatars/*.
 
 <div class="contributions-container">
   <section class="contributions">
-    <p class="contributions-title">Quienes han contribuido en el desarrollo y diseño</p>
-
-    <span class="contributions-subtitle">Diseño</span>
-    <div class="contributors">
-      {
-        dataDesigners.map((designer) => (
-          <a href={designer.html_url} target="_blank" class="contributor" title={designer.name}>
-            <Picture
-              class="contributors__img"
-              src={images[designer.avatar_url]()}
-              formats={['avif', 'webp']}
-              alt={`Avatar ${designer.name}`}
-              width={45}
-              height={45}
-            />
-          </a>
-        ))
-      }
+    <h3 class="contributions-title">Quienes han contribuido en el desarrollo y diseño</h3>
+    <div class="design-container">
+      <p class="contributions-subtitle">Diseño</p>
+      <div class="contributors">
+        {
+          dataDesigners.map((designer) => (
+            <a href={designer.html_url} target="_blank" class="contributor" title={designer.name}>
+              <Picture
+                class="contributors__img"
+                src={images[designer.avatar_url]()}
+                formats={['avif', 'webp']}
+                alt={`Avatar ${designer.name}`}
+                width={45}
+                height={45}
+              />
+            </a>
+          ))
+        }
+      </div>
     </div>
-
-    <span class="contributions-subtitle">Desarrollo</span>
-    <div class="contributors">
-      {
-        dataDevs.map((contributor) => (
-          <a
-            href={contributor.html_url}
-            target="_blank"
-            class="contributor"
-            title={contributor.login}
-          >
-            <img
-              src={contributor.avatar_url}
-              alt={`Avatar ${contributor.login}`}
-              class="contributors__img"
-            />
-          </a>
-        ))
-      }
+    <div class="dev-container">
+      <p class="contributions-subtitle">Desarrollo</p>
+      <div class="contributors">
+        {
+          dataDevs.map((contributor) => (
+            <a
+              href={contributor.html_url}
+              target="_blank"
+              class="contributor"
+              title={contributor.login}
+            >
+              <img
+                src={contributor.avatar_url}
+                alt={`Avatar ${contributor.login}`}
+                class="contributors__img"
+              />
+            </a>
+          ))
+        }
+      </div>
     </div>
   </section>
   <Aurora />
@@ -75,43 +77,38 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/img/avatars/*.
   }
 
   .contributions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 5.5rem;
     max-width: 1280px;
     margin: 0 auto;
+    text-align: center;
+    padding-bottom: 5.5rem;
+
+    & > * + * {
+      margin-top: 2.7rem;
+    }
 
     .contributions-title {
-      font-size: 40px;
+      font-size: 2.5rem;
       font-weight: 500;
-      line-height: 60px;
-      text-align: center;
-      margin-bottom: 32px;
       color: white;
+    }
+
+    .design-container > * + *,
+    .dev-container > * + * {
+      margin-top: 1rem;
     }
 
     .contributions-subtitle {
       font-size: 24px;
       font-weight: 500;
-      line-height: 14px;
-      text-align: left;
-      margin-bottom: 36px;
       color: white;
     }
 
     .contributors {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      max-width: 1044px;
-      width: 100%;
-
       a {
+        display: inline-block;
         position: relative;
         margin-left: -10px;
+        width: max-content;
       }
 
       .contributors__img {
@@ -153,18 +150,14 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/img/avatars/*.
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media (max-width: 767.98px) {
     .contributions {
       width: 90%;
-      margin: 0 auto;
+      margin: auto;
 
       .contributors {
-        width: calc(100% - 2rem);
-        margin-bottom: 32px;
-      }
-
-      .contributors-img {
-        margin-bottom: 32px;
+        width: 85%;
+        margin-inline: auto;
       }
     }
   }
