@@ -4,7 +4,7 @@ import { Aurora, Button, ButtonDownloadCv } from '@components';
 
 <div class="contact-container">
   <section class="container">
-    <div class="contact">
+    <div class:list={['contact', { 'no-home': Astro.url.pathname !== '/' }]}>
       <div class="content">
         <h2 class="title">¿Listo para dar vida a tus ideas?</h2>
         <p class="description">
@@ -37,8 +37,13 @@ import { Aurora, Button, ButtonDownloadCv } from '@components';
     justify-content: center;
     align-items: center;
     gap: 24px;
-    padding: 10rem 1rem;
+    padding: 10rem 0;
   }
+
+  .contact.no-home {
+    padding: 5.5rem 0;
+  }
+
   .content {
     text-align: center;
     display: flex;
