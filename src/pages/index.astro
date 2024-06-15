@@ -14,7 +14,7 @@ import Thunder from './_Sections/Thunder/Thunder.astro';
   <main>
     <GradientBackground color={GradientColor.blue} />
     <Hero />
-    <div>
+    <div class="main-container">
       <Profession />
 
       <div id="proyecto" class="grid-auto-fit">
@@ -67,8 +67,11 @@ import Thunder from './_Sections/Thunder/Thunder.astro';
   @media (width >= 992px) {
     main {
       padding-block-start: 4rem;
-      max-width: 1280px;
-      margin: 0 auto;
+
+      & .main-container {
+        max-width: 1280px;
+        margin: 0 auto;
+      }
     }
 
     .grid-auto-fit {
