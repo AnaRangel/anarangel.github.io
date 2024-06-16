@@ -1,4 +1,5 @@
 ---
+import { t } from 'i18n:astro';
 import IconAna from '../../public/svg/ana-logo.svg';
 import Behance from '../../public/svg/behance.svg';
 import Github from '../../public/svg/github.svg';
@@ -20,7 +21,7 @@ import Twitch from '../../public/svg/twitch.svg';
         fetchpriority="low"
       />
       <div class="social">
-        <p>Redes Sociales</p>
+        <p>{t('social_net')}</p>
         <ul class="social-icons">
           <li>
             <a href="https://www.behance.net/rangelana1a2a6" target="_blank" rel="noopener norefer"
@@ -94,7 +95,7 @@ import Twitch from '../../public/svg/twitch.svg';
     </div>
   </div>
   <div class="copyright">
-    <p>&copy; 2024 Orgullosamente impulsado por Ana Rangel.</p>
+    <p set:html={t('copyright')} />
   </div>
 </footer>
 
