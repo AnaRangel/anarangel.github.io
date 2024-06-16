@@ -19,5 +19,64 @@
   "study_case_desc": "Proyecto realizado con inteligencia artificial para mejorar la reserva de vuelos en LATAM Airlines, este es un proyecto propio donde el diseño UX se encuentra con la innovación para un servicio más rápido y personalizado.",
   "thunder_desc": "Es mi próximo sistema de diseño, actualmente en proceso de creación, con un compromiso firme hacia la accesibilidad universal. Aún no está listo, pero mi meta es clara: crear una experiencia accesible y funcional para distintos productos.",
   "social_net": "Redes Sociales",
-  "copyright": "&copy; 2024 Orgullosamente impulsado por Ana Rangel."
+  "copyright": "&copy; 2024 Orgullosamente impulsado por Ana Rangel.",
+  "about_me_title": "No sólo tengo experiencia en empresas, me gusta contribuir en comunidades y compartir conocimiento.",
+  "about_studies_title": "Estudios",
+  "about_studies_desc": "Graduada en Publicidad y Mercadeo, cursos de UX/UI, manejo de inteligencia artificial, y programación.",
+  "about_speaker_title": "Charlista",
+  "about_speaker_desc": "He tenido el privilegio de compartir mis conocimientos en talleres y charlas sobre trabajo en equipo y UX. Me apasiona conectar con la audiencia y fomentar el aprendizaje colaborativo.",
+  "about_content_creator_title": "Creación de contenido",
+  "about_content_creator_desc": "Desde 2022 he credo de contenido, quiero guiar a otros diseñadores y desarrolladores a través de mis redes sociales. Busco dar tips que sirvan para potenciar su trabajo y su creatividad",
+  "about_soft_skills_title": "Habilidades blandas",
+  "about_soft_skills_comunication": "Comunicación",
+  "about_soft_skills_adaptability": "Adaptabilidad",
+  "about_soft_skills_autonomy": "Autonomía",
+  "about_soft_skills_team_work": "Trabajo en equipo",
+  "about_soft_skills_stress": "Manejo del estrés",
+  "about_soft_skills_think": "Pensamiento crítico",
+  "about_mentor_title": "Mentora",
+  "about_mentor_desc": "Como mentora, estoy aquí para guiar a otros cuando buscan apoyo o consultoría, cuentas conmigo para potenciar tus habilidades y alcanzar tus metas.",
+  "about_streamer_title": "Streamer en twitch",
+  "about_streamer_desc": "He descubierto que ser streamer e interactuar con mi comunidad es divertido y me ha permitido crecer aún mas como profesional.",
+  "about_ux_engeneer_desc": "Hoy en día estoy buscando adquirir más habilidades, y manejar lenguajes de programación ha sido una excelente forma de mejorar en mi área de UX.",
+  "about_volunteering_title": "Voluntariado",
+  "about_volunteering_desc": "Ser voluntaria me ha dado muchas oportunidades laborales y conocer excelentes profesionales, adicional aporto desde mis habilidades de diseño a comunidades de tecnología, dándome tambien experiencia en organización de eventos y conferencias como la <span>JSconf 2024</span>, hackathons, siendo charlista, contribuyendo al open source y más, es una manera de regresarle a la comunidad todo lo que he aprendido y transmitirlo a nuevas generaciones.",
+  "about_testimonials_title": "Lo que mis compañeros y líderes han dicho de mi",
+  "about_testimonials_desc": "Afortunadamente he trabajado con distintos roles y perfiles, de los cuales he tenido una grata relación y espero algún día volver a trabajar con ellos.",
+  "about_testimonials_text": [
+    {
+      "companyLogoUrl": "/assets/images/neoris_logo.jpg",
+      "companyName": "Neoris",
+      "personFullName": "Jesús Contreras",
+      "personJobTitle": "UX Researcher",
+      "testimonyText": "Ana es una Product Designer dedicada y creativa, capaz de resolver problemas complejos de manera inspiradora. Su pasión y habilidad para fomentar la colaboración impactan positivamente en cualquier equipo. Recomiendo su talento a cualquier organización.",
+      "fullTestimonyUrl": ""
+    },
+    {
+      "companyLogoUrl": "/assets/images/bancoRipley_logo.webp",
+      "companyName": "Banco Ripley",
+      "personFullName": "Viviana de Toledo",
+      "personJobTitle": "Lead UX I Researcher",
+      "testimonyText": "Trabajar con Ana fue un placer debido a su enfoque en los objetivos del negocio y su exhaustiva investigación previa al diseño. Destaca en presentaciones técnicas y es flexible para aceptar recomendaciones. Es una profesional excelente con habilidades en gestión de proyectos y trabajo en equipos multidisciplinarios.",
+      "fullTestimonyUrl": ""
+    },
+    {
+      "companyLogoUrl": "/assets/images/neoris_logo.jpg",
+      "companyName": "Neoris",
+      "personFullName": "Luís Felipe A. Amaral",
+      "personJobTitle": "UX Researcher",
+      "testimonyText": "Ana Rangel es una persona de gran talento con una capacidad operativa y de liderazgo sin parangón. Cuando se trata de trabajo operativo, traduce los datos recogidos en las encuestas y crea diseños con un cuidado absoluto tanto técnica como emocionalmente. Sus dotes de liderazgo incluyen su carisma, sus habilidades comunicativas y de mediación que la hacen destacar.",
+      "fullTestimonyUrl": ""
+    },
+    {
+      "companyLogoUrl": "/assets/images/timining.webp",
+      "companyName": "Timining",
+      "personFullName": "Caro Retamal",
+      "personJobTitle": "Sr. Product Manager",
+      "testimonyText": "Ana es proactiva, autodidacta y resolutiva. Fundamenta sus propuestas con investigación y no asume comportamientos de usuarios sin datos. Es colaborativa y tiene buenas aptitudes para el trabajo en equipo.",
+      "fullTestimonyUrl": ""
+    }
+  ],
+  "about_testimonials_read_more": "Leer completo",
+  "about_tools_title": "Algunas herramientas de diseño que manejo"
 }

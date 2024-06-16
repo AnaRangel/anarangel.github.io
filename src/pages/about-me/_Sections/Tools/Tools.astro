@@ -1,4 +1,5 @@
 ---
+import { t } from 'i18n:astro';
 import MainLogo from './MainLogo.astro';
 import ToolsLogos from './ToolsLogos.astro';
 
@@ -10,7 +11,7 @@ const OFFSET_Y = 1.2;
   <ToolsLogos />
 
   <div class="tools">
-    <h2 class="tools-title">Algunas herramientas de diseño que manejo</h2>
+    <h2 class="tools-title">{t('about_tools_title')}</h2>
     <svg id="tools-desktop" width="1300" height="741" viewBox="0 0 1300 741" fill="none">
       <g id="lines">
         <path
