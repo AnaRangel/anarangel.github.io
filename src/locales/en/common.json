@@ -19,5 +19,64 @@
   "study_case_desc": "Project carried out with artificial intelligence to improve flight booking at LATAM Airlines, this is a proprietary project where UX design meets innovation for a faster and more personalized service.",
   "thunder_desc": "It is my next design system, currently under creation, with a firm commitment to universal accessibility. It's not ready yet, but my goal is clear: to create an accessible and functional experience for different products.",
   "social_net": "Social Networks",
-  "copyright": "&copy; 2024 Proudly powered by Ana Rangel."
+  "copyright": "&copy; 2024 Proudly powered by Ana Rangel.",
+  "about_me_title": "Not only do I have experience in companies, I like to contribute to communities and share knowledge.",
+  "about_studies_title": "Studies",
+  "about_studies_desc": "Graduated in Advertising and Marketing, UX/UI courses, artificial intelligence management, and programming.",
+  "about_speaker_title": "Speaker",
+  "about_speaker_desc": "I have had the privilege of sharing my knowledge in workshops and talks on teamwork and UX. I am passionate about connecting with the audience and fostering collaborative learning.",
+  "about_content_creator_title": "Content creation",
+  "about_content_creator_desc": "Since 2022 I have been creating content, I want to guide other designers and developers through my social networks. I seek to give tips that serve to enhance their work and creativity.",
+  "about_soft_skills_title": "Soft skills",
+  "about_soft_skills_comunication": "Communication",
+  "about_soft_skills_adaptability": "Adaptability",
+  "about_soft_skills_autonomy": "Autonomy",
+  "about_soft_skills_team_work": "Teamwork",
+  "about_soft_skills_stress": "Stress management",
+  "about_soft_skills_think": "Critical thinking",
+  "about_mentor_title": "Mentor",
+  "about_mentor_desc": "As a mentor, I am here to guide others when they are looking for support or consulting, count on me to empower your skills and achieve your goals.",
+  "about_streamer_title": "Streamer on twitch",
+  "about_streamer_desc": "I have found that being a streamer and interacting with my community is fun and has allowed me to grow even more as a professional.",
+  "about_ux_engeneer_desc": "Nowadays I am looking to acquire more skills, and handling programming languages has been a great way to improve in my UX area.",
+  "about_volunteering_title": "Volunteering",
+  "about_volunteering_desc": "Being a volunteer has given me many job opportunities and meeting excellent professionals, additional I contribute from my design skills to technology communities, giving me also experience in organizing events and conferences such as <span>JSconf 2024</span>, hackathons, being a speaker, contributing to open source and more, is a way to give back to the community everything I have learned and pass it on to new generations.",
+  "about_testimonials_title": "What my peers and leaders have said about me",
+  "about_testimonials_desc": "Fortunately I have worked with different roles and profiles, of which I have had a pleasant relationship and I hope one day to work with them again.",
+  "about_testimonials_text": [
+    {
+      "companyLogoUrl": "/assets/images/neoris_logo.jpg",
+      "companyName": "Neoris",
+      "personFullName": "Jesús Contreras",
+      "personJobTitle": "UX Researcher",
+      "testimonyText": "Ana is a dedicated and creative Product Designer, capable of solving complex problems in an inspiring way. Her passion and ability to foster collaboration positively impacts any team. I highly recommend her talent to any organization.",
+      "fullTestimonyUrl": ""
+    },
+    {
+      "companyLogoUrl": "/assets/images/bancoRipley_logo.webp",
+      "companyName": "Banco Ripley",
+      "personFullName": "Viviana de Toledo",
+      "personJobTitle": "Lead UX I Researcher",
+      "testimonyText": "Ana was a pleasure to work with because of her focus on business objectives and her thorough pre-design research. She excels in technical presentations and is flexible in accepting recommendations. She is an excellent professional with skills in project management and working in multidisciplinary teams.",
+      "fullTestimonyUrl": ""
+    },
+    {
+      "companyLogoUrl": "/assets/images/neoris_logo.jpg",
+      "companyName": "Neoris",
+      "personFullName": "Luís Felipe A. Amaral",
+      "personJobTitle": "UX Researcher",
+      "testimonyText": "Ana Rangel is an extremely talented individual with unparalleled operational and leadership skills. When it comes to operational work, she translates data collected in surveys and creates designs with absolute care both technically and emotionally. Her leadership skills include her charisma, her communicative and mediation skills that make her stand out.",
+      "fullTestimonyUrl": ""
+    },
+    {
+      "companyLogoUrl": "/assets/images/timining.webp",
+      "companyName": "Timining",
+      "personFullName": "Caro Retamal",
+      "personJobTitle": "Sr. Product Manager",
+      "testimonyText": "Ana is proactive, self-taught and decisive. She supports her proposals with research and does not assume user behavior without data. She is collaborative and has good teamwork skills.",
+      "fullTestimonyUrl": ""
+    }
+  ],
+  "about_testimonials_read_more": "Read more",
+  "about_tools_title": "Some design tools I use"
 }

@@ -1,5 +1,6 @@
 ---
 import { CardWrapper, Tooltip } from '@components';
+import { t } from 'i18n:astro';
 ---
 
 <section class="container">
@@ -7,11 +8,8 @@ import { CardWrapper, Tooltip } from '@components';
     <CardWrapper class="card | flow" hasBorder data-type="twitch">
       <div class="flow">
         <img src="/svg/twitch.svg" alt="logo twitch" class="twitch" />
-        <h3 class="card__title">Streamer en twitch</h3>
-        <p class="card__paragraph">
-          He descubierto que ser streamer e interactuar con mi comunidad es divertido y me ha
-          permitido crecer aún mas como profesional
-        </p>
+        <h3 class="card__title">{t('about_streamer_title')}</h3>
+        <p class="card__paragraph">{t('about_streamer_desc')}</p>
       </div>
 
       <picture class="twitch-img">
@@ -30,8 +28,7 @@ import { CardWrapper, Tooltip } from '@components';
     <CardWrapper class="card | flow" hasBorder data-type="ux-engineer">
       <h3 class="card__title">UX engineer</h3>
       <p class="card__paragraph">
-        Hoy en día estoy buscando adquirir mas habilidades, y manejas lenguajes de programación ha
-        sido una excelente forma de mejorar en mi área de UX
+        {t('about_ux_engeneer_desc')}
       </p>
       <div class="hobbies-imgs-group">
         <Tooltip message="HTML 5"><img src="/svg/html-logo.svg" alt="logo html" /></Tooltip>
@@ -45,15 +42,8 @@ import { CardWrapper, Tooltip } from '@components';
 
     <CardWrapper hasBorder class="card" data-type="volunteering">
       <div class="flow">
-        <h3 class="card__title">Voluntariado</h3>
-        <p class="card__paragraph">
-          Ser voluntaria me ha dado muchas oportunidades laborales y conocer excelentes
-          profesionales, adicional aporto desde mis habilidades de diseño a comunidades de
-          tecnología, dándome tambien experiencia en organización de eventos y conferencias como la <span
-            >JSconf 2024</span
-          >, hackathons, siendo charlista, contribuyendo al open source y más, es una manera de
-          regresarle a la comunidad todo lo que he aprendido y transmitirlo a nuevas generaciones.
-        </p>
+        <h3 class="card__title">{t('about_volunteering_title')}</h3>
+        <p class="card__paragraph" set:html={t('about_volunteering_desc')} />
       </div>
       <div class="events-container">
         <div class="event" data-name="js-chile">

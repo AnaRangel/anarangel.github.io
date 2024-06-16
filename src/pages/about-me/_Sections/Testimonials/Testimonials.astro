@@ -1,15 +1,20 @@
 ---
 import { TestimonyCard } from '@components';
-import { dataTestimonies } from '@data/testimonies';
+import { t } from 'i18n:astro';
+
+// import { dataTestimonies } from '@data/testimonies';
+
+const dataTestimonies = t('about_testimonials_text', {
+  returnObjects: true,
+});
 ---
 
 <section>
   <div class="testimonials | container">
     <article class="testimonials__item">
-      <h2 class="testimonials__item__title">Lo que mis compañeros y líderes han dicho de mi</h2>
+      <h2 class="testimonials__item__title">{t('about_testimonials_title')}</h2>
       <p class="testimonials__item__content">
-        Afortunadamente he trabajado con distintos roles y perfiles, de los cuales he tenido una
-        grata relación y espero algún día volver a trabajar con ellos.
+        {t('about_testimonials_desc')}
       </p>
     </article>
 

@@ -1,21 +1,20 @@
 ---
 import { CardWrapper, Tooltip } from '@components';
+import { t } from 'i18n:astro';
 ---
 
 <section>
   <div class="container">
     <p class="intro-text">
-      No sólo tengo experiencia en empresas, me gusta contribuir en comunidades y compartir
-      conocimiento.
+      {t('about_me_title')}
     </p>
 
     <div class="wrapper">
       <div class="grid-item" data-type="studies">
         <CardWrapper hasBorder class="card">
-          <h3 class="card__title">Estudios</h3>
+          <h3 class="card__title">{t('about_studies_title')}</h3>
           <p class="card__description">
-            Graduada en Publicidad y mercadeo, cursos de UX/UI, manejo de inteligencia artificial, y
-            programación.
+            {t('about_studies_desc')}
           </p>
           <img
             class="gif"
@@ -28,11 +27,9 @@ import { CardWrapper, Tooltip } from '@components';
         </CardWrapper>
 
         <CardWrapper hasBorder class="card grid-item" data-type="speaker">
-          <h3 class="card__title">Charlista</h3>
+          <h3 class="card__title">{t('about_speaker_title')}</h3>
           <p class="card__description">
-            He tenido el privilegio de compartir mis conocimientos en talleres y charlas sobre
-            trabajo en equipo y UX. Me apasiona conectar con la audiencia y fomentar el aprendizaje
-            colaborativo.
+            {t('about_speaker_desc')}
           </p>
           <div class="flex-group">
             <Tooltip message="Nerdearla"
@@ -57,11 +54,9 @@ import { CardWrapper, Tooltip } from '@components';
 
       <CardWrapper hasBorder class="card grid-item" data-type="content-creator">
         <div class="flow">
-          <h3 class="card__title">Creación de contenido</h3>
+          <h3 class="card__title">{t('about_content_creator_title')}</h3>
           <p class="card__description">
-            Desde 2022 he credo de contenido, quiero guiar a otros diseñadores y desarrolladores a
-            través de mis redes sociales. Busco dar tips que sirvan para potenciar su trabajo y su
-            creatividad
+            {t('about_content_creator_desc')}
           </p>
         </div>
         <picture class="portrait-img">
@@ -73,35 +68,35 @@ import { CardWrapper, Tooltip } from '@components';
 
       <div class="grid-item" data-type="soft-skills">
         <CardWrapper hasBorder class="card">
-          <p class="card__title">Habilidades blandas</p>
+          <p class="card__title"></p>
           <div class="skills | grid-auto-fit">
             <div class="flow">
-              <p>Comunicación</p>
+              <p>{t('about_soft_skills_comunication')}</p>
               <div class="line" data-variant="primary"></div>
               <div class="line"></div>
             </div>
             <div class="flow">
-              <p>Adaptabilidad</p>
+              <p>{t('about_soft_skills_adaptability')}</p>
               <div class="line" data-variant="secondary"></div>
               <div class="line"></div>
             </div>
             <div class="flow">
-              <p>Autonomía</p>
+              <p>{t('about_soft_skills_autonomy')}</p>
               <div class="line" data-variant="tertiary"></div>
               <div class="line"></div>
             </div>
             <div class="flow">
-              <p>Trabajo en equipo</p>
+              <p>{t('about_soft_skills_team_work')}</p>
               <div class="line" data-variant="primary"></div>
               <div class="line"></div>
             </div>
             <div class="flow">
-              <p>Manejo del estrés</p>
+              <p>{t('about_soft_skills_stress')}</p>
               <div class="line" data-variant="secondary"></div>
               <div class="line"></div>
             </div>
             <div class="flow">
-              <p>Pensamiento crítico</p>
+              <p>{t('about_soft_skills_think')}</p>
               <div class="line" data-variant="tertiary"></div>
               <div class="line"></div>
             </div>
@@ -109,10 +104,9 @@ import { CardWrapper, Tooltip } from '@components';
         </CardWrapper>
 
         <CardWrapper hasBorder class="card">
-          <p class="card__title">Mentora</p>
+          <p class="card__title">{t('about_mentor_title')}</p>
           <p class="card__description">
-            Como mentora, estoy aquí para guiar a otros cuando buscan apoyo o consultoría, cuentan
-            conmigo para potenciar tus habilidades y alcanzar tus metas
+            {t('about_mentor_desc')}
           </p>
           <div class="flex-group">
             <img src="/img/emoji-invider.png" alt="Juego" />
