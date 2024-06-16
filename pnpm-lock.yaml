@@ -26,6 +26,9 @@ importers:
       astro:
         specifier: ^4.5.12
         version: 4.5.12(@types/node@20.12.2)(lightningcss@1.24.1)(sass@1.74.1)(typescript@5.4.3)
+      i18next:
+        specifier: ^23.11.5
+        version: 23.11.5
       sass:
         specifier: ^1.74.1
         version: 1.74.1
