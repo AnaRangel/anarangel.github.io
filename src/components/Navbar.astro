@@ -1,25 +1,29 @@
 ---
 import { LanguageToggle } from '@components';
+import { getLocalePath, t } from 'i18n:astro';
 import Logo from './Logo.astro';
 
-const ITEMS = [
+const SLUGS = [
   {
-    text: 'Inicio',
-    slug: '/',
+    slug: getLocalePath('/'),
   },
   {
-    text: 'Proyectos',
-    slug: '/#proyecto',
+    slug: Astro.url.pathname.includes('/en')
+      ? getLocalePath('/#project')
+      : getLocalePath('/#proyecto'),
   },
   {
-    text: 'Sobre mí',
-    slug: '/about-me',
+    slug: getLocalePath('/sobre-mi'),
   },
 ];
+
+const LINKS = t('navbar', {
+  returnObjects: true,
+});
 ---
 
 <header class="nav-container">
-  <a href="/">
+  <a href={getLocalePath('/')}>
     <Logo />
   </a>
 
@@ -27,10 +31,10 @@ const ITEMS = [
   <nav class="navbar" data-status="close" aria-hidden="true">
     <ul class="list">
       {
-        ITEMS.map(({ text, slug }) => (
+        SLUGS.map(({ slug }, index) => (
           <>
             <li class:list={['list-item', { active: Astro.url.pathname === slug }]}>
-              <a href={slug}>{text}</a>
+              <a href={slug}>{LINKS[index]}</a>
             </li>
             <li class="dots">&#183;</li>
           </>
