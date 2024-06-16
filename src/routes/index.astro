@@ -17,7 +17,7 @@ import { GradientColor } from '../components/GradientBackground/GradientBackgrou
     <div>
       <Profession />
 
-      <div id="proyecto" class="grid-auto-fit">
+      <div id={Astro.url.pathname.includes('/en') ? 'projects' : 'proyectos'} class="grid-auto-fit">
         <SimpleCard
           cardText="UX Designer para productos financieros de Chile y Perú"
           cardImage="/svg/logo-ripley.svg"
