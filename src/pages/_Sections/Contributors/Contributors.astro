@@ -36,7 +36,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/img/avatars/*.
             <a href={designer.html_url} target="_blank" class="contributor" title={designer.name}>
               <Picture
                 class="contributors__img"
-                src={designer.avatar_url}
+                src={images[designer.avatar_url]()}
                 formats={['avif', 'webp']}
                 alt={`Avatar ${designer.name}`}
                 width={45}
