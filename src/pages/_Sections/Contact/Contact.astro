@@ -1,18 +1,18 @@
 ---
 import { Button, ButtonDownloadCv } from '@components';
+import { t } from 'i18n:astro';
 ---
 
 <section class="container">
   <div class="contact">
     <div class="content">
-      <h2 class="title">¿Listo para dar vida a tus ideas?</h2>
-      <p class="description">
-        Haz clic abajo para conversar conmigo o echa un vistazo a mi CV, para ver cómo puedo
-        impulsar tu proyecto o formar parte de tu equipo
-      </p>
+      <h2 class="title">{t('contact_title')}</h2>
+      <p class="description">{t('contact_desc')}</p>
     </div>
     <div class="actions">
-      <Button tag="anchor" href="https://calendly.com/rangelana1221/30min">Contáctame</Button>
+      <Button tag="anchor" href="https://calendly.com/rangelana1221/30min"
+        >{t('contact_button')}</Button
+      >
       <ButtonDownloadCv id="btn-contact-download" />
     </div>
   </div>
@@ -48,9 +48,9 @@ import { Button, ButtonDownloadCv } from '@components';
   }
   .description {
     font-family: Inter;
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 300;
-    line-height: 48px;
+    line-height: 1.5;
     color: white;
   }
 

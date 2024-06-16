@@ -1,16 +1,13 @@
 ---
 import { Button, IconCatalog } from '@components';
+import { t } from 'i18n:astro';
 ---
 
 <article>
   <div class="container | even-columns">
     <div class="title-container">
-      <h3>Diseño, testeo, liderazgo,<span> programación,</span> estrategia</h3>
-      <p class="text-content">
-        En cada proyecto, mi objetivo es armonizar la estética, la funcionalidad y la eficiencia
-        para entregar soluciones que no solo satisfacen necesidades del usuario, sino que haya un
-        aporte de valor que tiene para el negocio
-      </p>
+      <h3 set:html={t('profession_title')} />
+      <p class="text-content">{t('profession_desc')}</p>
       <Button
         invert
         tag="anchor"
@@ -18,7 +15,7 @@ import { Button, IconCatalog } from '@components';
         target="_self"
         afterIcon={IconCatalog.arrowDownTray}
       >
-        Saber más de mi
+        {t('profession_button')}
       </Button>
     </div>
     <img class="svg-container" src="/svg/interface-description.svg" alt="" />

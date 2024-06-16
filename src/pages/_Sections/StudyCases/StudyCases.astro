@@ -1,5 +1,6 @@
 ---
 import { SimpleCard } from '@components';
+import { t } from 'i18n:astro';
 ---
 
 <div class="study-cases">
@@ -10,17 +11,15 @@ import { SimpleCard } from '@components';
       alt="Latam airlines Logo"
       width="285"
     />
-    <h3>Caso de estudio</h3>
+    <h3>{t('study_case_title')}</h3>
     <p>
-      Proyecto realizado con inteligencia artificial para mejorar la reserva de vuelos con LATAM,
-      esto un proyecto propio donde el diseño UX se encuentra con la innovación para un servicio más
-      rápido y personalizado
+      {t('study_case_desc')}
     </p>
     <img class="logo-img" src="/svg/latam-airlines-1.svg" alt="Latam airlines Logo" />
   </section>
   <!-- TODO: arreglar que la imagen dentro del componente quede en la posicion correcta -->
   <SimpleCard
-    cardText="Mira más sobre el proyecto"
+    cardText={t('project_cta')}
     cardImage="/svg/latam-airlines.svg"
     isInverted={true}
     url="/latam-airlines"
