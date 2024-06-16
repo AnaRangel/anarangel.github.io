@@ -1,29 +1,22 @@
 ---
-// TODO: Activar cuando esté integrado con i18n
-// import { getLocale, getSwitcherData, t } from 'i18n:astro'
-// const locale = getLocale()
-// const data = getSwitcherData()
+import { switchLocalePath } from 'i18n:astro';
 ---
 
 <div class="slider-container">
-  <!--TODO: Cambiar a los anchor y eliminar los button cuando esté integrado i18n -->
-  <button type="button" class="action-language action-left action-selected">Esp</button>
-  <button type="button" class="action-language action-right">Eng</button>
-  <!-- {
-    data.map((e, idx) => {
-      return (
-        <a
-          href={e.href}
-          class:list={[
-            `action-language action-${idx === 0 ? 'left' : 'right'}`,
-            { 'action-selected': e.locale === locale },
-          ]}
-        >
-          {e.locale === 'es' ? 'Esp' : 'Eng'}
-        </a>
-      );
-    })
-  } -->
+  <a
+    href={switchLocalePath('es')}
+    class:list={[
+      'action-language action-left',
+      { 'action-selected': !Astro.url.pathname.includes('/en') },
+    ]}>Esp</a
+  >
+  <a
+    href={switchLocalePath('en')}
+    class:list={[
+      'action-language action-right',
+      { 'action-selected': Astro.url.pathname.includes('/en') },
+    ]}>Eng</a
+  >
 </div>
 
 <style>
@@ -74,21 +67,3 @@
     border-bottom-right-radius: 50px;
   }
 </style>
-
-<!-- TODO: Eliminar todo estos script cuando esté integrado con i18n -->
-<script>
-  const btnLeft = document.querySelector('.action-left');
-  const btnRight = document.querySelector('.action-right');
-
-  if (btnLeft && btnRight) {
-    btnLeft.addEventListener('click', () => {
-      btnLeft.classList.add('action-selected');
-      btnRight.classList.remove('action-selected');
-    });
-
-    btnRight.addEventListener('click', () => {
-      btnRight.classList.add('action-selected');
-      btnLeft.classList.remove('action-selected');
-    });
-  }
-</script>

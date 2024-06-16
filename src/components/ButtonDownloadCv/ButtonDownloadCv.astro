@@ -1,5 +1,6 @@
 ---
 import { Button, IconCatalog } from '@components';
+import { t } from 'i18n:astro';
 
 interface Props {
   /*
@@ -11,7 +12,7 @@ interface Props {
 const { id } = Astro.props;
 ---
 
-<Button invert id={id} afterIcon={IconCatalog.arrowDownTray}> Descargar CV </Button>
+<Button invert id={id} afterIcon={IconCatalog.arrowDownTray}>{t('hero_download_cv')}</Button>
 
 <script is:inline define:vars={{ btnId: id }}>
   const button = document.getElementById(btnId);

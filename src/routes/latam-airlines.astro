@@ -1,14 +1,14 @@
 ---
 import { GradientBackground } from '@components';
-import { GradientColor } from 'components/GradientBackground/GradientBackground.astro';
 import Layout from '@layouts/Layout.astro';
 import Contact from '@pages/_Sections/Contact/Contact.astro';
-import { Context, Designs, Hero, Process } from './_sections';
+import { ABTesting, Context, Designs, Hero, Process } from '@pages/latam-airlines/_sections';
+import { GradientColor } from '../components/GradientBackground/GradientBackground.astro';
 ---
 
-<Layout title="Ana Rangel | Planograma">
+<Layout title="Ana Rangel | Latam Airlines">
   <main>
-    <GradientBackground color={GradientColor.cyan} />
+    <GradientBackground color={GradientColor.blue} />
 
     <!-- Hero Section -->
     <Hero />
@@ -21,6 +21,9 @@ import { Context, Designs, Hero, Process } from './_sections';
 
     <!-- Designs Section -->
     <Designs />
+
+    <!-- ABTesting Section -->
+    <ABTesting />
 
     <!-- Contact Section -->
     <Contact />

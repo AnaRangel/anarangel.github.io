@@ -20,10 +20,12 @@
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.5.10",
+		"@astrolicious/i18n": "^0.4.3",
 		"@types/node": "^20.12.2",
 		"@typescript-eslint/eslint-plugin": "^7.5.0",
 		"@typescript-eslint/parser": "^7.5.0",
 		"astro": "^4.5.12",
+		"i18next": "^23.11.5",
 		"sass": "^1.74.1",
 		"sharp": "^0.33.4",
 		"typescript": "^5.4.3"
