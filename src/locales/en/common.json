@@ -1,3 +1,7 @@
 {
-  "navbar": ["Home", "Projects", "About me"]
+  "navbar": ["Home", "Projects", "About me"],
+  "hero_title": "Hello! I'm Ana",
+  "hero_subtitle": "A <span class=\"highlighted-role\">UX Senior</span> with a Junior's soul",
+  "hero_contact_button": "Contact me",
+  "hero_download_cv": "Download CV"
 }

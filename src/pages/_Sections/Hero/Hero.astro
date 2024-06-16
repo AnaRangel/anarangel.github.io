@@ -1,13 +1,14 @@
 ---
 import { Button, ButtonDownloadCv } from '@components';
+import { t } from 'i18n:astro';
 ---
 
 <section>
   <div class="container">
     <div class="hero-headline | flow">
-      <h1>¡Hola! Soy Ana</h1>
+      <h1>{t('hero_title')}</h1>
       <p class="hero-description">
-        Una <span class="highlighted-role"> UX Senior</span> con alma de Junior
+        <Fragment set:html={t('hero_subtitle')} />
       </p>
     </div>
     <div class="hero-actions | flow">
@@ -15,7 +16,7 @@ import { Button, ButtonDownloadCv } from '@components';
       <div class="btn-contanier">
         <div class="btn-group">
           <Button tag="anchor" href="https://calendly.com/rangelana1221/30min" isFullWidth>
-            Contáctame
+            {t('hero_contact_button')}
           </Button>
           <ButtonDownloadCv id="btn-hero-download" />
         </div>
@@ -149,14 +150,6 @@ import { Button, ButtonDownloadCv } from '@components';
     @media (width >= 1536px) {
       max-width: 80%;
     }
-  }
-
-  .highlighted-role {
-    color: transparent;
-
-    background-image: linear-gradient(to right, hsl(317deg 90% 74%), hsl(258deg 92% 70%));
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .hero-actions {

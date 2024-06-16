@@ -1,3 +1,7 @@
 {
-  "navbar": ["Inicio", "Proyectos", "Sobre mí"]
+  "navbar": ["Inicio", "Proyectos", "Sobre mí"],
+  "hero_title": "¡Hola! Soy Ana",
+  "hero_subtitle": "Una <span class=\"highlighted-role\">UX Senior</span> con alma de Junior",
+  "hero_contact_button": "Contáctame",
+  "hero_download_cv": "Descargar CV"
 }
