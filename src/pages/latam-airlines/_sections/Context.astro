@@ -1,12 +1,13 @@
+---
+import { t } from 'i18n:astro';
+---
+
 <section class="context">
   <div class="container flow">
-    <h2 class="title">Contexto</h2>
+    <h2 class="title">{t('latam_context_title')}</h2>
 
     <!-- Section Description: Explanation of the problem and solution -->
-    <p class="description">
-      Revisión y evaluación del proceso de compra en LATAM, con el objetivo de identificar puntos
-      críticos en el flujo y convertirlos en oportunidades de mejora para el usuario y el negocio
-    </p>
+    <p class="description">{t('latam_context_desc')}</p>
 
     <!-- Section Image: Illustrating the context -->
     <img
@@ -23,14 +24,10 @@
     />
 
     <!-- Subsection Title: Opportunity Search -->
-    <h3 class="title">Búsqueda de oportunidad</h3>
+    <h3 class="title">{t('latam_oportunity_title')}</h3>
 
     <!-- Subsection Description: Explanation of the first integration of AI -->
-    <p class="description">
-      El primer punto donde se integró IA en este proceso fue en un brainstorming inicial, con un
-      pluggin en la herramienta de Figjam, para así ser comparadas estas ideas con la opinión de
-      usuarios reales
-    </p>
+    <p class="description">{t('latam_coportunity_desc')}</p>
 
     <!-- Subsection Image: Post-Jambot illustration -->
     <img

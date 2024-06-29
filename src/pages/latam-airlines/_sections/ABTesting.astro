@@ -1,5 +1,6 @@
 ---
 import { CardWrapper } from '@components';
+import { t } from 'i18n:astro';
 ---
 
 <section>
@@ -10,11 +11,7 @@ import { CardWrapper } from '@components';
         <img src="/assets/images/latam-airways-abtesting-1.png" alt="AB Testing Logo" />
         <h3>Test A/B</h3>
       </div>
-      <p>
-        Como última etapa se hizo un A/B testing para iterar los diseños con IA, esta nos permite
-        predecir donde hay puntos focales en los diseños que tengan mas relevancia y carga cognitiva
-        se iteraron los diseños hasta llegar a una mayor puntuación en la claridad del contenido
-      </p>
+      <p>{t('latam_abtesting_desc')}</p>
     </CardWrapper>
 
     <!-- Container for additional images related to A/B Testing -->
