@@ -5,7 +5,7 @@ import { t } from 'i18n:astro';
 
 <div class="contact-container">
   <section class="container">
-    <div class="contact">
+    <div class:list={['contact', { 'no-home': Astro.url.pathname !== '/' }]}>
       <div class="content">
         <h2 class="title">{t('contact_title')}</h2>
         <p class="description">{t('contact_desc')}</p>
@@ -37,8 +37,13 @@ import { t } from 'i18n:astro';
     justify-content: center;
     align-items: center;
     gap: 24px;
-    padding: 10rem 1rem;
+    padding: 10rem 0;
   }
+
+  .contact.no-home {
+    padding: 5.5rem 0;
+  }
+
   .content {
     text-align: center;
     display: flex;
