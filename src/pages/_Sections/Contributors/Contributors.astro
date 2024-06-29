@@ -25,7 +25,7 @@ const dataDesigners: Designer[] = designersData;
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/img/avatars/*.jpg');
 ---
 
-<div class="contributions-container">
+<div class="container-contributions">
   <section class="contributions">
     <p class="contributions-title">{t('contributions_title')}</p>
 
@@ -77,6 +77,10 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/img/avatars/*.
 </div>
 
 <style lang="scss">
+  .container-contributions {
+    position: relative;
+  }
+
   .contributions {
     display: flex;
     flex-direction: column;
