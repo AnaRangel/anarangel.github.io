@@ -15,7 +15,7 @@ import { GradientColor } from '../components/GradientBackground/GradientBackgrou
   <main>
     <GradientBackground color={GradientColor.blue} />
     <Hero />
-    <div>
+    <div class="container">
       <Profession />
 
       <div id={Astro.url.pathname.includes('/en') ? 'projects' : 'proyectos'} class="grid-auto-fit">
@@ -62,8 +62,11 @@ import { GradientColor } from '../components/GradientBackground/GradientBackgrou
   @media (width >= 992px) {
     main {
       padding-block-start: 4rem;
-      max-width: 1280px;
-      margin: 0 auto;
+
+      & .container {
+        max-width: 1280px;
+        margin: 0 auto;
+      }
     }
 
     .grid-auto-fit {
