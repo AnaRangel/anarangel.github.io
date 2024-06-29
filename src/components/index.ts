@@ -9,3 +9,4 @@ export { default as Navbar } from './Navbar.astro';
 export { default as Tooltip } from './Tooltip/Tooltip.astro';
 export { default as Avatar } from './Avatar.astro';
 export { default as ScrollBack } from './ScrollBack.astro';
+export { default as Aurora } from './Aurora.astro';
