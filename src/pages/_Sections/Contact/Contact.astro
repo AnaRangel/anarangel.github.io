@@ -1,24 +1,31 @@
 ---
-import { Button, ButtonDownloadCv } from '@components';
+import { Aurora, Button, ButtonDownloadCv } from '@components';
 import { t } from 'i18n:astro';
 ---
 
-<section class="container">
-  <div class="contact">
-    <div class="content">
-      <h2 class="title">{t('contact_title')}</h2>
-      <p class="description">{t('contact_desc')}</p>
+<div class="contact-container">
+  <section class="container">
+    <div class="contact">
+      <div class="content">
+        <h2 class="title">{t('contact_title')}</h2>
+        <p class="description">{t('contact_desc')}</p>
+      </div>
+      <div class="actions">
+        <Button tag="anchor" href="https://calendly.com/rangelana1221/30min"
+          >{t('contact_button')}</Button
+        >
+        <ButtonDownloadCv id="btn-contact-download" />
+      </div>
     </div>
-    <div class="actions">
-      <Button tag="anchor" href="https://calendly.com/rangelana1221/30min"
-        >{t('contact_button')}</Button
-      >
-      <ButtonDownloadCv id="btn-contact-download" />
-    </div>
-  </div>
-</section>
+  </section>
+  {Astro.url.pathname !== '/' && <Aurora />}
+</div>
 
 <style>
+  .contact-container {
+    position: relative;
+  }
+
   .container {
     padding-inline: 1rem;
   }
