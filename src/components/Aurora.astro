@@ -1,0 +1,36 @@
+<div class="aurora"></div>
+<div class="aurora"></div>
+<div class="aurora"></div>
+
+<style>
+  .aurora {
+    --size: 500px;
+
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    top: 0;
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: 0.4;
+    scale: 1.5;
+
+    &:nth-child(2) {
+      background: radial-gradient(#9452ff, #0a0a0a);
+      translate: 0 -60px;
+    }
+
+    &:nth-child(3) {
+      left: 50%;
+      background: radial-gradient(#ed8f9e, #0a0a0a);
+      translate: -50% 100px;
+    }
+
+    &:nth-child(4) {
+      right: 0;
+      background: radial-gradient(#11005f, #0a0a0a);
+      translate: -100px;
+    }
+  }
+</style>
