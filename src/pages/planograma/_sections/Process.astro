@@ -1,5 +1,6 @@
 ---
 import { CardWrapper } from '@components';
+import { t } from 'i18n:astro';
 ---
 
 <section>
@@ -9,11 +10,7 @@ import { CardWrapper } from '@components';
       <!-- Card 1: Journey Maps Description -->
       <CardWrapper class="card | flow">
         <h2 class="card-title">Journey maps</h2>
-        <p class="card-description">
-          Es un lienzo que nos permitió visualizar el viaje que tienen los usuarios para lograr un
-          objetivo. Con la ayuda del mapa de ese trayecto obtuvimos una idea de las motivaciones de
-          los usuarios, sus necesidades y puntos críticos.
-        </p>
+        <p class="card-description">{t('planogram_process_journey_map_desc')}</p>
       </CardWrapper>
 
       <!-- Images for Journey Maps -->
@@ -33,11 +30,7 @@ import { CardWrapper } from '@components';
         <!-- Card 2: Testing Description -->
         <CardWrapper class="card | flow">
           <h2 class="card-title">Testing</h2>
-          <p class="card-description">
-            Validar 3 flujos que están en una versión wireframes, para confirmar si esta posible
-            solución, efectivamente solventa sus problemas que se presentan en las diferentes tareas
-            que debían realizar los usuarios.
-          </p>
+          <p class="card-description">{t('planogram_process_testing_desc')}</p>
         </CardWrapper>
         <!-- Image for Testing -->
         <img
@@ -60,13 +53,8 @@ import { CardWrapper } from '@components';
       <div class="even-columns">
         <!-- Card 3: Analysis Description -->
         <CardWrapper class="card | flow" data-type="no-background">
-          <h2 class="card-title">Análisis</h2>
-          <p class="card-description">
-            A nivel general se obtuvieron muchos insights muy valioso de parte de los diferentes
-            tipos de usuarios, se dedicaron unos 3 días para recopilar todo, analizar detalladamente
-            y encontrar los patrones que serian los indicadores principales para comenzar a
-            priorizar el primer MVP en cuanto a diseño.
-          </p>
+          <h2 class="card-title">{t('planogram_process_analysis_title')}</h2>
+          <p class="card-description">{t('planogram_process_analysis_desc')}</p>
         </CardWrapper>
 
         <!-- Image for Analysis -->
@@ -87,12 +75,7 @@ import { CardWrapper } from '@components';
         <!-- Card 4: MVP 1 Description -->
         <CardWrapper class="card | flow" data-type="no-background">
           <h2 class="card-title">MVP 1</h2>
-          <p class="card-description">
-            Ya teniendo claro cuáles eran los principales dolores y oportunidades de mejora para los
-            usuarios había que tener una sesión con todo el equipo de desarrollo y product owner
-            para asegurar que las funcionalidades del primer MVP sean realmente factibles dentro del
-            tiempo límite, y que aporten valor al negocio.
-          </p>
+          <p class="card-description">{t('planogram_process_mvp_desc')}</p>
         </CardWrapper>
       </div>
     </div>
