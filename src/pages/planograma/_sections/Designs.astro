@@ -1,3 +1,7 @@
+---
+import { t } from 'i18n:astro';
+---
+
 <section>
   <div class="container | flow">
     <!-- Image showing design process -->
@@ -8,13 +12,8 @@
 
     <!-- Text container explaining the design process -->
     <div class="text-container">
-      <h2>Diseños</h2>
-      <p>
-        Se logró digitalizar todo el proceso de envío de planogramas, implementación y notificación
-        de que la tarea fue realizada por las tiendas, fue un flujo bastante denso y desafiante que
-        había que considerar tambien los dispositivos en los que cada usuario debía acceder, que
-        fuera rápido e intuitivo
-      </p>
+      <h2>{t('projects_designs_design_title')}</h2>
+      <p>{t('planogram_designs_desc')}</p>
     </div>
 
     <!-- Image showing further design details -->
