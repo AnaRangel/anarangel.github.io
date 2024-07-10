@@ -53,3 +53,21 @@ body {
 	max-inline-size: 5.5rem;
 	max-block-size: 1.5rem;
 }
+
+.heart {
+	display: inline-block;
+	animation: pulse 0.9s ease-out infinite;
+	filter: drop-shadow(0 0 0.5rem #f82e03);
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
