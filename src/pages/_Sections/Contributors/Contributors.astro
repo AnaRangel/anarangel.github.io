@@ -27,11 +27,11 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/img/avatars/*.
 
 <div class="container-contributions">
   <section class="contributions">
-    <p class="contributions-title">{t('contributions_title')}</p>
+    <h2 class="contributions-title">{t('contributions_title')}</h2>
 
     <article class="contributions-container">
       <div class="contributions-container-roles">
-        <span class="contributions-subtitle">{t('contributions_design')}</span>
+        <h3 class="contributions-subtitle">{t('contributions_design')}</h3>
         <div class="contributors">
           {
             dataDesigners.map((designer) => (
@@ -51,7 +51,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/img/avatars/*.
       </div>
 
       <div class="contributions-container-roles">
-        <span class="contributions-subtitle">{t('contributions_dev')}</span>
+        <h3 class="contributions-subtitle">{t('contributions_dev')}</h3>
         <div class="contributors">
           {
             dataDevs.map((contributor) => (
@@ -89,37 +89,44 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/img/avatars/*.
     padding-bottom: 5.5rem;
     max-width: 1280px;
     margin: 0 auto;
+    padding-inline: 1rem;
+    gap: 3rem;
 
     .contributions-title {
       font-size: 40px;
       font-weight: 500;
-      line-height: 60px;
       text-align: center;
-      margin-bottom: 32px;
       color: white;
     }
 
     .contributions-container {
       display: flex;
-      gap: 120px;
+      flex-direction: column;
+      gap: 80px;
+
+      @media (width >= 768px) {
+        flex-direction: row;
+        gap: 120px;
+      }
     }
 
     .contributions-container-roles {
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 1rem;
     }
 
     .contributions-subtitle {
       font-size: 24px;
       font-weight: 500;
-      line-height: 14px;
-      margin-bottom: 36px;
       color: white;
     }
 
     .contributors {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       max-width: 1044px;
       width: 100%;
 
