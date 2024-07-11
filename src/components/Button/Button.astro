@@ -179,6 +179,10 @@ const computedIconSize = iconSizeMap[size];
     z-index: 1;
     inline-size: 90%;
 
+    @media (width >= 48rem) {
+      inline-size: fit-content;
+    }
+
     padding: var(--padding);
     border: none;
     border-radius: 2.25rem;
