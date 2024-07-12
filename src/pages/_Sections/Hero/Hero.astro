@@ -55,6 +55,11 @@ import { t } from 'i18n:astro';
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    inline-size: 100%;
+
+    @media (width >= 48rem) {
+      inline-size: fit-content;
+    }
   }
 
   @media (width >= 992px) {
