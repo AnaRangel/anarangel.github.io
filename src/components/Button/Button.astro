@@ -177,13 +177,17 @@ const computedIconSize = iconSizeMap[size];
   .button {
     position: relative;
     z-index: 1;
-    inline-size: fit-content;
+    inline-size: 90%;
+
+    @media (width >= 48rem) {
+      inline-size: fit-content;
+    }
 
     padding: var(--padding);
     border: none;
     border-radius: 2.25rem;
     overflow: hidden;
-
+    text-align: center;
     color: var(--text-color);
     font-weight: var(--font-weight);
     font-size: var(--font-size);
@@ -199,6 +203,7 @@ const computedIconSize = iconSizeMap[size];
       display: flex;
       gap: 0.625rem;
       align-items: center;
+      justify-content: center;
     }
 
     &:active {
