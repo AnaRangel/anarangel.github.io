@@ -25,6 +25,7 @@ export enum IconSize {
 export enum IconCatalog {
   arrowDownTray = 'arrowDownTray',
   arrowRight = 'arrowRight',
+  arrowUpRight = 'arrowUpRight',
   discord = 'discord',
   documentCheck = 'documentCheck',
   gitHub = 'gitHub',
@@ -50,6 +51,10 @@ export const Icons: Record<IconCatalog, IconType> = {
   },
   [IconCatalog.arrowRight]: {
     outline: 'M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3',
+  },
+  [IconCatalog.arrowUpRight]: {
+    outline:
+      'M0.329505 12.4312C-0.109835 11.9919 -0.109835 11.2796 0.329505 10.8402L8.15901 3.01074H2.625C2.00368 3.01074 1.5 2.50706 1.5 1.88574C1.5 1.26442 2.00368 0.760742 2.625 0.760742H10.875C11.4963 0.760742 12 1.26442 12 1.88574V10.1357C12 10.7571 11.4963 11.2607 10.875 11.2607C10.2537 11.2607 9.75 10.7571 9.75 10.1357V4.60173L1.9205 12.4312C1.48116 12.8706 0.768844 12.8706 0.329505 12.4312Z',
   },
   [IconCatalog.discord]: {
     outline:
