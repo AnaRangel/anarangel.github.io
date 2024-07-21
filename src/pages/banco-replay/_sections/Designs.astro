@@ -1,0 +1,112 @@
+---
+
+---
+
+<section>
+  <div class="container">
+    <div class="flow">
+      <h2 class="title">Diseños</h2>
+      <p class="description">
+        Después de un proceso de empatizar y definir cuáles eras las oportunidades de mejora, se
+        hizo un refrescamiento de todo el flujo, y adicional se agregaron nuevas funcionalidades
+        para optimizar aún mas este flujo, posteriormente fue llevado a testeo para asegurar su
+        usabilidad e implementarlo a desarrollo
+      </p>
+
+      <img
+        src="/assets/images/banco-replay-benchmarks-3.png"
+        alt="Pantalla de selección de vuelo de LATAM Airlines con observaciones de UX y comentarios de usuarios"
+      />
+      <div class="image-container">
+        <img
+          src="/assets/images/banco-replay-benchmarks-6.png"
+          alt="Pantalla de selección de vuelo de LATAM Airlines con observaciones de UX y comentarios de usuarios"
+          style="width: 100%;"
+        />
+        <img
+          src="/assets/images/banco-replay-benchmarks-4.png"
+          alt="Pantalla de selección de vuelo de LATAM Airlines con observaciones de UX y comentarios de usuarios"
+          style="width: 100%; "
+        />
+        <img
+          src="/assets/images/banco-replay-benchmarks-5.png"
+          alt="Pantalla de selección de vuelo de LATAM Airlines con observaciones de UX y comentarios de usuarios"
+          style="width: 100%; "
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section .container {
+    display: grid;
+    margin-block-start: 3rem;
+    padding-inline: 2rem;
+    gap: 2rem;
+  }
+  .title {
+    font-size: var(--font-size-fluid-3);
+    line-height: 1.4;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .description {
+    color: hsl(236, 25%, 75%);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  img {
+    width: 100%;
+  }
+  .section-title {
+    margin-block: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: 2rem;
+    margin-block-start: 2rem;
+  }
+
+  .image-container img {
+    inline-size: 100%;
+    block-size: 100%;
+    max-inline-size: 320px;
+    max-block-size: 31.25rem;
+    margin-inline: auto;
+  }
+  @media (min-width: 48em) {
+    .title {
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+    .image-container {
+      flex-direction: row;
+    }
+
+    .image-container img {
+      max-inline-size: unset;
+      max-block-size: unset;
+      block-size: unset;
+      inline-size: unset;
+      flex-shrink: 1;
+      flex-basis: 15rem;
+    }
+    .image-container img:first-child {
+      width: 100%;
+      max-width: 43.75rem;
+      flex-basis: 50rem;
+    }
+  }
+</style>

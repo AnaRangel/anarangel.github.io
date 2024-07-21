@@ -1,0 +1,139 @@
+---
+import { CardWrapper } from '@components';
+---
+
+<div class="evaluation-container">
+  <div class="evaluation-cards">
+    <div class="grid-auto-fit">
+      <!-- Card: Evaluation Criteria -->
+      <CardWrapper class="evaluation-card | flow">
+        <h2 class="evaluation-card-title">Criterios de evaluación</h2>
+
+        <ol class="evaluation-criteria flow">
+          <li>1. Cantidad de pasos</li>
+          <li>2. Priorización y saturación de información</li>
+          <li>3. Definición de flujo simulación y contratación</li>
+          <li>4. Origen y destino del producto</li>
+          <li>5. Comparación de plazos</li>
+          <li>6. Nivel de contenidos</li>
+          <li>7. Priorización y saturación de información</li>
+        </ol>
+      </CardWrapper>
+
+      <!-- Image: Explaining wireframes -->
+      <img
+        src="/assets/images/banco-replay-benchmarks-1.png"
+        alt="Pantalla de selección de vuelo de LATAM Airlines con observaciones de UX y comentarios de usuarios"
+        class="evaluation-image"
+      />
+    </div>
+  </div>
+
+  <div class="cards-container">
+    <div class="even-columns">
+      <!-- Card: Identified Issues -->
+      <div class="flow">
+        <h2 class="title">NPS</h2>
+        <p class="description">
+          Se revisó el estado del NPS para revelar qué aspectos valoran o descontentan a los
+          clientes, guiando así las mejoras directamente hacia lo que más impacta en su
+          satisfacción. Según los comentarios que indican los detractores y algunos pasivos buscamos
+          incorporar la opción de DAP renovable para mejorar aún más el flujo, ya que para aquellos
+          usuarios que querían tener inversiones prolongadas en el tiempo no tenían esta opción
+          disponible
+        </p>
+      </div>
+
+      <!-- Image: Explaining wireframes -->
+      <img
+        src="/assets/images/banco-replay-benchmarks-2.png"
+        alt="Pantalla de selección de vuelo de LATAM Airlines con observaciones de UX y comentarios de usuarios"
+      />
+    </div>
+  </div>
+</div>
+
+<style>
+  .evaluation-container {
+    padding-block-start: 2rem;
+    display: grid;
+    gap: 1.5rem;
+    place-items: center;
+    padding-inline: 2rem;
+  }
+
+  .flow {
+    --flow-spacer: 1.5rem;
+  }
+
+  .evaluation-cards {
+    margin-block-start: 3rem;
+    inline-size: 100%;
+
+    .grid-auto-fit {
+      --min-item-width: 30rem;
+    }
+  }
+
+  .evaluation-image {
+    width: 100%;
+  }
+
+  .evaluation-card {
+    --flow-spacer: 1.4375rem;
+    width: 100%;
+    background-color: hsl(240, 4%, 5%);
+    padding: 3.5rem 1.5rem 2.25rem 1.5rem;
+    margin-inline: auto;
+  }
+
+  .evaluation-card-title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .evaluation-criteria {
+    --flow-spacer: 1rem;
+    line-height: 24px;
+    letter-spacing: -1%;
+    color: hsla(236, 25%, 75%, 1);
+  }
+
+  .even-columns {
+    margin-block-start: 2rem;
+    place-items: center;
+    gap: 4rem;
+  }
+  .title {
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .description {
+    color: hsl(236, 25%, 75%);
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  @media (min-width: 48em) {
+    .evaluation-card {
+      padding: 3rem;
+      text-align: start;
+    }
+
+    .title {
+      font-size: 4rem;
+      text-align: start;
+    }
+
+    .even-columns {
+      .flow {
+        padding-inline-start: 2rem;
+      }
+      img {
+        justify-self: end;
+      }
+    }
+  }
+</style>

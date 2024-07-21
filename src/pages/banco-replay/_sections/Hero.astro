@@ -1,0 +1,118 @@
+---
+import { CardWrapper } from '@components';
+---
+
+<section class="hero">
+  <div class="container">
+    <!-- Main logo of the case study -->
+    <img src="/svg/banco-replay-logo.svg" alt="Cencosud logo" class="main-logo" />
+    <h1 class="title">Depósito a plazo</h1>
+    <p class="description">
+      Se levantó la necesidad de realizar un estudio relacionado a DAP, debido a que el flujo en ese
+      momento era funcional pero tenia algunas incidencias tanto de usabilidad en desktop como en
+      mobile y algunos puntos de mejora del front por parte del sistema como la superposición de
+      componentes.
+    </p>
+
+    <!-- Container for the cards -->
+    <div class="cards-container | grid-auto-fit">
+      <!-- Card 1: Methodology used -->
+      <CardWrapper class="card" hasBorder>
+        <h2 class="card-title">Metodología</h2>
+        <p class="subtitle">Doble diamante</p>
+      </CardWrapper>
+
+      <!-- Card 2: Time taken -->
+      <CardWrapper class="card" hasBorder>
+        <h2 class="card-title">Tiempo</h2>
+        <p class="subtitle">1 mes</p>
+      </CardWrapper>
+
+      <!-- Card 3: Devices used -->
+      <CardWrapper class="card" hasBorder>
+        <h2 class="card-title">Dispositivos</h2>
+        <p class="subtitle">Desktop y mobile</p>
+      </CardWrapper>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero .container {
+    padding-block-start: 2rem;
+    display: grid;
+    gap: 1.5rem;
+    place-items: center;
+    padding-inline: 2rem;
+  }
+
+  .main-logo {
+    inline-size: 100%;
+    max-inline-size: 11.875rem;
+  }
+
+  .title {
+    font-size: var(--font-size-fluid-3);
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  .description {
+    color: hsl(236, 25%, 75%);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .cards-container {
+    --min-item-width: 22rem;
+
+    margin-block-start: 3rem;
+    inline-size: 100%;
+    justify-items: center;
+  }
+
+  .card {
+    display: grid;
+    gap: 1rem;
+    background-color: hsla(240, 4%, 5%, 1);
+    padding: 1.5rem;
+    max-inline-size: 25.625rem;
+    inline-size: 100%;
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  @media (min-width: 48em) {
+    .hero .container {
+      padding-block-start: 8rem;
+    }
+
+    .description {
+      font-size: 1.25rem;
+      max-inline-size: 78ch;
+    }
+
+    .card {
+      padding: 3rem;
+      text-align: start;
+    }
+
+    .title {
+      font-size: 4rem;
+    }
+
+    .subtitle {
+      font-size: 2.25rem;
+      white-space: nowrap;
+    }
+  }
+</style>
