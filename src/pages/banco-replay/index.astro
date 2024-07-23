@@ -1,0 +1,37 @@
+---
+import { GradientBackground } from '@components';
+import { GradientColor } from 'components/GradientBackground/GradientBackground.astro';
+import Layout from '@layouts/Layout.astro';
+import Contact from '@pages/_Sections/Contact/Contact.astro';
+import { Analysis, Benchmarks, Context, Criterios, Designs, Hero } from './_sections';
+---
+
+<Layout title="Ana Rangel | Latam Airlines">
+  <main>
+    <GradientBackground color={GradientColor.blue} />
+
+    <!-- Hero Section -->
+    <Hero />
+
+    <!-- Context Section -->
+    <Context />
+
+    <Benchmarks />
+
+    <Criterios />
+
+    <Analysis />
+
+    <Designs />
+
+    <!-- Contact Section -->
+    <Contact />
+  </main>
+</Layout>
+
+<style>
+  main {
+    padding-block-start: 4rem;
+    overflow: hidden;
+  }
+</style>
