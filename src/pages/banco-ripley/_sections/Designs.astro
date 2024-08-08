@@ -14,6 +14,7 @@
       </p>
 
       <img
+        class="hide-mobile"
         src="/assets/images/banco-ripley-benchmarks-3.png"
         alt="Pantalla de selección de vuelo de LATAM Airlines con observaciones de UX y comentarios de usuarios"
       />
@@ -73,6 +74,7 @@
   .image-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
     padding-inline: 2rem;
     margin-block-start: 4rem;
@@ -85,6 +87,14 @@
     max-block-size: 31.25rem;
     margin-inline: auto;
   }
+
+  @media (width <= 768px) {
+    .hide-mobile {
+      display: none;
+      content-visibility: hidden;
+    }
+  }
+
   @media (min-width: 48em) {
     .title {
       font-size: 2rem;
@@ -99,10 +109,6 @@
     }
 
     .image-container img {
-      max-inline-size: unset;
-      max-block-size: unset;
-      block-size: unset;
-      inline-size: unset;
       flex-shrink: 1;
       flex-basis: 15rem;
     }
