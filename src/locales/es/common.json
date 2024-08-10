@@ -150,5 +150,7 @@
   "ripley_analysis_1": "La competencia mantiene al menos dos capas de información, la primera con un historial de los DAPs en cards con la información mínima necesaria y la segunda capa con el detalle.",
   "ripley_analysis_2": "Se integró recientemente cuenta corriente como opción de origen de la inversión a realizar. Antes sólo un cliente con cuenta vista podía realizar un depósito a plazo.",
   "ripley_analysis_3": "Se le notifica al usuario por correo electrónico cuando se hace la renovación automática y se envía un documento detallado con las condiciones de la renovación.",
-  "ripley_analysis_4": ""
+  "ripley_analysis_4": "",
+  "ripley_designs_title": "Diseños",
+  "ripley_designs_desc": "Después de un proceso de empatizar y definir cuáles eras las oportunidades de mejora, se hizo un refrescamiento de todo el flujo, y adicional se agregaron nuevas funcionalidades para optimizar aún mas este flujo, posteriormente fue llevado a testeo para asegurar su usabilidad e implementarlo a desarrollo."
 }
