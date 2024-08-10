@@ -126,5 +126,10 @@
   "planogram_process_analysis_title": "Analysis",
   "planogram_process_analysis_desc": "In general, many valuable insights were obtained from the different types of users, we spent about 3 days to collect everything, analyze in detail and find the patterns that would be the main indicators to start prioritizing the first MVP in terms of design.",
   "planogram_process_mvp_desc": "Once it was clear what were the main pains and opportunities for improvement for the users, it was necessary to have a session with the entire development team and product owner to ensure that the functionalities of the first MVP are really feasible within the time limit, and that they bring value to the business.",
-  "planogram_designs_desc": "The entire process of sending planograms, implementation and notification that the task was completed by the stores was digitized, it was a very dense and challenging flow that had to be considered as well as the devices on which each user had to access, which had to be fast and intuitive."
+  "planogram_designs_desc": "The entire process of sending planograms, implementation and notification that the task was completed by the stores was digitized, it was a very dense and challenging flow that had to be considered as well as the devices on which each user had to access, which had to be fast and intuitive.",
+  "ripley_hero_title": "Time deposit",
+  "ripley_hero_desc": "The need for a study related to DAP arose, because the flow at that time was functional but had some issues both in desktop and mobile usability and some points of improvement of the front end by the system as the overlapping of components.",
+  "ripley_hero_methodology_desc": "Double diamond",
+  "ripley_hero_time_desc": "1 month",
+  "ripley_hero_device_desc": "Desktop & mobile"
 }
