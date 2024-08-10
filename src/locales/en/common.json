@@ -133,5 +133,9 @@
   "ripley_hero_time_desc": "1 month",
   "ripley_hero_device_desc": "Desktop & mobile",
   "ripley_context_title": "Importance",
-  "ripley_context_desc": "Inquiring about some KPIs, it was learned that on average in the year 2022 86% were online users. In DAP more than 1900 transactions were generated monthly on average, which translated into a large amount of money for the bank, in that year there was an increase in customer investments, which shows the contribution that this product makes to the bank."
+  "ripley_context_desc": "Inquiring about some KPIs, it was learned that on average in the year 2022 86% were online users. In DAP more than 1900 transactions were generated monthly on average, which translated into a large amount of money for the bank, in that year there was an increase in customer investments, which shows the contribution that this product makes to the bank.",
+  "ripley_benchmarks_desc": "Due to time and scope, it was decided to perform two benchmarks evaluating direct competition.",
+  "ripley_benchmarks_banks_numb": "No. of banks studied",
+  "ripley_benchmarks_obj_1_desc": "Map how the competition addresses this flow at a general level in architecture, prioritization, how information is displayed and what components and visual resources they use.",
+  "ripley_benchmarks_obj_2_desc": "Study how the competition provides the user with comparative information when simulating between different investment terms and whether these terms are predefined or not."
 }
