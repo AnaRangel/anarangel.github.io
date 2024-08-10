@@ -131,5 +131,7 @@
   "ripley_hero_desc": "Se levantó la necesidad de realizar un estudio relacionado a DAP, debido a que el flujo en ese momento era funcional pero tenia algunas incidencias tanto de usabilidad en desktop como en mobile y algunos puntos de mejora del front por parte del sistema como la superposición de componentes.",
   "ripley_hero_methodology_desc": "Doble diamante",
   "ripley_hero_time_desc": "1 mes",
-  "ripley_hero_device_desc": "Desktop y mobile"
+  "ripley_hero_device_desc": "Desktop y mobile",
+  "ripley_context_title": "Importancia",
+  "ripley_context_desc": "Indagando algunos KPI, se supo que en promedio en el año 2022 el 86% eran usuarios online. En DAP mensualmente se generaban más de 1900 transacciones en promedio, lo cual se traducía en una gran cantidad de dinero para el banco, en ese año había una alza en las inversiones de los clientes, lo cual muestra el aporte que hace este producto al banco."
 }
