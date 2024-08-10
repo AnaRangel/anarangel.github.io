@@ -137,5 +137,13 @@
   "ripley_benchmarks_desc": "Debido al tiempo y alcance, se definió realizar dos benchmarks evaluando competencia directa.",
   "ripley_benchmarks_banks_numb": "Cant. de bancos estudiados",
   "ripley_benchmarks_obj_1_desc": "Mapear cómo la competencia aborda este flujo a nivel general en arquitectura, priorización, forma de mostrar información y que componentes y recursos visuales utilizan.",
-  "ripley_benchmarks_obj_2_desc": "Estudiar cómo la competencia le facilita al usuario la información comparativa al momento de simular entre distintos plazos al invertir y si estos plazos vienen predefinidos o no."
+  "ripley_benchmarks_obj_2_desc": "Estudiar cómo la competencia le facilita al usuario la información comparativa al momento de simular entre distintos plazos al invertir y si estos plazos vienen predefinidos o no.",
+  "ripley_criterios_title": "Criterios de evaluación",
+  "ripley_criterios_1": "1. Cantidad de pasos",
+  "ripley_criterios_2": "2. Priorización y saturación de información",
+  "ripley_criterios_3": "3. Definición de flujo, simulación y contratación",
+  "ripley_criterios_4": "4. Origen y destino del producto",
+  "ripley_criterios_5": "5. Comparación de plazos",
+  "ripley_criterios_6": "6. Nivel de contenidos",
+  "ripley_criterios_NPS_desc": "Se revisó el estado del NPS para revelar qué aspectos valoran o descontentan a los clientes, guiando así las mejoras directamente hacia lo que más impacta en su satisfacción. Según los comentarios que indican los detractores y algunos pasivos buscamos incorporar la opción de DAP renovable para mejorar aún más el flujo, ya que para aquellos usuarios que querían tener inversiones prolongadas en el tiempo no tenían esta opción disponible."
 }

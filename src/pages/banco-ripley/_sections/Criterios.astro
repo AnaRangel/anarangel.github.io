@@ -1,5 +1,6 @@
 ---
 import { CardWrapper } from '@components';
+import { t } from 'i18n:astro';
 ---
 
 <div class="container">
@@ -7,16 +8,15 @@ import { CardWrapper } from '@components';
     <div class="grid-auto-fit">
       <!-- Card: Evaluation Criteria -->
       <CardWrapper class="evaluation-card | flow">
-        <h2 class="evaluation-card-title">Criterios de evaluación</h2>
+        <h2 class="evaluation-card-title">{t('ripley_criterios_title')}</h2>
 
         <ol class="evaluation-criteria flow">
-          <li>1. Cantidad de pasos</li>
-          <li>2. Priorización y saturación de información</li>
-          <li>3. Definición de flujo simulación y contratación</li>
-          <li>4. Origen y destino del producto</li>
-          <li>5. Comparación de plazos</li>
-          <li>6. Nivel de contenidos</li>
-          <li>7. Priorización y saturación de información</li>
+          <li>{t('ripley_criterios_1')}</li>
+          <li>{t('ripley_criterios_2')}</li>
+          <li>{t('ripley_criterios_3')}</li>
+          <li>{t('ripley_criterios_4')}</li>
+          <li>{t('ripley_criterios_5')}</li>
+          <li>{t('ripley_criterios_6')}</li>
         </ol>
       </CardWrapper>
 
@@ -34,14 +34,7 @@ import { CardWrapper } from '@components';
       <!-- Card: Identified Issues -->
       <div class="flow">
         <h2 class="title">NPS</h2>
-        <p class="description">
-          Se revisó el estado del NPS para revelar qué aspectos valoran o descontentan a los
-          clientes, guiando así las mejoras directamente hacia lo que más impacta en su
-          satisfacción. Según los comentarios que indican los detractores y algunos pasivos buscamos
-          incorporar la opción de DAP renovable para mejorar aún más el flujo, ya que para aquellos
-          usuarios que querían tener inversiones prolongadas en el tiempo no tenían esta opción
-          disponible
-        </p>
+        <p class="description">{t('ripley_criterios_NPS_desc')}</p>
       </div>
 
       <!-- Image: Explaining wireframes -->
