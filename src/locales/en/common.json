@@ -145,5 +145,10 @@
   "ripley_criterios_4": "4. Origin and destination of the product",
   "ripley_criterios_5": "5. Comparison of terms",
   "ripley_criterios_6": "6. Content level",
-  "ripley_criterios_NPS_desc": "The NPS status was reviewed to reveal what aspects customers value or dissatisfy, thus guiding improvements directly to what most impacts their satisfaction. Based on feedback indicated by detractors and some liabilities we sought to incorporate the option of renewable WTP to further improve flow, as for those users who wanted to have prolonged investments over time did not have this option available."
+  "ripley_criterios_NPS_desc": "The NPS status was reviewed to reveal what aspects customers value or dissatisfy, thus guiding improvements directly to what most impacts their satisfaction. Based on feedback indicated by detractors and some liabilities we sought to incorporate the option of renewable WTP to further improve flow, as for those users who wanted to have prolonged investments over time did not have this option available.",
+  "ripley_analysis_title": "Final analysis",
+  "ripley_analysis_1": "The competition maintains at least two layers of information, the first with a history of the DAPs in cards with the minimum necessary information and the second layer with the detail.",
+  "ripley_analysis_2": "The current account was recently integrated as an option for the origin of the investment to be made. Previously, only a customer with a demand account could make a time deposit.",
+  "ripley_analysis_3": "The user is notified by e-mail when the automatic renewal is done and a detailed document with the renewal conditions is sent.",
+  "ripley_analysis_4": ""
 }
