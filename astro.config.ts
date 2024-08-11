@@ -1,4 +1,5 @@
 import i18n from '@astrolicious/i18n';
+import playformCompress from '@playform/compress';
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
@@ -7,11 +8,7 @@ export default defineConfig({
   image: {
     domains: ['media.licdn.com'],
   },
-  vite: {
-    build: {
-      cssMinify: 'lightningcss',
-    },
-  },
+  compressHTML: false,
   integrations: [
     i18n({
       defaultLocale: 'es',
@@ -24,6 +21,13 @@ export default defineConfig({
           en: '/planogramm',
         },
       },
+    }),
+    playformCompress({
+      HTML: true,
+      JavaScript: true,
+      CSS: true,
+      Image: false,
+      SVG: true,
     }),
   ],
 });
