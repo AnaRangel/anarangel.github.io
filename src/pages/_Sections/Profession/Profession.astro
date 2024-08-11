@@ -1,6 +1,6 @@
 ---
 import { Button } from '@components';
-import { t } from 'i18n:astro';
+import { getLocalePath, t } from 'i18n:astro';
 ---
 
 <article>
@@ -8,7 +8,7 @@ import { t } from 'i18n:astro';
     <div class="title-container">
       <h3 set:html={t('profession_title')} />
       <p class="text-content">{t('profession_desc')}</p>
-      <Button invert tag="anchor" href="/about-me" target="_self">
+      <Button invert tag="anchor" href={getLocalePath('/sobre-mi')} target="_self">
         {t('profession_button')}
         <!-- Se agrega el SVG de manera provisoria ya que el componente button da problemas para implementar el icono mediante props -->
         <svg
