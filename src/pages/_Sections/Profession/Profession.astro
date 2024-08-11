@@ -6,7 +6,11 @@ import { getLocalePath, t } from 'i18n:astro';
 <article>
   <div class="container | even-columns">
     <div class="title-container">
-      <h3 set:html={t('profession_title')} />
+      <div class="border-box hoverable">
+        <h3 set:html={t('profession_title')} />
+        <div class="dots top"></div>
+        <div class="dots bottom"></div>
+      </div>
       <p class="text-content">{t('profession_desc')}</p>
       <Button invert tag="anchor" href={getLocalePath('/sobre-mi')} target="_self">
         {t('profession_button')}
@@ -65,6 +69,77 @@ import { getLocalePath, t } from 'i18n:astro';
     font-size: 1.25rem;
     font-style: normal;
     line-height: 150%;
+  }
+
+  .border-box {
+    --border-color: #4b82ee;
+    --outline-offset: 4px;
+    --dot-size: 10px;
+    --dots-color: #fff;
+    --pos-dots: calc(var(--dot-size) / -2);
+    --hover-dots: calc(var(--dot-size) * -1);
+
+    outline: 2px solid var(--border-color);
+    padding: 12px 15px;
+    position: relative;
+    cursor: text;
+    width: fit-content;
+    transition: outline-offset 0.3s ease-in-out;
+
+    & .dots {
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: var(--dot-size);
+        height: var(--dot-size);
+        background: var(--dots-color);
+        border-radius: 50%;
+        border: 1px solid var(--border-color);
+        transition: all 0.3s ease-in-out;
+      }
+
+      &::before {
+        left: var(--pos-dots);
+      }
+      &::after {
+        right: var(--pos-dots);
+      }
+
+      &.top::before,
+      &.top::after {
+        top: calc(var(--dot-size) / -2);
+      }
+
+      &.bottom::before,
+      &.bottom::after {
+        bottom: calc(var(--dot-size) / -2);
+      }
+    }
+
+    &.hoverable:hover {
+      outline-offset: var(--outline-offset);
+
+      & .dots {
+        &::before {
+          left: var(--hover-dots);
+        }
+
+        &::after {
+          right: var(--hover-dots);
+        }
+
+        &.top::before,
+        &.top::after {
+          top: var(--hover-dots);
+        }
+
+        &.bottom::before,
+        &.bottom::after {
+          bottom: var(--hover-dots);
+        }
+      }
+    }
   }
 
   h3 {
