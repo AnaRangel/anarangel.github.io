@@ -8,7 +8,11 @@ export default defineConfig({
   image: {
     domains: ['media.licdn.com'],
   },
-  compressHTML: false,
+  vite: {
+    build: {
+      cssMinify: 'lightningcss',
+    },
+  },
   integrations: [
     i18n({
       defaultLocale: 'es',
@@ -25,7 +29,7 @@ export default defineConfig({
     playformCompress({
       HTML: true,
       JavaScript: true,
-      CSS: true,
+      CSS: false,
       Image: false,
       SVG: true,
     }),
