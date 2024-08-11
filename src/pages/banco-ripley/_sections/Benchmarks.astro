@@ -1,38 +1,31 @@
 ---
 import { CardWrapper } from '@components';
+import { t } from 'i18n:astro';
 ---
 
 <section class="hero">
   <div class="container">
     <h2 class="section-title">Benchmarks</h2>
-    <p class="section-description">
-      Debido al tiempo y alcance, se definió realizar dos benchmarks evaluando competencia directa.
-    </p>
+    <p class="section-description">{t('ripley_benchmarks_desc')}</p>
 
     <!-- Container for the cards -->
     <div class="cards-container | grid-auto-fit">
       <!-- Card 1: Methodology used -->
       <CardWrapper class="card | flow">
-        <h2 class="card-title">Cant. de bancos estudiados</h2>
+        <h2 class="card-title">{t('ripley_benchmarks_banks_numb')}</h2>
         <span>8</span>
       </CardWrapper>
 
       <!-- Card 2: Time taken -->
       <CardWrapper class="card | flow">
-        <h2 class="card-title">Objetivo 1</h2>
-        <p class="subtitle">
-          Mapear cómo la competencia aborda este flujo a nivel general en arquitectura,
-          priorización, forma de mostrar información y que componentes y recursos visuales utilizan.
-        </p>
+        <h2 class="card-title">{t('planogram_context_obj_1')}</h2>
+        <p class="subtitle">{t('ripley_benchmarks_obj_1_desc')}</p>
       </CardWrapper>
 
       <!-- Card 3: Devices used -->
       <CardWrapper class="card | flow">
-        <h2 class="card-title">Objetivo 2</h2>
-        <p class="subtitle">
-          Estudiar cómo la competencia le facilita al usuario la información comparativa al momento
-          de simular entre distintos plazos al invertir y si estos plazos vienen predefinidos o no.
-        </p>
+        <h2 class="card-title">{t('planogram_context_obj_2')}</h2>
+        <p class="subtitle">{t('ripley_benchmarks_obj_2_desc')}</p>
       </CardWrapper>
     </div>
   </div>
