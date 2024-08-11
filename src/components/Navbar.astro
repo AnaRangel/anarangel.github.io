@@ -40,6 +40,16 @@ const LINKS = t('navbar', {
           </>
         ))
       }
+      <li class="list-item">
+        <a
+          href="https://uxcorprangel.github.io/ana-cards-web/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="symbol">×</span>
+          <span class="cards">CARDS</span>
+        </a>
+      </li>
       <li class="toggle-container">
         <LanguageToggle />
       </li>
@@ -194,7 +204,7 @@ const LINKS = t('navbar', {
   }
 
   @media (width >= 50rem) {
-    span,
+    .burger span,
     .burger {
       display: none;
     }
@@ -255,6 +265,10 @@ const LINKS = t('navbar', {
         rgba(153, 153, 153, 0) 100%
       );
       color: white;
+
+      & a > span.cards {
+        color: #fa86ce;
+      }
     }
 
     .list-item {
@@ -263,6 +277,18 @@ const LINKS = t('navbar', {
       text-decoration: none;
       font-size: 1rem;
       color: #b1b3d0;
+    }
+
+    a:has(span.cards) {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    a > span.symbol {
+      font-size: 1.2rem;
+      line-height: 12px;
+      translate: 0 -0.8px;
     }
 
     .dots {
