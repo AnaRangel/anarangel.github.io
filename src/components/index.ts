@@ -1,3 +1,5 @@
+export { default as Aurora } from './Aurora.astro';
+export { default as Avatar } from './Avatar.astro';
 export { default as Button } from './Button/Button.astro';
 export { default as ButtonDownloadCv } from './ButtonDownloadCv/ButtonDownloadCv.astro';
 export * from './Cards';
@@ -6,7 +8,6 @@ export * from './GradientBackground';
 export * from './Icon';
 export { default as LanguageToggle } from './LanguageToggle/LanguageToggle.astro';
 export { default as Navbar } from './Navbar.astro';
-export { default as Tooltip } from './Tooltip/Tooltip.astro';
-export { default as Avatar } from './Avatar.astro';
+export { default as PostHog } from './PostHog.astro';
 export { default as ScrollBack } from './ScrollBack.astro';
-export { default as Aurora } from './Aurora.astro';
+export { default as Tooltip } from './Tooltip/Tooltip.astro';
