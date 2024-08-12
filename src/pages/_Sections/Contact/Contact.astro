@@ -1,5 +1,5 @@
 ---
-import { Aurora, Button, ButtonDownloadCv } from '@components';
+import { Aurora, Button, IconCatalog } from '@components';
 import { t } from 'i18n:astro';
 ---
 
@@ -14,7 +14,16 @@ import { t } from 'i18n:astro';
         <Button tag="anchor" href="https://calendly.com/rangelana1221/30min"
           >{t('contact_button')}</Button
         >
-        <ButtonDownloadCv id="btn-contact-download" />
+        <Button
+          invert
+          tag="anchor"
+          href="https://drive.google.com/drive/u/0/folders/1vFrPWKHdKbi8AW8kAzEXHg7cGeCUWcfs"
+          isFullWidth
+          id="btn-hero-download"
+          afterIcon={IconCatalog.arrowDownTray}
+        >
+          {t('hero_download_cv')}
+        </Button>
       </div>
     </div>
   </section>
