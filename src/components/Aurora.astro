@@ -5,10 +5,15 @@
 <style>
   .aurora {
     --size: 500px;
+    --translate-child-2: 180px 60px;
+    --translate-child-3: -50% 60px;
+    --translate-child-4: -150px 60px;
 
     position: absolute;
-    width: var(--size);
-    height: var(--size);
+    width: 100%;
+    height: 100%;
+    max-width: var(--size);
+    max-height: var(--size);
     top: 0;
     z-index: -1;
     border-radius: 50%;
@@ -18,21 +23,21 @@
 
     &:nth-child(2) {
       background: #9452ff;
-      translate: 0 -60px;
+      translate: var(--translate-child-2);
       animation: move-2 20s linear infinite;
     }
 
     &:nth-child(3) {
       left: 50%;
       background: #ed8f9e;
-      translate: -50% 100px;
+      translate: var(--translate-child-3);
       animation: move-3 20s linear infinite;
     }
 
     &:nth-child(4) {
       right: 0;
       background: #11005f;
-      translate: -100px;
+      translate: var(--translate-child-4);
       animation: move-4 20s linear infinite;
     }
   }
@@ -40,19 +45,19 @@
   @keyframes move-2 {
     0% {
       background: #9452ff;
-      translate: 0 -60px;
+      translate: var(--translate-child-2);
       scale: 1.1;
     }
 
     50% {
       background: #52d7ff;
-      translate: 200px -150px;
-      scale: 1.4;
+      translate: 180px 0px;
+      scale: 1.3;
     }
 
     100% {
       background: #9452ff;
-      translate: 0 -60px;
+      translate: var(--translate-child-2);
       scale: 1.1;
     }
   }
@@ -60,36 +65,36 @@
   @keyframes move-3 {
     0% {
       background: #ed8f9e;
-      translate: -50% 100px;
+      translate: var(--translate-child-3);
     }
 
     50% {
       background: #8fe7ed;
-      translate: -50% -80px;
+      translate: -50% -20px;
     }
 
     100% {
       background: #ed8f9e;
-      translate: -50% 100px;
+      translate: var(--translate-child-3);
     }
   }
 
   @keyframes move-4 {
     0% {
       background: #11005f;
-      translate: -100px;
+      translate: var(--translate-child-4);
       scale: 1.1;
     }
 
     50% {
       background: #005f4f;
-      translate: -200px -100px;
+      translate: -150px -40px;
       scale: 1.3;
     }
 
     100% {
       background: #11005f;
-      translate: -100px;
+      translate: var(--translate-child-4);
       scale: 1.1;
     }
   }

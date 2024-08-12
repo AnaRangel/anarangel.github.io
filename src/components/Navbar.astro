@@ -310,7 +310,6 @@ const LINKS = t('navbar', {
   const navBar = document.querySelector('.navbar');
   const burgerMenu = document.querySelector('.burger');
   const dataStatus = 'data-status';
-  const anchorLink = document.querySelector('[href*="#"]');
 
   items.forEach((anchor) => {
     anchor.addEventListener('click', () => {
@@ -333,17 +332,4 @@ const LINKS = t('navbar', {
       burgerMenu.setAttribute(dataStatus, 'open');
     }
   });
-
-  // TODO: remover este código cuando se encuentre que es lo que provoca ese bug.
-  // Esta función arregla un bug que al hacer clic en el enlace que contiene el
-  // anchor de los proyectos, se traslada todo el contenido hacia arriba.
-  // function fixBugAurora() {
-  //   const containerContribution = document.querySelector('.container-contributions');
-  //   containerContribution.style.overflow = 'hidden';
-
-  //   setTimeout(() => (containerContribution.style.overflow = ''), 100);
-  // }
-
-  // anchorLink.addEventListener('click', fixBugAurora);
-  // window.addEventListener('load', fixBugAurora);
 </script>
