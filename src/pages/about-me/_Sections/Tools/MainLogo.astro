@@ -1,8 +1,14 @@
 <svg>
   <symbol id="logo-ana" fill="none" viewBox="0 0 254 254">
-    <g filter="url(#)">
-      <rect width="180.5" height="179.3" x="36.7" y="36.9" fill="url(#logo-ana-bg)" rx="29.9"
-      ></rect>
+    <g filter="url(#logo-filter)">
+      <rect
+        width="180.5"
+        height="179.3"
+        x="36.7"
+        y="36.9"
+        fill="url(#logo-ana-bg)"
+        rx="29.9"
+        filter="url(#bg-blur)"></rect>
       <rect
         width="180.5"
         height="179.3"
@@ -68,8 +74,11 @@
         <stop stop-color="#1F1F20"></stop>
         <stop offset="1" stop-color="#0D0D0E"></stop>
       </radialGradient>
+      <filter id="bg-blur">
+        <feGaussianBlur stdDeviation="12"></feGaussianBlur>
+      </filter>
       <filter
-        id="unused-logo-filter"
+        id="logo-filter"
         width="252.7"
         height="251.5"
         x=".6"
@@ -87,7 +96,6 @@
           operator="dilate"
           radius="7.5"
           result="effect1_dropShadow_704_1660"></feMorphology>
-        <feOffset></feOffset>
         <feGaussianBlur stdDeviation="14.3"></feGaussianBlur>
         <feComposite in2="hardAlpha" operator="out"></feComposite>
         <feColorMatrix values="0 0 0 0 0.179167 0 0 0 0 0.343333 0 0 0 0 1 0 0 0 0.3 0"
@@ -124,8 +132,7 @@
   }
 
   rect[fill='url(#logo-ana-bg)'] {
-    scale: 1.1;
+    scale: 1.075;
     transform-origin: center;
-    filter: blur(12px);
   }
 </style>
