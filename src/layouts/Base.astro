@@ -1,7 +1,7 @@
 ---
 import '@styles/main.scss';
 
-import { Avatar } from '@components';
+import { Avatar, PostHog } from '@components';
 
 interface Props {
   title: string;
@@ -36,6 +36,8 @@ const ogImage = new URL('/img/og.jpg', baseUrl);
   <meta property="og:locale" content="es_ES" />
 
   <meta name="robots" content="index, follow" />
+
+  <PostHog />
 </head>
 <body>
   <slot />
