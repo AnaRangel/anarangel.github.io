@@ -24,14 +24,12 @@ import { getLocalePath, t } from 'i18n:astro';
         </svg>
       </Button>
     </div>
-    <picture>
+    <picture style="aspect-ratio: 591/470">
       <source srcset="/img/home/interface-description.avif" type="image/avif" />
       <source srcset="/img/home/interface-description.webp" type="image/webp" />
       <img
         src="/img/home/interface-description.webp"
         alt="Interface description"
-        width={546}
-        height={470}
         decoding="async"
         loading="lazy"
         fetchpriority="low"
