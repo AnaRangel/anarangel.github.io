@@ -27,7 +27,7 @@ import { t } from 'i18n:astro';
   />
 </div>
 
-<style>
+<style is:global>
   .study-cases {
     display: grid;
     gap: 2rem;
@@ -51,8 +51,10 @@ import { t } from 'i18n:astro';
     block-size: initial;
 
     & img {
-      margin-top: 6rem;
-      translate: -3rem 0;
+      @media (width >= 992px) {
+        margin-top: 9.8rem;
+        translate: -3rem 0;
+      }
     }
   }
 
