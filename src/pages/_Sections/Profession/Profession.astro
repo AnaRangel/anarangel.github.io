@@ -15,13 +15,7 @@ import { getLocalePath, t } from 'i18n:astro';
       <Button invert tag="anchor" href={getLocalePath('/sobre-mi')} target="_self">
         {t('profession_button')}
         <!-- Se agrega el SVG de manera provisoria ya que el componente button da problemas para implementar el icono mediante props -->
-        <svg
-          width="12"
-          height="13"
-          viewBox="0 0 12 13"
-          fill="white"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width="12" height="13" viewBox="0 0 12 13" fill="white">
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
@@ -30,7 +24,19 @@ import { getLocalePath, t } from 'i18n:astro';
         </svg>
       </Button>
     </div>
-    <img class="svg-container" src="/svg/interface-description.svg" alt="" />
+    <picture>
+      <source srcset="/img/home/interface-description.avif" type="image/avif" />
+      <source srcset="/img/home/interface-description.webp" type="image/webp" />
+      <img
+        src="/img/home/interface-description.webp"
+        alt="Interface description"
+        width={546}
+        height={470}
+        decoding="async"
+        loading="lazy"
+        fetchpriority="low"
+      />
+    </picture>
   </div>
 </article>
 
