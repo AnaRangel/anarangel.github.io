@@ -15,7 +15,17 @@ import { t } from 'i18n:astro';
       </div>
     </div>
 
-    <img class="svg-container" src="/svg/thunder-buttons.svg" alt="" />
+    <picture style="aspect-ratio: 739/529">
+      <source srcset="/img/home/thunder-buttons.avif" type="image/avif" />
+      <source srcset="/img/home/thunder-buttons.webp" type="image/webp" />
+      <img
+        src="/img/home/thunder-buttons.webp"
+        alt="Thunder Design System - Ana Rangel"
+        decoding="async"
+        loading="lazy"
+        fetchpriority="low"
+      />
+    </picture>
   </div>
 </article>
 
@@ -35,6 +45,7 @@ import { t } from 'i18n:astro';
 
     @media (width >= 992px) {
       width: 100%;
+      padding-bottom: 10px;
     }
   }
 
