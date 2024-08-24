@@ -10,17 +10,32 @@ import { t } from 'i18n:astro';
       src="/svg/latam-airlines-logo.svg"
       alt="Latam airlines Logo"
       width="285"
+      height="91"
     />
     <h3>{t('study_case_title')}</h3>
     <p>
       {t('study_case_desc')}
     </p>
-    <img class="logo-img" src="/svg/latam-airlines-1.svg" alt="Latam airlines Logo" />
+    <picture style="aspect-ratio: 512/228">
+      <source srcset="/img/home/latam-airlines-1.avif" type="image/avif" />
+      <source srcset="/img/home/latam-airlines-1.webp" type="image/webp" />
+      <img
+        class="logo-img"
+        src="/img/home/latam-airlines-1.webp"
+        alt="Latam airlines - Ana Rangel"
+        decoding="async"
+        loading="lazy"
+        fetchpriority="low"
+        style="aspect-ratio: 512/228"
+      />
+    </picture>
   </section>
   <!-- TODO: arreglar que la imagen dentro del componente quede en la posicion correcta -->
   <SimpleCard
     cardText={t('project_cta')}
-    cardImage="/svg/latam-airlines.svg"
+    cardImage="/img/home/latam-airlines"
+    aspectRatio="512/384"
+    altText="Latam airlines"
     isInverted={true}
     url="/latam-airlines"
     hasHover
@@ -50,7 +65,7 @@ import { t } from 'i18n:astro';
   .study-cases .card-container:not(.latam-airlines) {
     block-size: initial;
 
-    & img {
+    & picture {
       @media (width >= 992px) {
         margin-top: 9.8rem;
         translate: -3rem 0;
