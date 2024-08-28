@@ -6,7 +6,7 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://anarangel.github.io',
   image: {
-    domains: ['media.licdn.com'],
+    domains: ['media.licdn.com', 'avatars.githubusercontent.com'],
   },
   vite: {
     build: {

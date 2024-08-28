@@ -12,6 +12,29 @@ import { GradientColor } from '../components/GradientBackground/GradientBackgrou
 ---
 
 <Layout title="UX Ana Rangel">
+  <link rel="preload" href="/svg/notion-maze.svg" as="image" type="image/svg+xml" slot="preload" />
+  <link
+    rel="preload"
+    href="/svg/figma-useberry.svg"
+    as="image"
+    type="image/svg+xml"
+    slot="preload"
+  />
+  <link
+    rel="preload"
+    href="/img/home/interface-description.avif"
+    as="image"
+    type="image/avif"
+    slot="preload"
+  />
+  <link
+    rel="preload"
+    href="/img/home/interface-description.webp"
+    as="image"
+    type="image/webp"
+    slot="preload"
+  />
+
   <main>
     <GradientBackground color={GradientColor.blue} />
     <Hero />
@@ -23,8 +46,10 @@ import { GradientColor } from '../components/GradientBackground/GradientBackgrou
 
         <SimpleCard
           cardText={t('project_cta')}
-          cardImage="/svg/img-ripley.svg"
+          cardImage="/img/home/img-ripley"
           isInverted={true}
+          altText={t('project_ripley_title')}
+          aspectRatio="512/265"
           variant={CardVariant.secondary}
           url="/banco-ripley"
           hasHover
@@ -32,7 +57,9 @@ import { GradientColor } from '../components/GradientBackground/GradientBackgrou
 
         <SimpleCard
           cardText={t('project_cta')}
-          cardImage="/svg/frame_4.svg"
+          cardImage="/img/home/img-cencosud"
+          altText={t('project_cencosud_title')}
+          aspectRatio="512/251"
           variant={CardVariant.tertiary}
           isInverted={true}
           url="/planograma"

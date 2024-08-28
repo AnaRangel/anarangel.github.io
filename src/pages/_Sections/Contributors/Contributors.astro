@@ -61,10 +61,13 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/img/avatars/*.
                 class="contributor"
                 title={contributor.login}
               >
-                <img
-                  src={contributor.avatar_url}
-                  alt={`Avatar ${contributor.login}`}
+                <Picture
                   class="contributors__img"
+                  src={contributor.avatar_url}
+                  formats={['avif', 'webp']}
+                  alt={`Avatar ${contributor.login}`}
+                  width={45}
+                  height={45}
                 />
               </a>
             ))
