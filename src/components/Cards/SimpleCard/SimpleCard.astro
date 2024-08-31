@@ -108,7 +108,11 @@ const {
     justify-content: space-between;
 
     color: white;
-    padding: 3rem 3rem 0 3rem;
+    padding: 3rem 2rem 0 2rem;
+
+    @media (width >= 992px) {
+      padding: 3rem 3rem 0 3rem;
+    }
   }
 
   .card-container:has(p) {
