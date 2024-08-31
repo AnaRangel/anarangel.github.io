@@ -16,21 +16,20 @@ import { t } from 'i18n:astro';
     <p>
       {t('study_case_desc')}
     </p>
-    <picture style="aspect-ratio: 512/228">
-      <source srcset="/img/home/latam-airlines-1.avif" type="image/avif" />
-      <source srcset="/img/home/latam-airlines-1.webp" type="image/webp" />
+    <picture style="aspect-ratio: 523/227">
+      <source srcset="/img/home/latam-airlines-1.avif?v=1" type="image/avif" />
+      <source srcset="/img/home/latam-airlines-1.webp?v=1" type="image/webp" />
       <img
         class="logo-img"
-        src="/img/home/latam-airlines-1.webp"
+        src="/img/home/latam-airlines-1.webp?v=1"
         alt="Latam airlines - Ana Rangel"
         decoding="async"
         loading="lazy"
         fetchpriority="low"
-        style="aspect-ratio: 512/228"
+        style="aspect-ratio: 523/227"
       />
     </picture>
   </section>
-  <!-- TODO: arreglar que la imagen dentro del componente quede en la posicion correcta -->
   <SimpleCard
     cardText={t('project_cta')}
     cardImage="/img/home/latam-airlines"
@@ -77,7 +76,11 @@ import { t } from 'i18n:astro';
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 3rem;
+    padding: 3rem 2rem;
+
+    @media (width >= 992px) {
+      padding: 3rem;
+    }
   }
 
   h3 {
