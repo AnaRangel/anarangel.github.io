@@ -60,6 +60,7 @@ import { t } from 'i18n:astro';
   img {
     width: 100%;
   }
+
   .section-title {
     margin-block: 2rem;
     font-size: 3rem;
@@ -77,10 +78,16 @@ import { t } from 'i18n:astro';
 
   .image-container img {
     inline-size: 100%;
-    block-size: 100%;
-    max-inline-size: 320px;
-    max-block-size: 31.25rem;
+    height: auto;
+    max-inline-size: 100%;
     margin-inline: auto;
+    object-fit: contain;
+  }
+
+  @media (max-width: 47.99em) {
+    .image-container img {
+      max-block-size: none;
+    }
   }
 
   @media (width <= 768px) {
@@ -106,6 +113,10 @@ import { t } from 'i18n:astro';
     .image-container img {
       flex-shrink: 1;
       flex-basis: 15rem;
+      height: auto;
+      max-inline-size: 320px;
+      max-block-size: 31.25rem;
+      object-fit: contain;
     }
     .image-container img:first-child {
       width: 100%;

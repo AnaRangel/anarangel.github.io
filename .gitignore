@@ -21,3 +21,9 @@ pnpm-debug.log*
 .DS_Store
 
 .tool-versions
+
+# bun
+bun.lockb
+
+# npm 
+package-lock.json
